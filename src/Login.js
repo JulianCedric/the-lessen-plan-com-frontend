@@ -1,4 +1,5 @@
 import React from 'react';  
+import './App.css';
 import { Form, Grid } from 'semantic-ui-react';
 
 class Login extends React.Component {

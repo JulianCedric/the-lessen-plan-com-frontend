@@ -13,7 +13,7 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
           <Switch>
-            <div>
+            <div className="App">
               <Sticky context={this.contextRef}>
                 <Navbar />
               </Sticky>
