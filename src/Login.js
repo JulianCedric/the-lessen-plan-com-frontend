@@ -5,10 +5,9 @@ class Login extends React.Component {
     state = {  
         firstName: '',
         lastName: '',
-        username: '',
+        email: '',
         password: '',
-        confirmPassword: '',
-        usernameLogin: '',
+        emailLogin: '',
         passwordLogin: ''
     }
 
@@ -31,9 +30,8 @@ class Login extends React.Component {
             body: JSON.stringify({
                 firstName: this.state.firstName,
                 lastName: this.state.lastName,
-                username: this.state.username,
-                password: this.state.password,
-                confirmPassword: this.state.confirmPassword
+                email: this.state.email,
+                password: this.state.password
             })
         })
         .then(r => r.json())
@@ -54,7 +52,7 @@ class Login extends React.Component {
                                 <form action="#">
                                     <h2 style={{ color: 'white' }}>Login</h2>
                                     <div icon='user' iconPosition='left' class="text-input">
-                                        <Form.Input icon='user' iconPosition='left' type="text" name="usernameLogin" value={this.state.usernameLogin} onChange={this.handleChangeLogin} id="username" placeholder="Username" style={{width: "250px"}}/>
+                                        <Form.Input icon='user' iconPosition='left' type="text" name="emailLogin" value={this.state.emailLogin} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
                                     </div>   
                                     <div class="text-input">
                                         <Form.Input icon='lock' iconPosition='left' type="password" name="passwordLogin" value={this.state.passwordLogin} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
@@ -80,18 +78,13 @@ class Login extends React.Component {
                                         <span class="separator"> </span><br></br><br></br>                                        
                                     </div>
                                     <div class="text-input">
-                                        <input type="text" name="username" value={this.state.username} onChange={this.handleChangeSignUp} id="username" placeholder="Username" style={{width: "250px"}}/>
+                                        <input type="text" name="email" value={this.state.email} onChange={this.handleChangeSignUp} id="username" placeholder="Email" style={{width: "250px"}}/>
                                         <span class="separator"> </span><br></br><br></br>
                                     </div>   
                                     <div class="text-input">
                                         <input type="password" name="password" value={this.state.password} onChange={this.handleChangeSignUp} id="password" placeholder="Password" style={{width: "250px"}}/>
                                         <span class="separator"> </span><br></br><br></br>
                                     </div>
-                                    <div class="text-input">
-                                        <input type="password" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChangeSignUp} id="confirmPassword" placeholder="Confirm Password" style={{width: "250px"}}/>
-                                        <span class="separator"> </span><br></br>                                        <span class="separator"> </span><br></br><br></br>
-
-                                    </div>  
                                     <div class="form-bottom">
                                         <input type="submit" id="submit" value="Create Account" class="ui inverted purple button" style={{width: "250px"}}/><p></p>
                                     </div>
