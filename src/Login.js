@@ -60,7 +60,7 @@ class Login extends React.Component {
                                         <span class="separator"> </span><br></br>
                                     </div>  
                                     <div class="form-bottom">
-                                        <input type="submit" id="submit" value="Login" class="ui inverted purple button" style={{width: "250px"}}/><p></p>
+                                        <input type="submit" id="submit" value="Login" class="ui inverted blue button" style={{width: "250px"}}/><p></p>
                                     </div>
                                 </form>  
                             </Form>
@@ -87,7 +87,7 @@ class Login extends React.Component {
                                         <span class="separator"> </span><br></br><br></br>
                                     </div>
                                     <div class="form-bottom">
-                                        <input type="submit" id="submit" value="Create Account" class="ui inverted purple button" style={{width: "250px"}}/><p></p>
+                                        <input type="submit" id="submit" value="Create Account" class="ui inverted blue button" style={{width: "250px"}}/><p></p>
                                     </div>
                                 </form>  
                             </div>
