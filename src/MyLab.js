@@ -7,52 +7,47 @@ class MyLab extends React.Component {
     render() { 
         return (  
             <div>
+                <br/>
                 <p>My Lab</p>
-
-                <Grid centered columns={2}>
-
-                    <Grid.Row>
-                        <Reveal animated='move down'>
-                            <Reveal.Content visible>
-                                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='small' />
-                            </Reveal.Content>
-                            <Reveal.Content hidden>
-                                <Image src='https://react.semantic-ui.com/images/avatar/large/chris.jpg' size='small' />
-                            </Reveal.Content>
-                        </Reveal>
-                        <Reveal animated='move down'>
-                            <Reveal.Content visible>
-                                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='small' />
-                            </Reveal.Content>
-                            <Reveal.Content hidden>
-                                <Image src='https://react.semantic-ui.com/images/avatar/large/chris.jpg' size='small' />
-                            </Reveal.Content>
-                        </Reveal>
-                    </Grid.Row>
-
-                    <Grid.Row>
-                        <Reveal animated='move up'>
-                            <Reveal.Content visible>
-                                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='small' />
-                            </Reveal.Content>
-                            <Reveal.Content hidden>
-                                <Image src='https://react.semantic-ui.com/images/avatar/large/chris.jpg' size='small' />
-                            </Reveal.Content>
-                        </Reveal>
-                        <Reveal animated='move up'>
-                            <Reveal.Content visible>
-                                <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' size='small' />
-                            </Reveal.Content>
-                            <Reveal.Content hidden>
-                                <Image src='https://react.semantic-ui.com/images/avatar/large/chris.jpg' size='small' />
-                            </Reveal.Content>
-                        </Reveal>
-                    </Grid.Row>
-
-                </Grid>
                 <br/>
                 <HabitLoop />
+
                 <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
             </div>
         );
     }
