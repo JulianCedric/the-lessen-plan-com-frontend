@@ -14,7 +14,7 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
           <Switch>
-            <div className="App">
+            <div className="App" style={{ color: 'grey' }}>
               <Sticky context={this.contextRef}>
                 <Navbar />
               </Sticky>
