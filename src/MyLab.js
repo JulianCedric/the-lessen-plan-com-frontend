@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Image, Reveal } from 'semantic-ui-react';
+import AccordionExampleNested from './AccordionExampleNested';
 
 class MyLab extends React.Component {
     state = {  }
@@ -49,7 +50,9 @@ class MyLab extends React.Component {
                     </Grid.Row>
 
                 </Grid>
-
+                <br/>
+                <AccordionExampleNested />
+                <br/>
             </div>
         );
     }
