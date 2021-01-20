@@ -2,13 +2,13 @@ import React from 'react'
 import { Accordion } from 'semantic-ui-react'
 
 const level1Panels = [
-  { key: 'panel-1a', title: 'Level 1A', content: 'Level 1A Contents' },
-  { key: 'panel-ba', title: 'Level 1B', content: 'Level 1B Contents' },
+  { key: 'panel-1a', title: 'Move It..', content: 'To make it invisible, I can move it from its current usual location __________ ( e.g. on its usb charger connected to the right side of my laptop ) to this new location __________ ( e.g. on the inside pocket of my travel suitcase, which I store underneath the basement stairs ).' },
+  { key: 'panel-ba', title: 'Book It..', content: '*Insert Dropdown Menu Here*' },
 ]
 
 const Level1Content = (
   <div>
-    Welcome to level 1
+    How can I make it invisible?
     <Accordion.Accordion panels={level1Panels} />
   </div>
 )
@@ -50,14 +50,14 @@ const level3Panels = [
   )
 
 const rootPanels = [
-  { key: 'panel-1', title: 'Level 1', content: { content: Level1Content } },
-  { key: 'panel-2', title: 'Level 2', content: { content: Level2Content } },
-  { key: 'panel-3', title: 'Level 3', content: { content: Level3Content } },
-  { key: 'panel-4', title: 'Level 4', content: { content: Level4Content } },
+  { key: 'panel-1', title: 'CUE', content: { content: Level1Content } },
+  { key: 'panel-2', title: 'CRAVING', content: { content: Level2Content } },
+  { key: 'panel-3', title: 'RESPONSE', content: { content: Level3Content } },
+  { key: 'panel-4', title: 'REWARD', content: { content: Level4Content } },
 ]
 
-const AccordionExampleNested = () => (
+const HabitLoop = () => (
   <Accordion defaultActiveIndex={0} panels={rootPanels} styled />
 )
 
-export default AccordionExampleNested
+export default HabitLoop
