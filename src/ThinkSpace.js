@@ -111,3 +111,24 @@ export default HabitLoop
 </Grid.Row>
 
 </Grid>
+
+
+
+
+
+
+// Write a function that associates object a (user) with object b (lessonPlan). 
+
+let user = { user_id: 1, name: 'Julian' }
+
+let lessonPlan = { lessonPlan_id: 1, type: 'Morning' }
+
+// ** Write your function here. **
+
+let user_lessonPlan = { ...user, ...lessonPlan }
+
+merge(a,b) {
+  console.log(a,b)
+}
+
+merge(user, lessonPlan)
