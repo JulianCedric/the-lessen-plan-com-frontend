@@ -19,8 +19,8 @@ class FunctionMerge extends React.Component {
 
                     <Dropdown 
                     inline
-                    options={this.props.lessonPlans}
-                    placeholder='lessonPlan'
+                    options={this.props.lessenPlans}
+                    placeholder='lessenPlan'
                     />
 
                 </span>

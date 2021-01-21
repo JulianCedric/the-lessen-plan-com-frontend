@@ -16,21 +16,25 @@ const USERS = [
     }
 ]
 
-const LESSONPLANS = [
+const LESSENPLANS = [
     {
-        lessonplan_id: 1,
-        type: 'Morning'
-    },
-    {
-        lessonplan_id: 2,
-        type: 'Evening'
+      id: 1,
+      user_id: 1,
+      type: 'morning',
+      habitDesc: '',
+      habitBad: false,
+      habitLoopItemA: 'Cue',
+      habitLoopItemB: 'Craving',
+      habitLoopItemC: 'Response',
+      habitLoopItemD: 'Reward',
+      habitTracker: 'Under Construction'
     }
-]
+  ]
 
 class MyLab extends React.Component {
     state = {  
         users: [],
-        lessonPlans: []
+        lessenPlans: []
     }
 
     handleClickLoadUsers = e => {
@@ -38,9 +42,9 @@ class MyLab extends React.Component {
         this.setState({ users: USERS })
     }
 
-    handleClickLoadLessonPlans = e => {
-        console.log('[ Load Lesson Plans ]')
-        this.setState({ lessonPlans: LESSONPLANS })
+    handleClickLoadLessenPlans = e => {
+        console.log('[ Load Lessen Plans ]')
+        this.setState({ lessenPlans: LESSENPLANS })
     }
 
     handleClickMerge = (a,b) => {
@@ -49,7 +53,7 @@ class MyLab extends React.Component {
 
     render() { 
         console.log("Current state of 'users': ", this.state.users)
-        console.log("Current state of 'lessonPlans': ", this.state.lessonPlans)
+        console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
             <div>
                 <br/>
@@ -65,14 +69,14 @@ class MyLab extends React.Component {
                 <br/>
                 <br/>
 
-                <Button onClick={this.handleClickLoadLessonPlans}>Load Lesson Plans</Button>
+                <Button onClick={this.handleClickLoadLessenPlans}>Load Lessen Plans</Button>
                 <br/>
                 <br/>
 
                 <hr/>
                 <br/>
 
-                <FunctionMerge users={this.state.users} lessonPlans={this.state.lessonPlans}/>
+                <FunctionMerge users={this.state.users} lessenPlans={this.state.lessenPlans}/>
                 <br/>
                 <br/>
 

@@ -191,3 +191,21 @@ class Example extends React.Component {
 
 export default Example;
 
+
+
+
+
+const LESSENPLANS = [
+  {
+    id: 1,
+    user_id: 1,
+    type: 'morning',
+    habitDesc: '',
+    habitBad: false,
+    habitLoopItemA: 'Cue',
+    habitLoopItemB: 'Craving',
+    habitLoopItemC: 'Response',
+    habitLoopItemD: 'Reward',
+    habitTracker: 'Under Construction'
+  }
+]
