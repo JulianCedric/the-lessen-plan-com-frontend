@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, Grid, Image, Reveal } from 'semantic-ui-react';
+import { Button, Form, Grid, Icon, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
 import FunctionMerge from './FunctionMerge';
 import LessenPlan from './LessenPlan';
@@ -55,7 +55,6 @@ class MyLab extends React.Component {
                 <br/>
                 <p>My Lab</p>
                 <br/>
-                {/* <Button>Create New Lessen Plan</Button> */}
 
                 {/* <HabitLoop /> */}
 
@@ -85,11 +84,15 @@ class MyLab extends React.Component {
                 <br/>
                 <br/>
 
-                <ReactToPrint 
-                    trigger={() => <a href="#">Print this out!</a>}
-                    content={() => this.componentRef}
-                />
                 <LessenPlan ref={(el) => (this.componentRef = el)} />
+                
+                <span>
+                    <Icon color='blue' name='save' size='big'></Icon>
+                    <ReactToPrint 
+                        trigger={() => <a href="#"><Icon color='blue' name='print' size='big'></Icon></a>}
+                        content={() => this.componentRef}
+                    />
+                </span>
 
                 <br/>
                 <br/>
