@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Form, Grid, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
 import FunctionMerge from './FunctionMerge';
+import LessenPlan from './LessenPlan';
+import ReactToPrint from "react-to-print";
 
 const USERS = [
     {
@@ -82,6 +84,12 @@ class MyLab extends React.Component {
                 <br/>
                 <br/>
                 <br/>
+
+                <ReactToPrint 
+                    trigger={() => <a href="#">Print this out!</a>}
+                    content={() => this.componentRef}
+                />
+                <LessenPlan ref={(el) => (this.componentRef = el)} />
 
                 <br/>
                 <br/>
