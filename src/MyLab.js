@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Reveal } from 'semantic-ui-react';
+import { Button, Grid, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
 
 class MyLab extends React.Component {
@@ -9,6 +9,9 @@ class MyLab extends React.Component {
             <div>
                 <br/>
                 <p>My Lab</p>
+                <br/>
+                <Button>Create New Lessen Plan</Button>
+                <br/>
                 <br/>
                 <HabitLoop />
 
