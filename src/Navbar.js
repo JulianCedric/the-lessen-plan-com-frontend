@@ -11,7 +11,7 @@ class Navbar extends React.Component {
                     </a>
                     
                     <a class='item'>
-                        <Link to='/mylab' className='lab'><i class="big lab icon"></i></Link>
+                        <Link to='/lab' className='lab'><i class="big lab icon"></i></Link>
                     </a>
 
                     <div className="right menu">

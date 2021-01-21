@@ -2,8 +2,11 @@ import React from 'react';
 import { Button, Form, Grid, Icon, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
 import FunctionMerge from './FunctionMerge';
-import LessenPlan from './LessenPlan';
+// import LessenPlan from './LessenPlan';
 import ReactToPrint from "react-to-print";
+import Create from './Create';
+import LessenPlans from './LessenPlans';
+import Update from './Update';
 
 const USERS = [
     {
@@ -31,7 +34,7 @@ const LESSENPLANS = [
     }
   ]
 
-class MyLab extends React.Component {
+class Lab extends React.Component {
     state = {  
         users: [],
         lessenPlans: []
@@ -52,22 +55,17 @@ class MyLab extends React.Component {
     }
 
     render() { 
-        console.log("Current state of 'users': ", this.state.users)
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
             <div>
                 <br/>
-                <p>My Lab</p>
+                <p>Lab</p>
                 <br/>
-
-                {/* <HabitLoop /> */}
 
                 <hr/>
                 <br/>
 
-                <Button onClick={this.handleClickLoadUsers}>Load Users</Button>
-                <br/>
-                <br/>
+                {/* <Button onClick={this.handleClickLoadUsers}>Load Users</Button> */}
 
                 <Button onClick={this.handleClickLoadLessenPlans}>Load Lessen Plans</Button>
                 <br/>
@@ -76,11 +74,13 @@ class MyLab extends React.Component {
                 <hr/>
                 <br/>
 
-                <FunctionMerge users={this.state.users} lessenPlans={this.state.lessenPlans}/>
+                {/* <FunctionMerge users={this.state.users} lessenPlans={this.state.lessenPlans}/> */}
                 <br/>
                 <br/>
 
-                <Button onClick={this.handleClickMerge}>Merge</Button>
+                {/* <Button onClick={this.handleClickMerge}>Merge</Button> */}
+
+                <LessenPlans lessenPlans={this.state.lessenPlans} />
 
                 <br/>
                 <br/>
@@ -88,7 +88,7 @@ class MyLab extends React.Component {
                 <br/>
                 <br/>
 
-                <LessenPlan ref={(el) => (this.componentRef = el)} />
+                {/* <LessenPlan ref={(el) => (this.componentRef = el)} />
                 
                 <span>
                     <Icon color='blue' name='save' size='big'></Icon>
@@ -96,7 +96,7 @@ class MyLab extends React.Component {
                         trigger={() => <a href="#"><Icon color='blue' name='print' size='big'></Icon></a>}
                         content={() => this.componentRef}
                     />
-                </span>
+                </span> */}
 
                 <br/>
                 <br/>
@@ -127,4 +127,4 @@ class MyLab extends React.Component {
     }
 }
  
-export default MyLab;
+export default Lab;

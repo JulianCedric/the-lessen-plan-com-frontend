@@ -4,11 +4,11 @@ import { Button } from 'semantic-ui-react';
 class LessenPlan extends React.Component {
     state = {  }
     render() { 
+        console.log('ID: ', this.props.lessenPlan.id)
         return (  
             <div>
 
                 <br/>
-                <Button>Create New Lessen Plan</Button>
                 <br/>
                 <br/>
 
