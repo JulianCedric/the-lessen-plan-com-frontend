@@ -18,7 +18,25 @@ class LessenPlan extends React.Component {
 
 
 
-                                <p>Card.Description</p>
+
+                                <hr/>
+
+                                <p>Step 1. Make a list of your daily morning habits:</p>
+                                <p>{this.props.lessenPlan.habitDesc}</p>
+                                <br/>
+                                <p>Step 2. For each behavior, select "-" if it's bad, or "+" if it's good:</p>
+                                <p>*Under Construction*</p>
+                                <br/>
+                                <p>Step 3. Create a new, personalized plan for eliminating your bad habit:</p>
+                                <p>{this.props.lessenPlan.habitLoopItemA}</p>
+
+                                <hr/>
+                                <p>10-Day Challenge Habit Tracker</p>
+                                <p>*Under Construction*</p>
+
+                                <br/>
+                                <p>—meOS—</p>
+
                             
                             
                             
