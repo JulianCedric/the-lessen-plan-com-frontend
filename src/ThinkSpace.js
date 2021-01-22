@@ -224,3 +224,7 @@ class Create extends React.Component {
 }
  
 export default Create;
+
+// When a user clicks [ Create New Lessen Plan ], the app creates a new, blank lessenPlan obj.
+  // Step 1: Form to add a bad habit. 
+

@@ -37,7 +37,17 @@ const LESSENPLANS = [
 class Lab extends React.Component {
     state = {  
         users: [],
-        lessenPlans: []
+        lessenPlans: [],
+        renderCreate: true
+    }
+
+    create = obj => {
+        let arr = [...this.state.lessenPlans, obj]
+        this.setState({ lessenPlans: arr })
+    }
+
+    renderCreate = e => {
+        this.setState({ renderCreate: !this.state.renderCreate })
     }
 
     handleClickLoadUsers = e => {
@@ -57,22 +67,48 @@ class Lab extends React.Component {
     render() { 
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
-            <div>
+            <div className="Lab">
                 <br/>
                 <p>Lab</p>
-                <br/>
 
                 <hr/>
                 <br/>
-
-                {/* <Button onClick={this.handleClickLoadUsers}>Load Users</Button> */}
 
                 <Button onClick={this.handleClickLoadLessenPlans}>Load Lessen Plans</Button>
-                <br/>
-                <br/>
 
+                <br/>
                 <hr/>
                 <br/>
+
+                {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} /> : null }
+
+                <br/>
+                <hr/>
+                <br/>
+
+                <Update />
+
+                <br/>
+                <hr/>
+                <br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 {/* <FunctionMerge users={this.state.users} lessenPlans={this.state.lessenPlans}/> */}
                 <br/>

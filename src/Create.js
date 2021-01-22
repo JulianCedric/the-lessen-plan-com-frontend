@@ -1,11 +1,45 @@
 import React from 'react';
+import { Button, Form } from 'semantic-ui-react';
 
 class Create extends React.Component {
-    state = {  }
+    state = {  
+        id: null,
+        user_id: null,
+        type: "",
+        habitDesc: "",
+        habitBad: false,
+        habitLoopItemA: "",
+        habitLoopItemB: "",
+        habitLoopItemC: "",
+        habitLoopItemD: "",
+        habitTracker: ""
+    }
+
+    handleChange = e => {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
+    handleSubmit = e => {
+        let obj = this.state
+        this.props.create(obj)
+        this.props.renderCreate()
+    }
+
     render() { 
         return (  
-            <div>
-                <p>Create</p>
+            <div className="Lab">
+                <p>Create a New Lessen Plan for your: </p>
+                <Form onSubmit={this.handleSubmit}>
+                    <Form.Group>
+                        <Form.Input 
+                            placeholder="e.g. Morning Routine"
+                            name="type"
+                            value={this.state.type}
+                            onChange={this.handleChange}
+                        />
+                    </Form.Group>
+                    <Form.Button content='Start' />
+                </Form>
             </div>
         );
     }

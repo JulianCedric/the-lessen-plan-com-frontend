@@ -5,6 +5,13 @@
   background-color: black;
 }
 
+.Lab {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: black;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
