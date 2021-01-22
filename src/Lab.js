@@ -21,8 +21,8 @@ const USERS = [
 
 const LESSENPLANS = [
     {
-      id: 1,
-      user_id: 1,
+      id: 0,
+      user_id: 0,
       type: 'morning',
       habitDesc: '',
       habitBad: false,
@@ -48,6 +48,17 @@ class Lab extends React.Component {
 
     renderCreate = e => {
         this.setState({ renderCreate: !this.state.renderCreate })
+    }
+
+    updateHabitDesc = (id, desc) => {
+        let arr = [...this.state.lessenPlans]
+        let obj = arr.find(elem => elem.id === id)
+
+        console.log('id: ', id)
+        console.log('desc: ', desc)
+
+        obj.habitDesc = desc
+        this.setState({ lessenPlans: arr })
     }
 
     handleClickLoadUsers = e => {
@@ -86,7 +97,7 @@ class Lab extends React.Component {
                 <hr/>
                 <br/>
 
-                <Update />
+                <Update updateHabitDesc={this.updateHabitDesc} />
 
                 <br/>
                 <hr/>

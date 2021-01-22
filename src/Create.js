@@ -3,8 +3,8 @@ import { Button, Form } from 'semantic-ui-react';
 
 class Create extends React.Component {
     state = {  
-        id: null,
-        user_id: null,
+        id: 1,
+        user_id: 1,
         type: "",
         habitDesc: "",
         habitBad: false,
