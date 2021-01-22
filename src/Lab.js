@@ -92,48 +92,24 @@ class Lab extends React.Component {
     render() { 
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
-            <div className="Lab" style={{ color: 'grey' }}>
-                <br/>
-                <p>Lab</p>
+            <div className="Lab" style={{ color: 'white' }}>
+
+                <Icon color='blue' name='lab' size='huge' />
+                <h2>Create a New Lessen Plan</h2> 
+                
 
                 {/* <hr/> */}
                 {/* <br/> */}
 
                 {/* <Button onClick={this.handleClickLoadLessenPlans}>Load Lessen Plans</Button> */}
 
-                <br/>
-                <hr/>
-                <br/>
-
                 {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} /> : null }
 
-                <br/>
-                <hr/>
-                <br/>
-
-                <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} />
+                {this.state.renderUpdate ? <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} /> : null }
 
                 <br/>
-                <hr/>
+
                 <br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 {/* <FunctionMerge users={this.state.users} lessenPlans={this.state.lessenPlans}/> */}
                 <br/>
@@ -160,7 +136,6 @@ class Lab extends React.Component {
                 </span> */}
 
                 
-
             </div>
         );
     }

@@ -58,7 +58,8 @@ import React from 'react';
                                       <h2 style={{ color: 'white' }}>Login</h2>
                                       <div icon='user' iconPosition='left' class="text-input">
                                           <Form.Input icon='user' iconPosition='left' type="text" name="emailLogin" value={this.state.emailLogin} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
-                                      </div>   
+                                      </div>
+                                      <br/>   
                                       <div class="text-input">
                                           <Form.Input icon='lock' iconPosition='left' type="password" name="passwordLogin" value={this.state.passwordLogin} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
                                           <span class="separator"> </span><br></br>

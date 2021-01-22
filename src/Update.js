@@ -44,6 +44,9 @@ class Update extends React.Component {
     render() { 
         return (  
             <div>
+                <hr/>
+                <br/>
+            <div className="update">
 
                 <p>Step 1. Make a list of your daily morning habits:</p>
                 <Form onSubmit={this.handleSubmitStep1}>
@@ -53,17 +56,18 @@ class Update extends React.Component {
                             name="habitDesc"
                             value={this.state.habitDesc}
                             onChange={this.handleChangeStep1}
+                            style={{ width: '500px' }}
                         />
                     </Form.Group>
-                    <Form.Button content='Submit' />
+                    <Form.Button content='Submit' color='blue' style={{ width: '500px' }}/>
                 </Form>
 
                 <br/>
 
                 <p>Step 2. For each behavior, select "-" if it's bad, or "+" if it's good:</p>
                 <span>
-                    <Button onClick={this.handleClickBad}>-</Button>
-                    <Button onClick={this.handleClickGood}>+</Button>
+                    <Button style={{ width: '250px' }} color='red' onClick={this.handleClickBad}>-</Button>
+                    <Button style={{ width: '250px' }} color='green' onClick={this.handleClickGood}>+</Button>
                 </span>
 
                 <br/>
@@ -76,11 +80,13 @@ class Update extends React.Component {
                             name="habitLoopItemA"
                             value={this.state.habitLoopItemA}
                             onChange={this.handleChangeStep3}
+                            style={{ width: '500px' }}
                         />
                     </Form.Group>
-                    <Form.Button content='Submit' />
+                    <Form.Button content='Submit' color='blue' style={{ width: '500px' }}/>
                 </Form>
 
+            </div>
             </div>
         );
     }
