@@ -228,3 +228,60 @@ export default Create;
 // When a user clicks [ Create New Lessen Plan ], the app creates a new, blank lessenPlan obj.
   // Step 1: Form to add a bad habit. 
 
+
+
+import React from 'react'
+import { Tab } from 'semantic-ui-react'
+
+const panes = [
+  {
+    menuItem: 'Tab 1',
+    render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>,
+  },
+  {
+    menuItem: 'Tab 2',
+    render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
+  },
+  {
+    menuItem: 'Tab 3',
+    render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+  },
+]
+
+const Update = () => (
+  <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+)
+
+export default Update;
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import { Button, Tab } from 'semantic-ui-react';
+
+const panes = [
+    {
+      menuItem: 'Tab 1',
+      render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>,
+    },
+    {
+      menuItem: 'Tab 2',
+      render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
+    },
+    {
+      menuItem: 'Tab 3',
+      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+    },
+  ]
+
+  const Update = () => (
+        <Tab menu={{ secondary: true, pointing: true }} panes={panes} style={{ width: '600px' }} />
+  )
+  
+  export default Update;

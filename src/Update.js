@@ -1,12 +1,26 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
 
 class Update extends React.Component {
-    state = {  }
+    state = {  
+        id: null,
+        user_id: null,
+        type: "",
+        habitDesc: "",
+        habitBad: false,
+        habitLoopItemA: "",
+        habitLoopItemB: "",
+        habitLoopItemC: "",
+        habitLoopItemD: "",
+        habitTracker: ""
+    }
+
+    
+
     render() { 
         return (  
             <div>
-                <Button>Update</Button>
+                <p>Step 1. Make a list of your daily morning habits:</p>
+                <p></p>
             </div>
         );
     }

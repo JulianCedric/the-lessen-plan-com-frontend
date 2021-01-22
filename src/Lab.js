@@ -67,7 +67,7 @@ class Lab extends React.Component {
     render() { 
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
-            <div className="Lab">
+            <div className="Lab" style={{ color: 'grey' }}>
                 <br/>
                 <p>Lab</p>
 
