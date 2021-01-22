@@ -159,29 +159,7 @@ class Lab extends React.Component {
                     />
                 </span> */}
 
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                
 
             </div>
         );

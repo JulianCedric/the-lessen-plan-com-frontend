@@ -27,7 +27,7 @@ class Create extends React.Component {
 
     render() { 
         return (  
-            <div className="Lab">
+            <div>
                 <p>Create a New Lessen Plan for your: </p>
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>

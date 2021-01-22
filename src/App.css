@@ -1,13 +1,11 @@
 .App {
+  background-image: url('./TLPLogo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
+  height: 100vh;
+  width: 100vw;
   /* place-items: center; */
-  text-align: center;
-  background-color: black;
-}
-
-.Lab {
-  display: grid;
-  place-items: center;
   text-align: center;
   background-color: black;
 }
@@ -44,7 +42,7 @@
   }
   to {
     transform: rotate(360deg);
-  }
+  }  
 }
 
 .login-signup {
@@ -54,4 +52,22 @@
   /* background-position: center; */
   height: 100vh;
   width: 100vw;
+}
+
+.Lab {
+  /* display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: black; */
+
+  display: grid;
+  place-items: center;
+  background-image: url('./DoLessBeMore.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  height: 100vh;
+  width: 100vw;
+
+
 }

@@ -8,7 +8,15 @@ import Login from './Login';
 import Lab from './Lab';
 
 class App extends React.Component {
-  state = {  }
+  state = {  
+    loggedIn: false
+  }
+
+  setLogin = e => {
+    console.log('setLogin')
+    this.setState({ loggedIn: !this.state.loggedIn })
+  } 
+
   render() { 
     return (  
       <Router>
@@ -16,10 +24,16 @@ class App extends React.Component {
           <Switch>
             <div className="App" style={{ color: 'grey' }}>
               <Sticky context={this.contextRef}>
-                <Navbar />
+                <Navbar loggedIn={this.state.loggedIn} setLogin={this.setLogin}/>
               </Sticky>
               <Route path='/lab' render={(props) => (<Lab {...props} />)}></Route>
-              <Route path='/login' render={(props) => (<Login {...props} />)}></Route>
+              <Route path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
+            
+              {!this.state.loggedIn 
+                ? <Redirect to="/" component={ App } /> 
+                : <Redirect to="/lab" component={ Lab } /> 
+              }
+            
             </div>
           </Switch>
         </React.Fragment>

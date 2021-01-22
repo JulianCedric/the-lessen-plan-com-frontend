@@ -43,7 +43,7 @@ class Update extends React.Component {
 
     render() { 
         return (  
-            <div className="Lab">
+            <div>
 
                 <p>Step 1. Make a list of your daily morning habits:</p>
                 <Form onSubmit={this.handleSubmitStep1}>
