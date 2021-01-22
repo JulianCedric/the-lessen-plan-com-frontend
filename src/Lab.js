@@ -68,6 +68,13 @@ class Lab extends React.Component {
         this.setState({ lessenPlans: arr })
     }
 
+    updateHabitLoopItemA = (id, cue) => {
+        let arr = [...this.state.lessenPlans]
+        let obj = arr.find(elem => elem.id === id)
+        obj.habitLoopItemA = cue
+        this.setState({ lessenPlans: arr })
+    }
+
     handleClickLoadUsers = e => {
         console.log('[ Load Users ]')
         this.setState({ users: USERS })
@@ -104,7 +111,7 @@ class Lab extends React.Component {
                 <hr/>
                 <br/>
 
-                <Update updateHabitDesc={this.updateHabitDesc} badHabit={this.badHabit} />
+                <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} />
 
                 <br/>
                 <hr/>

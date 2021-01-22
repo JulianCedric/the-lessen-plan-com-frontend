@@ -15,15 +15,25 @@ class Update extends React.Component {
         habitTracker: ""
     }
 
-    handleChange = e => {
+    handleChangeStep1 = e => {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    handleSubmit = e => {
+    handleSubmitStep1 = e => {
         let id = this.state.user_id
         let desc = this.state.habitDesc
         let bad = this.state.habitBad
         this.props.updateHabitDesc(id, desc, bad)
+    }
+
+    handleChangeStep3 = e => {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
+    handleSubmitStep3 = e => {
+        let id = this.state.user_id
+        let cue = this.state.habitLoopItemA
+        this.props.updateHabitLoopItemA(id, cue)
     }
 
     handleClickBad = e => {
@@ -36,13 +46,13 @@ class Update extends React.Component {
             <div className="Lab">
 
                 <p>Step 1. Make a list of your daily morning habits:</p>
-                <Form onSubmit={this.handleSubmit}>
+                <Form onSubmit={this.handleSubmitStep1}>
                     <Form.Group>
                         <Form.Input 
                             placeholder="e.g. Eating chips for breakfast."
                             name="habitDesc"
                             value={this.state.habitDesc}
-                            onChange={this.handleChange}
+                            onChange={this.handleChangeStep1}
                         />
                     </Form.Group>
                     <Form.Button content='Submit' />
@@ -56,6 +66,20 @@ class Update extends React.Component {
                     <Button onClick={this.handleClickGood}>+</Button>
                 </span>
 
+                <br/>
+
+                <p>Step 3. Create a new, personalized plan for eliminating your bad habit:</p>
+                <Form onSubmit={this.handleSubmitStep3}>
+                    <Form.Group>
+                        <Form.Input 
+                            placeholder="e.g. Make it invisible."
+                            name="habitLoopItemA"
+                            value={this.state.habitLoopItemA}
+                            onChange={this.handleChangeStep3}
+                        />
+                    </Form.Group>
+                    <Form.Button content='Submit' />
+                </Form>
 
             </div>
         );
