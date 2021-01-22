@@ -33,8 +33,10 @@ class LessenPlan extends React.Component {
                                 <hr/>
                                 <p>10-Day Challenge Habit Tracker</p>
                                 <p>*Under Construction*</p>
-
-                                <br/>
+                                <p>The Problem: </p>
+                                <p>My Solution: </p>
+                                <p>How It Works: </p>
+                                <br/>e
                                 <p>—meOS—</p>
 
                             

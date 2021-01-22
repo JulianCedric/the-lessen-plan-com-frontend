@@ -46,3 +46,12 @@
     transform: rotate(360deg);
   }
 }
+
+.login-signup {
+  background-image: url('./lessismore.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  height: 100vh;
+  width: 100vw;
+}
