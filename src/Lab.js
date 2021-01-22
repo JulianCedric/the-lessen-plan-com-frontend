@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form, Grid, Icon, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
 import FunctionMerge from './FunctionMerge';
-// import LessenPlan from './LessenPlan';
+import LessenPlan from './LessenPlan';
 import ReactToPrint from "react-to-print";
 import Create from './Create';
 import LessenPlans from './LessenPlans';
