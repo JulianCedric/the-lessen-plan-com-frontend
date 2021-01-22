@@ -41,6 +41,11 @@ class Lab extends React.Component {
         renderCreate: true
     }
 
+    // badHabit = e => {
+    //     console.log('Confirmation: badHabit()')
+    //     this.setState({ habitBad: true })
+    // }
+
     create = obj => {
         let arr = [...this.state.lessenPlans, obj]
         this.setState({ lessenPlans: arr })
@@ -50,7 +55,7 @@ class Lab extends React.Component {
         this.setState({ renderCreate: !this.state.renderCreate })
     }
 
-    updateHabitDesc = (id, desc) => {
+    updateHabitDesc = (id, desc, bad) => {
         let arr = [...this.state.lessenPlans]
         let obj = arr.find(elem => elem.id === id)
 
@@ -58,6 +63,8 @@ class Lab extends React.Component {
         console.log('desc: ', desc)
 
         obj.habitDesc = desc
+        obj.habitBad = bad
+
         this.setState({ lessenPlans: arr })
     }
 
@@ -82,10 +89,10 @@ class Lab extends React.Component {
                 <br/>
                 <p>Lab</p>
 
-                <hr/>
-                <br/>
+                {/* <hr/> */}
+                {/* <br/> */}
 
-                <Button onClick={this.handleClickLoadLessenPlans}>Load Lessen Plans</Button>
+                {/* <Button onClick={this.handleClickLoadLessenPlans}>Load Lessen Plans</Button> */}
 
                 <br/>
                 <hr/>
@@ -97,7 +104,7 @@ class Lab extends React.Component {
                 <hr/>
                 <br/>
 
-                <Update updateHabitDesc={this.updateHabitDesc} />
+                <Update updateHabitDesc={this.updateHabitDesc} badHabit={this.badHabit} />
 
                 <br/>
                 <hr/>

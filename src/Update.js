@@ -7,7 +7,7 @@ class Update extends React.Component {
         user_id: 1,
         type: "",
         habitDesc: "",
-        habitBad: false,
+        habitBad: true,
         habitLoopItemA: "",
         habitLoopItemB: "",
         habitLoopItemC: "",
@@ -22,12 +22,19 @@ class Update extends React.Component {
     handleSubmit = e => {
         let id = this.state.user_id
         let desc = this.state.habitDesc
-        this.props.updateHabitDesc(id, desc)
+        let bad = this.state.habitBad
+        this.props.updateHabitDesc(id, desc, bad)
+    }
+
+    handleClickBad = e => {
+        // this.props.badHabit()
+        console.log('Under Construction')
     }
 
     render() { 
         return (  
             <div className="Lab">
+
                 <p>Step 1. Make a list of your daily morning habits:</p>
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>
@@ -40,6 +47,16 @@ class Update extends React.Component {
                     </Form.Group>
                     <Form.Button content='Submit' />
                 </Form>
+
+                <br/>
+
+                <p>Step 2. For each behavior, select "-" if it's bad, or "+" if it's good:</p>
+                <span>
+                    <Button onClick={this.handleClickBad}>-</Button>
+                    <Button onClick={this.handleClickGood}>+</Button>
+                </span>
+
+
             </div>
         );
     }

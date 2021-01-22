@@ -1,5 +1,6 @@
 {
   "name": "the-lessen-plan-com-frontend",
+  "homepage":"http://thelessenplan.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
