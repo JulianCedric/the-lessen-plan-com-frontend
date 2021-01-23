@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form } from 'semantic-ui-react';
+import { Button, Form, Tab } from 'semantic-ui-react';
 
 class Update extends React.Component {
     state = {  
@@ -42,49 +42,55 @@ class Update extends React.Component {
     }
 
     render() { 
+        const panes = [
+            { menuItem: 'Step 1', render: () => <Tab.Pane style={{ width: '470px'}} inverted><h3>Make a list of your daily morning habits:</h3>
+            <Form onSubmit={this.handleSubmitStep1}>
+                <Form.Group>
+                    <Form.Input 
+                        placeholder="e.g. Eating chips for breakfast."
+                        name="habitDesc"
+                        value={this.state.habitDesc}
+                        onChange={this.handleChangeStep1}
+                        style={{ width: '400px' }}
+                    />
+                </Form.Group>
+                <Form.Button content='Submit' color='blue' style={{ width: '400px' }}/>
+            </Form></Tab.Pane> },
+            { menuItem: 'Step 2', render: () => <Tab.Pane style={{ width: '470px'}} inverted><h3>Select "-" if it's a bad habit, or "+" if it's good:</h3>
+            <span>
+                <Button style={{ width: '180px' }} color='red' onClick={this.handleClickBad}>-</Button>
+                <Button style={{ width: '180px' }} color='green' onClick={this.handleClickGood}>+</Button>
+            </span></Tab.Pane> },
+            { menuItem: 'Step 3', render: () => <Tab.Pane style={{ width: '470px' }} inverted ><h3>Create a plan for eliminating your bad habit:</h3>
+            <Form onSubmit={this.handleSubmitStep3}>
+                <Form.Group>
+                    <Form.Input 
+                        placeholder="e.g. Make it invisible."
+                        name="habitLoopItemA"
+                        value={this.state.habitLoopItemA}
+                        onChange={this.handleChangeStep3}
+                        style={{ width: '400px' }}
+                    />
+                </Form.Group>
+                <Form.Button content='Submit' color='blue' style={{ width: '400px' }}/>
+            </Form></Tab.Pane> },
+          ]
         return (  
             <div>
-                <hr/>
+
                 <br/>
+                <Tab menu={{ fluid: true, vertical: true, tabular: true }} panes={panes} />
             <div className="update">
 
-                <p>Step 1. Make a list of your daily morning habits:</p>
-                <Form onSubmit={this.handleSubmitStep1}>
-                    <Form.Group>
-                        <Form.Input 
-                            placeholder="e.g. Eating chips for breakfast."
-                            name="habitDesc"
-                            value={this.state.habitDesc}
-                            onChange={this.handleChangeStep1}
-                            style={{ width: '500px' }}
-                        />
-                    </Form.Group>
-                    <Form.Button content='Submit' color='blue' style={{ width: '500px' }}/>
-                </Form>
+                
 
                 <br/>
 
-                <p>Step 2. For each behavior, select "-" if it's bad, or "+" if it's good:</p>
-                <span>
-                    <Button style={{ width: '250px' }} color='red' onClick={this.handleClickBad}>-</Button>
-                    <Button style={{ width: '250px' }} color='green' onClick={this.handleClickGood}>+</Button>
-                </span>
+                
 
                 <br/>
 
-                <p>Step 3. Create a new, personalized plan for eliminating your bad habit:</p>
-                <Form onSubmit={this.handleSubmitStep3}>
-                    <Form.Group>
-                        <Form.Input 
-                            placeholder="e.g. Make it invisible."
-                            name="habitLoopItemA"
-                            value={this.state.habitLoopItemA}
-                            onChange={this.handleChangeStep3}
-                            style={{ width: '500px' }}
-                        />
-                    </Form.Group>
-                    <Form.Button content='Submit' color='blue' style={{ width: '500px' }}/>
-                </Form>
+                
 
             </div>
             </div>

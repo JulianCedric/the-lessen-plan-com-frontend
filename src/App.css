@@ -80,3 +80,8 @@
   display: grid;
   place-items: center; 
 }
+
+.center-contents {
+  display: grid;
+  place-items: center; 
+}

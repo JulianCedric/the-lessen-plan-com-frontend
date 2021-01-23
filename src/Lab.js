@@ -7,6 +7,7 @@ import ReactToPrint from "react-to-print";
 import Create from './Create';
 import LessenPlans from './LessenPlans';
 import Update from './Update';
+import LabIcon from './LabIcon';
 
 const USERS = [
     {
@@ -38,7 +39,8 @@ class Lab extends React.Component {
     state = {  
         users: [],
         lessenPlans: [],
-        renderCreate: true
+        renderCreate: true,
+        renderUpdate: false
     }
 
     // badHabit = e => {
@@ -53,6 +55,7 @@ class Lab extends React.Component {
 
     renderCreate = e => {
         this.setState({ renderCreate: !this.state.renderCreate })
+        this.setState({ renderUpdate: !this.state.renderUpdate })
     }
 
     updateHabitDesc = (id, desc, bad) => {
@@ -93,15 +96,8 @@ class Lab extends React.Component {
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
             <div className="Lab" style={{ color: 'white' }}>
-
-                <Icon color='blue' name='lab' size='huge' />
+                <LabIcon />
                 <h2>Create a New Lessen Plan</h2> 
-                
-
-                {/* <hr/> */}
-                {/* <br/> */}
-
-                {/* <Button onClick={this.handleClickLoadLessenPlans}>Load Lessen Plans</Button> */}
 
                 {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} /> : null }
 
