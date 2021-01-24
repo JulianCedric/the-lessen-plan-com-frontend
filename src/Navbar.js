@@ -14,6 +14,10 @@ class Navbar extends React.Component {
                         <Link to='/lab' className='lab'><i class="big lab icon"></i></Link>
                     </a>
 
+                    <a class='item'>
+                        <Link to='/lab2' className='lab2'><i class="big book icon"></i></Link>
+                    </a>
+
                     <div className="right menu">
                         <a className="item">
                             {

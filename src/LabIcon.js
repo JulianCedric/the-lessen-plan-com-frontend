@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'semantic-ui-react';
 
 class LabIcon extends React.Component {
     state = {  }

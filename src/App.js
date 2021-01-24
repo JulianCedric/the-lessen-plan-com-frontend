@@ -6,6 +6,8 @@ import Navbar from './Navbar';
 import Dashboard from './Dashboard';
 import Login from './Login';
 import Lab from './Lab';
+import Lab2 from './Lab2';
+import Home from './Home';
 
 class App extends React.Component {
   state = {  
@@ -26,7 +28,9 @@ class App extends React.Component {
               <Sticky context={this.contextRef}>
                 <Navbar loggedIn={this.state.loggedIn} setLogin={this.setLogin}/>
               </Sticky>
+              <Route path='/' render={(props) => (<Home {...props} />)}></Route>
               <Route path='/lab' render={(props) => (<Lab {...props} />)}></Route>
+              {/* <Route path='/lab2' render={(props) => (<Lab2 {...props} />)}></Route> */}
               <Route path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
             
               {!this.state.loggedIn 
