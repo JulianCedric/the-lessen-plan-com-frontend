@@ -1,11 +1,23 @@
 .App {
-  background-image: url('./TLPLogo.png');
+  background-image: url('./blank.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+  /* place-items: center; */
+  text-align: center;
+  background-color: black;
+}
+
+.homepage {
+  background-image: url('./TLPLogo5.png');
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
   height: 100vh;
   width: 100vw;
-  /* place-items: center; */
   text-align: center;
   background-color: black;
 }
