@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Icon, Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
     render() { 
@@ -7,15 +7,15 @@ class Navbar extends React.Component {
             <div className="Navbar">
                 <div className="ui inverted borderless large menu">
                     <a className="item">
-                        <Link to="/" className="link"><i class="big home icon"></i></Link>
+                        <Link to="/" className="link"><Icon name='home' size='big'></Icon></Link>
                     </a>
                     
                     <a class='item'>
-                        <Link to='/lab' className='lab'><i class="big lab icon"></i></Link>
+                        <Link to='/lab' className='lab'><Icon name='lab' size='big'></Icon></Link>
                     </a>
 
                     <a class='item'>
-                        <Link to='/lab2' className='lab2'><i class="big book icon"></i></Link>
+                        <Link to='/lab2' className='lab2'><Icon name='book' size='big'></Icon></Link>
                     </a>
 
                     <div className="right menu">
