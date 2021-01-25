@@ -8,6 +8,7 @@ import Login from './Login';
 import Lab from './Lab';
 import Lab2 from './Lab2';
 import Home from './Home';
+import Footer from './Footer';
 
 class App extends React.Component {
   state = {  
@@ -24,7 +25,7 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
           <Switch>
-            <div className="App" style={{ color: 'grey' }}>
+            <div className="App" style={{ color: 'white' }}>
               <Sticky context={this.contextRef}>
                 <Navbar loggedIn={this.state.loggedIn} setLogin={this.setLogin}/>
               </Sticky>
@@ -40,6 +41,7 @@ class App extends React.Component {
             
             </div>
           </Switch>
+          <Footer />
         </React.Fragment>
       </Router>
     );

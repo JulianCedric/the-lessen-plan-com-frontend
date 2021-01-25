@@ -95,7 +95,7 @@ class Lab extends React.Component {
     render() { 
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
-            <div className="Lab" style={{ color: 'white' }}>
+            <div className="lab" style={{ color: 'white' }}>
                 <LabIcon />
                 <h2>Create a New Lessen Plan</h2> 
 
