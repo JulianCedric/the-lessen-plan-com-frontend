@@ -8,7 +8,7 @@ class LessenPlans extends React.Component {
     render() { 
         return (  
             <div>
-                {this.props.lessenPlans.map(lessenPlan => <LessenPlan key={lessenPlan.id} lessenPlan={lessenPlan} ref={(el) => (this.componentRef = el)} />)}
+                {this.props.lessenPlans.map(lessenPlan => <LessenPlan key={lessenPlan.id} lessenPlan={lessenPlan} ref={(el) => (this.componentRef = el)} delete={this.props.delete}/>)}
             
             
                 <span>

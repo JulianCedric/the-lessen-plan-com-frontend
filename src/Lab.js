@@ -38,7 +38,7 @@ const LESSENPLANS = [
 class Lab extends React.Component {
     state = {  
         users: [],
-        lessenPlans: [],
+        lessenPlans: LESSENPLANS,
         renderCreate: true,
         renderUpdate: false
     }
@@ -50,6 +50,13 @@ class Lab extends React.Component {
 
     create = obj => {
         let arr = [...this.state.lessenPlans, obj]
+        this.setState({ lessenPlans: arr })
+    }
+
+    delete = id => {
+        console.log('delete', id)
+        let arr = [...this.state.lessenPlans]
+        let obj = arr.filter(elem => elem.id !== id)
         this.setState({ lessenPlans: arr })
     }
 
@@ -113,7 +120,7 @@ class Lab extends React.Component {
 
                 {/* <Button onClick={this.handleClickMerge}>Merge</Button> */}
 
-                <LessenPlans lessenPlans={this.state.lessenPlans} />
+                <LessenPlans lessenPlans={this.state.lessenPlans} delete={this.delete} />
 
                 <br/>
                 <br/>
