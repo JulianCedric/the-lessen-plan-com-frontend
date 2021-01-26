@@ -69,3 +69,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # the-lessen-plan-com-frontend
+
+<!-- 
+
+User Journey:
+
+A user journey begins every time a user becomes aware of a particular behavior. 
+They ask, "Would it be a good thing or a bad thing if I repeated this behavior 
+every day for the rest of my life?" They then enter that behavior into the app, 
+tag it as either good or bad, and depending on which they select, will be guided
+through a series of questions that once complete, a user will receive a 'Lessen 
+Plan' ( printable ) for either establishing or eliminating the behavior. 
+
+Each Lessen Plan is tailored specifically to the user, based on input they 
+provide the app about their current main goal and/or situation. 
+
+
+
+-->

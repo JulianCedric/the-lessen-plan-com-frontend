@@ -3,6 +3,9 @@ import { Button, Card, Container } from 'semantic-ui-react';
 
 class LessenPlan extends React.Component {
     state = {  }
+
+    
+
     render() { 
         console.log('ID: ', this.props.lessenPlan.id)
         return (  
@@ -36,7 +39,10 @@ class LessenPlan extends React.Component {
                                 <p>The Problem: </p>
                                 <p>My Solution: </p>
                                 <p>How It Works: </p>
-                                <br/>e
+                                <br/>
+                                <Button color='red' onClick={this.handleClickDelete}>Delete</Button>
+                                <br/>
+                                <br/>
                                 <p>—meOS—</p>
 
                             
