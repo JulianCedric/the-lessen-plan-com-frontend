@@ -24,4 +24,4 @@ class LessenPlans extends React.Component {
     }
 }
  
-export default LessenPlans;
+export default LessenPlans; 

@@ -39,7 +39,7 @@ class LessenPlan extends React.Component {
                                 <p>10-Day Challenge Habit Tracker</p>
                                 <p>*Under Construction*</p>
                                 <p>The Problem: </p>
-                                <p>My Solution: </p>
+                                <p>The Solution: </p>
                                 <p>How It Works: </p>
                                 <br/>
                                 <Button color='red' onClick={() => this.handleClickDelete(this.props.lessenPlan.id)}>Delete</Button>

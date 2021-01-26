@@ -1,6 +1,7 @@
 import React from 'react';  
   import './App.css';
-  import { Form, Grid } from 'semantic-ui-react';
+  import { Link } from 'react-router-dom';
+  import { Form, Grid, Segment } from 'semantic-ui-react';
   
   class Login extends React.Component {
       state = {  
@@ -50,52 +51,31 @@ import React from 'react';
       render() { 
           return (  
               <div className="login-signup">
-                  <div className="twelve wide column">
-                      <Grid columns={2} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
+                  <div className="twelve wide column" className='center-contents'>
+                      <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
                           <Grid.Column style={{ maxWidth: 450 }}>
                               <Form inverted onSubmit={this.handleSubmitLogin}>
-                                  <form action="#">
-                                      <h2 style={{ color: 'white' }}>Login</h2>
-                                      <div icon='user' iconPosition='left' class="text-input">
-                                          <Form.Input icon='user' iconPosition='left' type="text" name="emailLogin" value={this.state.emailLogin} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
-                                      </div>
-                                      <br/>   
-                                      <div class="text-input">
-                                          <Form.Input icon='lock' iconPosition='left' type="password" name="passwordLogin" value={this.state.passwordLogin} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
-                                          <span class="separator"> </span><br></br>
-                                      </div>  
-                                      <div class="form-bottom">
-                                          <input type="submit" id="submit" value="Login" class="ui inverted blue button" style={{width: "250px"}}/><p></p>
-                                      </div>
-                                  </form>  
+                                  <Segment inverted>
+                                    <form action="#">
+                                        <h2 style={{ color: 'white' }}>Login</h2>
+                                        <hr style={{ width: '250px' }}/>
+                                        <br/>
+                                        <div icon='user' iconPosition='left' class="text-input">
+                                            <Form.Input icon='user' iconPosition='left' type="text" name="emailLogin" value={this.state.emailLogin} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
+                                        </div>
+                                        <br/>   
+                                        <div class="text-input">
+                                            <Form.Input icon='lock' iconPosition='left' type="password" name="passwordLogin" value={this.state.passwordLogin} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
+                                            <span class="separator"></span>
+                                            <br/>
+                                        </div>  
+                                        <div class="form-bottom">
+                                            <input type="submit" id="submit" value="Login" class="ui violet button" style={{width: "250px"}}/><p></p>
+                                        </div>
+                                    </form>  
+                                </Segment>
                               </Form>
-                          </Grid.Column>
-                          <Grid.Column style={{ maxWidth: 450 }}>                            
-                              <div class="ui form" onSubmit={this.handleSubmitSignUp}>
-                                  <form action="#">
-                                      <br/>
-                                      <h2 style={{ color: 'white' }}>Sign Up</h2>
-                                      <div class="text-input">
-                                          <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChangeSignUp} id="firstName" placeholder="First Name" style={{width: "250px"}}/>
-                                          <span class="separator"> </span><br></br><br></br>                                        
-                                      </div>
-                                      <div class="text-input">
-                                          <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChangeSignUp} id="lastName" placeholder="Last Name" style={{width: "250px"}}/>
-                                          <span class="separator"> </span><br></br><br></br>                                        
-                                      </div>
-                                      <div class="text-input">
-                                          <input type="text" name="email" value={this.state.email} onChange={this.handleChangeSignUp} id="username" placeholder="Email" style={{width: "250px"}}/>
-                                          <span class="separator"> </span><br></br><br></br>
-                                      </div>   
-                                      <div class="text-input">
-                                          <input type="password" name="password" value={this.state.password} onChange={this.handleChangeSignUp} id="password" placeholder="Password" style={{width: "250px"}}/>
-                                          <span class="separator"> </span><br></br><br></br>
-                                      </div>
-                                      <div class="form-bottom">
-                                          <input type="submit" id="submit" value="Create Account" class="ui inverted blue button" style={{width: "250px"}}/><p></p>
-                                      </div>
-                                  </form>  
-                              </div>
+                              <Segment inverted style={{ color: 'grey' }}>New to us? <Link to='/signup' className='signup' style={{ color: 'light blue' }}>Sign Up</Link></Segment>
                           </Grid.Column>
                       </Grid>
                   </div> 

@@ -9,6 +9,7 @@ import Lab from './Lab';
 import Lab2 from './Lab2';
 import Home from './Home';
 import Footer from './Footer';
+import SignUp from './SignUp';
 
 class App extends React.Component {
   state = {  
@@ -31,14 +32,12 @@ class App extends React.Component {
               </Sticky>
               <Route path='/' render={(props) => (<Home {...props} />)}></Route>
               <Route path='/lab' render={(props) => (<Lab {...props} />)}></Route>
-              {/* <Route path='/lab2' render={(props) => (<Lab2 {...props} />)}></Route> */}
               <Route path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
-            
-              {!this.state.loggedIn 
-                ? <Redirect to="/" component={ App } /> 
-                : <Redirect to="/lab" component={ Lab } /> 
-              }
-            
+                {!this.state.loggedIn 
+                  ? <Redirect to="/" component={ App } /> 
+                  : <Redirect to="/lab" component={ Lab } /> 
+                }
+              <Route path='/signup' render={(props) => (<SignUp {...props} />)}></Route>
             </div>
           </Switch>
           <Footer />
