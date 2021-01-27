@@ -84,6 +84,6 @@ Plan' ( printable ) for either establishing or eliminating the behavior.
 Each Lessen Plan is tailored specifically to the user, based on input they 
 provide the app about their current main goal and/or situation. 
 
-
+.. 
 
 -->

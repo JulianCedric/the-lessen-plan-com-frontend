@@ -13,13 +13,14 @@ import SignUp from './SignUp';
 
 class App extends React.Component {
   state = {  
-    loggedIn: false
+    loggedIn: false,
+    firstName: ""
   }
 
   setLogin = e => {
     console.log('setLogin')
     this.setState({ loggedIn: !this.state.loggedIn })
-  } 
+  }
 
   render() { 
     return (  
