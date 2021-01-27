@@ -6,7 +6,12 @@ class LabIcon extends React.Component {
     render() { 
         return (  
             <div>
+                <br/>
+                <br/>
                 <Icon color='violet' name='lab' size='huge' />
+                <br/>
+                <br/>
+                <br/>
             </div>
         );
     }

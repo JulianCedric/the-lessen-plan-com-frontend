@@ -82,6 +82,7 @@ import React from 'react';
                                         <input type="submit" id="submit" value="Create Account" class="ui violet button" style={{width: "250px"}}/><p></p>
                                     </div>
                                 </form>
+                                <br/>
                             </Segment>
                         </Form>  
                         </Grid.Column>

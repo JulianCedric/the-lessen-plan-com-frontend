@@ -38,13 +38,13 @@ class App extends React.Component {
                 <Navbar loggedIn={this.state.loggedIn} setLogin={this.setLogin}/>
               </Sticky>
               <Route exact path='/' render={(props) => (<Home {...props} />)}></Route>
-              <Route path='/lab' render={(props) => (<Lab {...props} />)}></Route>
-              <Route path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
+              <Route exact path='/lab' render={(props) => (<Lab {...props} />)}></Route>
+              <Route exact path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
                 {this.state.loggedIn 
                   ? <Redirect to="/lab" component={ Lab } /> 
                   : <Redirect to="/login" component={ Login } /> 
                 }
-              <Route path='/signup' render={(props) => (<SignUp {...props} signup={this.signup}/>)}></Route>
+              <Route exact path='/signup' render={(props) => (<SignUp {...props} signup={this.signup}/>)}></Route>
             </div>
           </Switch>
           <Footer />

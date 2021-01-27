@@ -25,6 +25,8 @@ const LESSENPLANS = [
       id: 0,
       user_id: 0,
       type: 'morning',
+      goal: "",
+      dueDate: "",
       habitDesc: '',
       habitBad: false,
       habitLoopItemA: 'Cue',
@@ -38,9 +40,17 @@ const LESSENPLANS = [
 class Lab extends React.Component {
     state = {  
         users: [],
-        lessenPlans: LESSENPLANS,
-        renderCreate: true,
+        lessenPlans: [],
+        renderLabIcon: false,
+        renderCreateIcon: true,
+        renderCreate: false,
         renderUpdate: false
+    }
+
+    handleClickCreate = e => {
+        this.setState({ renderLabIcon: !this.state.renderLabIcon })
+        this.setState({ renderCreateIcon: !this.state.renderCreateIcon })
+        this.setState({ renderCreate: !this.state.renderCreate })
     }
 
     // badHabit = e => {
@@ -103,9 +113,11 @@ class Lab extends React.Component {
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
             <div className="lab" style={{ color: 'white' }}>
-                <LabIcon />
-                <h2>Create a New Lessen Plan</h2> 
 
+                {this.state.renderLabIcon ? <LabIcon /> : null }
+
+                {this.state.renderCreateIcon ? <Icon onClick={this.handleClickCreate} inverted color='violet' name='add circle' size='huge'/> : null }
+                
                 {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} /> : null }
 
                 {this.state.renderUpdate ? <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} /> : null }
@@ -121,12 +133,6 @@ class Lab extends React.Component {
                 {/* <Button onClick={this.handleClickMerge}>Merge</Button> */}
 
                 <LessenPlans lessenPlans={this.state.lessenPlans} delete={this.delete} />
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
 
                 {/* <LessenPlan ref={(el) => (this.componentRef = el)} />
                 
