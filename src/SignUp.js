@@ -4,24 +4,23 @@ import React from 'react';
   import { Form, Grid, Segment } from 'semantic-ui-react';
   
   class SignUp extends React.Component {
-      state = {  
-          firstName: '',
-          lastName: '',
-          email: '',
-          password: ''
-      }
-  
-      handleChangeLogin = e => {
-          this.setState({[e.target.name]: e.target.value})
-      }
-  
-      handleChangeSignUp = e => {
-          this.setState({[e.target.name]: e.target.value})
-      }
+    state = {  
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: ''
+    }
 
-      handleSubmitSignUp = e => {
-        this.props.setLogin()
-      }
+    handleChangeSignUp = e => {
+        console.log(e.target.name, e.target.value)  
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    handleSubmitSignUp = e => {
+        console.log('handleSubmitSignUp')
+        let obj = this.state
+        this.props.signup(obj)
+    }
   
     //   handleSubmitSignUp = e => {
     //       e.preventDefault()
@@ -50,6 +49,11 @@ import React from 'react';
         return (  
             <div className="login-signup">
                 <div className="twelve wide column">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                     <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
                         <Grid.Column style={{ maxWidth: 450 }}>                     
                         <Form inverted onSubmit={this.handleSubmitSignUp}>       

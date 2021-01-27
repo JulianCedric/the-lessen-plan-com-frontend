@@ -6,7 +6,7 @@ class LabIcon extends React.Component {
     render() { 
         return (  
             <div>
-                <Icon color='blue' name='lab' size='huge' />
+                <Icon color='violet' name='lab' size='huge' />
             </div>
         );
     }

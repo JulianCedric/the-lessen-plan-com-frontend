@@ -45,6 +45,11 @@ class Login extends React.Component {
         return (  
             <div className="login-signup">
                 <div className="twelve wide column">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                     <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
                         <Grid.Column style={{ maxWidth: 450 }}>
                             <Form inverted onSubmit={this.handleSubmitLogin}>

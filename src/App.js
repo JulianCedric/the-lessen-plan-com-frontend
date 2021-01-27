@@ -14,7 +14,7 @@ import SignUp from './SignUp';
 class App extends React.Component {
   state = {  
     loggedIn: false,
-    firstName: ""
+    users: []
   }
 
   setLogin = e => {
@@ -22,7 +22,13 @@ class App extends React.Component {
     this.setState({ loggedIn: !this.state.loggedIn })
   }
 
+  signup = obj => {
+    console.log('signup')
+    console.log(obj)
+  }
+
   render() { 
+    console.log('Logged in?', this.state.loggedIn)
     return (  
       <Router>
         <React.Fragment>
@@ -31,14 +37,14 @@ class App extends React.Component {
               <Sticky context={this.contextRef}>
                 <Navbar loggedIn={this.state.loggedIn} setLogin={this.setLogin}/>
               </Sticky>
-              <Route path='/' render={(props) => (<Home {...props} />)}></Route>
+              <Route exact path='/' render={(props) => (<Home {...props} />)}></Route>
               <Route path='/lab' render={(props) => (<Lab {...props} />)}></Route>
               <Route path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
-                {!this.state.loggedIn 
-                  ? <Redirect to="/" component={ App } /> 
-                  : <Redirect to="/lab" component={ Lab } /> 
+                {this.state.loggedIn 
+                  ? <Redirect to="/lab" component={ Lab } /> 
+                  : <Redirect to="/login" component={ Login } /> 
                 }
-              <Route path='/signup' render={(props) => (<SignUp {...props} />)}></Route>
+              <Route path='/signup' render={(props) => (<SignUp {...props} signup={this.signup}/>)}></Route>
             </div>
           </Switch>
           <Footer />
