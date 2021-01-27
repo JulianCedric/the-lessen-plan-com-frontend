@@ -42,7 +42,7 @@ class App extends React.Component {
               <Route exact path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
                 {this.state.loggedIn 
                   ? <Redirect to="/lab" component={ Lab } /> 
-                  : <Redirect to="/login" component={ Login } /> 
+                  : <Redirect to="/Lab" component={ Lab } /> 
                 }
               <Route exact path='/signup' render={(props) => (<SignUp {...props} signup={this.signup}/>)}></Route>
             </div>

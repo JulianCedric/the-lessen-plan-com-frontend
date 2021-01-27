@@ -23,6 +23,7 @@ class Create extends React.Component {
     }
 
     handleSubmitCreate = e => {
+        e.preventDefault()
         let obj = this.state
         this.props.create(obj)
         this.props.renderCreate()

@@ -15,7 +15,8 @@ class Login extends React.Component {
     }
 
     handleSubmitLogin = e => {
-        this.props.setLogin()
+        console.log('handleSubmitLogin')
+        // this.props.setLogin()
     }
 
 //   handleSubmitSignUp = e => {
@@ -53,27 +54,29 @@ class Login extends React.Component {
                     <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
                         <Grid.Column style={{ maxWidth: 450 }}>
                             <Form inverted onSubmit={this.handleSubmitLogin}>
-                                <Segment inverted>
-                                <form action="#">
-                                    <h2 style={{ color: 'white' }}>Login</h2>
-                                    <hr style={{ width: '250px' }}/>
-                                    <br/>
-                                    <div icon='user' iconPosition='left' class="text-input">
-                                        <Form.Input icon='user' iconPosition='left' type="text" name="emailLogin" value={this.state.emailLogin} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
-                                    </div>
-                                    <br/>   
-                                    <div class="text-input">
-                                        <Form.Input icon='lock' iconPosition='left' type="password" name="passwordLogin" value={this.state.passwordLogin} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
-                                        <span class="separator"></span>
-                                        <br/>
-                                    </div>  
-                                    <div class="form-bottom">
-                                        <input type="submit" id="submit" value="Login" class="ui violet button" style={{width: "250px"}}/><p></p>
-                                    </div>
-                                </form>  
-                            </Segment>
+                                <Segment inverted className='center-contents'>
+                                    <Form.Group>
+                                        <form action="#">
+                                            <h2 style={{ color: 'white' }}>Login</h2>
+                                            <hr style={{ width: '250px' }}/>
+                                            <br/>
+                                            <div icon='user' iconPosition='left' class="text-input">
+                                                <Form.Input icon='user' iconPosition='left' type="text" name="emailLogin" value={this.state.emailLogin} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
+                                            </div>
+                                            <br/>   
+                                            <div class="text-input">
+                                                <Form.Input icon='lock' iconPosition='left' type="password" name="passwordLogin" value={this.state.passwordLogin} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
+                                                <span class="separator"></span>
+                                                <br/>
+                                            </div>  
+                                            <div class="form-bottom">
+                                                <Form.Button type='submit' content="Login" color='violet' style={{width: "250px"}}/><p></p>
+                                            </div>
+                                        </form>
+                                    </Form.Group>
+                                </Segment>
+                                <Segment inverted style={{ color: 'grey' }}>New to us? <Link to='/signup' className='signup' style={{ color: 'light blue' }}>Sign Up</Link></Segment>
                             </Form>
-                            <Segment inverted style={{ color: 'grey' }}>New to us? <Link to='/signup' className='signup' style={{ color: 'light blue' }}>Sign Up</Link></Segment>
                         </Grid.Column>
                     </Grid>
                 </div> 

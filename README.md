@@ -87,3 +87,25 @@ provide the app about their current main goal and/or situation.
 .. 
 
 -->
+
+<!-- 
+
+An app that helps you build the habits you need to get the results you want. 
+
+How does it work? --or-- What's the process?
+
+    1. Identify what you want.
+    2. Identify the habits you need to get what you want.
+    3. Make these NEW habits a part of your daily routine:
+        a. Identify your set of CURRENT habits ( your daily routine ), 
+        b. Build systems to establish these habits,
+        c. Build systems to eliminate OLD / 'bad' habits.
+    4. Track your progress daily.
+    5. Review your progress weekly.
+
+--
+Unsorted Ideas:
+
+ - Systems > Goals
+
+ -->

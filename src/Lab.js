@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { Button, Form, Grid, Icon, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
 import FunctionMerge from './FunctionMerge';
@@ -11,12 +12,18 @@ import LabIcon from './LabIcon';
 
 const USERS = [
     {
-        user_id: 1,
-        name: 'Julian'
+        id: 0,
+        firstName: 'Adam',
+        lastName: 'Boyd',
+        email: 'adam.boyd@email.com',
+        password: 'ab123'
     },
     {
-        user_id: 2,
-        name: 'Cedric'
+        id: 1,
+        firstName: 'Clara',
+        lastName: 'Davidson',
+        email: 'clara.davidson@email.com',
+        password: 'cd123'
     }
 ]
 
@@ -39,8 +46,8 @@ const LESSENPLANS = [
 
 class Lab extends React.Component {
     state = {  
-        users: [],
-        lessenPlans: [],
+        users: USERS,
+        lessenPlans: LESSENPLANS,
         renderLabIcon: false,
         renderCreateIcon: true,
         renderCreate: false,
@@ -63,6 +70,10 @@ class Lab extends React.Component {
         this.setState({ lessenPlans: arr })
     }
 
+    signup = (e, obj) => {
+        console.log('signup')
+    }
+
     delete = id => {
         console.log('delete', id)
         let arr = [...this.state.lessenPlans]
@@ -71,8 +82,9 @@ class Lab extends React.Component {
     }
 
     renderCreate = e => {
-        this.setState({ renderCreate: !this.state.renderCreate })
-        this.setState({ renderUpdate: !this.state.renderUpdate })
+        console.log('renderCreate')
+        // this.setState({ renderCreate: !this.state.renderCreate })
+        // this.setState({ renderUpdate: !this.state.renderUpdate })
     }
 
     updateHabitDesc = (id, desc, bad) => {
@@ -118,7 +130,7 @@ class Lab extends React.Component {
 
                 {this.state.renderCreateIcon ? <Icon onClick={this.handleClickCreate} inverted color='violet' name='add circle' size='huge'/> : null }
                 
-                {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} /> : null }
+                {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} signup={this.signup} /> : null }
 
                 {this.state.renderUpdate ? <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} /> : null }
 
