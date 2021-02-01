@@ -14,7 +14,7 @@ const USERS = [
     {
         id: 0,
         firstName: 'Adam',
-        lastName: 'Boyd',
+        lastName: 'Benton',
         email: 'adam.boyd@email.com',
         password: 'ab123'
     },

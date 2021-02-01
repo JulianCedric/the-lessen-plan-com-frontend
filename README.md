@@ -86,26 +86,45 @@ provide the app about their current main goal and/or situation.
 
 .. 
 
+--> 
+
+<!-- 
+
+THE LESSEN PLAN
+
+    App Overview:
+
+        An app that helps you build the habits you need to get the results you want. 
+
+    How Does It Work?
+
+        1. Identify what you want.
+        2. Identify the habits you need to get what you want.
+        3. Make these NEW habits a part of your daily routine:
+           This process:
+            a. Identify your CURRENT set of habits ( your daily routine ), 
+            b. Build systems to establish your NEW habits,
+            c. Build systems to eliminate your OLD ( or 'bad' ) habits.
+        4. Track your progress daily.
+        5. Review your progress weekly:
+            a. What's working?
+            b. What's not? And what can you do about it ( to make it work )?
+--
+Another way of saying lines 3, 4, and 5:
+
+"Systematically 'install' these new habits into your daily routine while systematically eliminating any habits that no longer serve you ( in the pursuit of your goal )." 
+
+"Track progress."
+
+"Review progress ( to determine potential areas of improvement )."
+
 -->
 
 <!-- 
 
-An app that helps you build the habits you need to get the results you want. 
 
-How does it work? --or-- What's the process?
+    Unsorted Ideas:
 
-    1. Identify what you want.
-    2. Identify the habits you need to get what you want.
-    3. Make these NEW habits a part of your daily routine:
-        a. Identify your set of CURRENT habits ( your daily routine ), 
-        b. Build systems to establish these habits,
-        c. Build systems to eliminate OLD / 'bad' habits.
-    4. Track your progress daily.
-    5. Review your progress weekly.
-
---
-Unsorted Ideas:
-
- - Systems > Goals
+         - Systems > Goals
 
  -->

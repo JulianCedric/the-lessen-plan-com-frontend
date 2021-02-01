@@ -57,13 +57,6 @@ const level3Panels = [
     </div>
   )
 
-const rootPanels = [
-  { key: 'panel-1', title: 'Level 1', content: { content: Level1Content } },
-  { key: 'panel-2', title: 'Level 2', content: { content: Level2Content } },
-  { key: 'panel-3', title: 'Level 3', content: { content: Level3Content } },
-  { key: 'panel-4', title: 'Level 4', content: { content: Level4Content } },
-]
-
 const HabitLoop = () => (
   <Accordion defaultActiveIndex={0} panels={rootPanels} styled />
 )
