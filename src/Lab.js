@@ -51,7 +51,7 @@ class Lab extends React.Component {
         renderLabIcon: false,
         renderCreateIcon: true,
         renderCreate: false,
-        renderUpdate: false
+        renderUpdate: true
     }
 
     handleClickCreate = e => {

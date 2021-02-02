@@ -6,7 +6,6 @@ import Navbar from './Navbar';
 import Dashboard from './Dashboard';
 import Login from './Login';
 import Lab from './Lab';
-import Lab2 from './Lab2';
 import Home from './Home';
 import Footer from './Footer';
 import SignUp from './SignUp';

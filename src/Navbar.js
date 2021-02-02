@@ -15,10 +15,6 @@ class Navbar extends React.Component {
                         <Link to='/lab' className='lab'><Icon name='lab' size='big'></Icon></Link>
                     </a>
 
-                    {/* <a class='item'>
-                        <Link to='/lab2' className='lab2'><Icon name='book' size='big'></Icon></Link>
-                    </a> */}
-
                     <div className="right menu">
                         <a className="item">
                             {
