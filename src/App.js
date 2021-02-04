@@ -3,7 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { Sticky } from 'semantic-ui-react';
 import Navbar from './Navbar';
-import Dashboard from './Dashboard';
 import Login from './Login';
 import Lab from './Lab';
 import Home from './Home';
