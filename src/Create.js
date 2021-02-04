@@ -31,55 +31,17 @@ class Create extends React.Component {
 
     render() { 
         return (  
-
-            // <div>
-            //     <br/>
-            //     <h2>Create a New Lessen Plan</h2> 
-            //     <br/>
-            //     <div className="create">
-            //         <Form onSubmit={this.handleSubmit}>
-            //             <Form.Group>
-            //                 <Form.Input 
-            //                     placeholder="e.g. Morning Routine"
-            //                     name="type"
-            //                     value={this.state.type}
-            //                     onChange={this.handleChange}
-            //                     style={{ width: '250px' }}
-            //                 />
-            //             </Form.Group>
-            //             <Form.Button inverted color='orange' content='Create' style={{ width: '250px' }}/>
-            //         </Form>
-            //     </div>
-                <div className="login-signup">
+            <div className="create">
                 <div className="twelve wide column">
-                    <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
+                    <Grid columns={1} relaxed='very' stackable style={{ height: '0vh' }} verticalAlign='middle'>
                         <Grid.Column style={{ maxWidth: 450 }}>                     
-                        <Form inverted onSubmit={this.handleSubmitSignUp}>       
+                        <Form inverted onSubmit={this.handleSubmitHabit}>       
                             <Segment inverted>
-                                <form action="#">
-                                    <h2 style={{ color: 'white' }}>My New Lessen Plan</h2>
-                                    <hr style={{ width: '250px' }}/>
-                                    <br/>
-                                    <div class="text-input">
-                                        <input type="text" name="goal" value={this.state.goal} onChange={this.handleChangeCreate} id="goal" placeholder="Goal" style={{width: "250px"}}/>
-                                        <span class="separator"> </span><br></br><br></br>                                        
-                                    </div>
-                                    <div class="text-input">
-                                        <input type="text" name="dueDate" value={this.state.dueDate} onChange={this.handleChangeCreate} id="dueDate" placeholder="Due Date" style={{width: "250px"}}/>
-                                        <span class="separator"> </span><br></br><br></br>                                        
-                                    </div>
-                                    {/* <div class="text-input">
-                                        <input type="text" name="email" value={this.state.email} onChange={this.handleChangeSignUp} id="username" placeholder="Email" style={{width: "250px"}}/>
-                                        <span class="separator"> </span><br></br><br></br>
-                                    </div>   
-                                    <div class="text-input">
-                                        <input type="password" name="password" value={this.state.password} onChange={this.handleChangeSignUp} id="password" placeholder="Password" style={{width: "250px"}}/>
-                                        <span class="separator"> </span><br></br><br></br>
-                                    </div> */}
-                                    <div class="form-bottom">
-                                        <input type="submit" id="submit" value="Create" class="ui violet button" style={{width: "250px"}}/><p></p>
-                                    </div>
-                                </form>
+                                    <h2 style={{ color: 'white' }}>What habit would you like to 'LESSEN'?</h2>
+                                    <Form.Field>
+                                        <input placeholder='Example: Eating potato chips for breakfast' />
+                                    </Form.Field>
+                                    <Button color='violet' style={{ width: '350px' }} type='submit'>Submit</Button>
                                 <br/>
                             </Segment>
                         </Form>  

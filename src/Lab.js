@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { Button, Form, Grid, Icon, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
-import FunctionMerge from './FunctionMerge';
 import LessenPlan from './LessenPlan';
 import ReactToPrint from "react-to-print";
 import Create from './Create';
@@ -117,10 +116,6 @@ class Lab extends React.Component {
         this.setState({ lessenPlans: LESSENPLANS })
     }
 
-    handleClickMerge = (a,b) => {
-        console.log('[ Merge ]')
-    }
-
     render() { 
         console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
@@ -132,31 +127,14 @@ class Lab extends React.Component {
                 
                 {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} signup={this.signup} /> : null }
 
-                {this.state.renderUpdate ? <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} /> : null }
+                {/* {this.state.renderUpdate ? <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} /> : null } */}
 
                 <br/>
-
-                <br/>
-
-                {/* <FunctionMerge users={this.state.users} lessenPlans={this.state.lessenPlans}/> */}
                 <br/>
                 <br/>
 
-                {/* <Button onClick={this.handleClickMerge}>Merge</Button> */}
+                {/* <LessenPlans lessenPlans={this.state.lessenPlans} delete={this.delete} /> */}
 
-                <LessenPlans lessenPlans={this.state.lessenPlans} delete={this.delete} />
-
-                {/* <LessenPlan ref={(el) => (this.componentRef = el)} />
-                
-                <span>
-                    <Icon color='blue' name='save' size='big'></Icon>
-                    <ReactToPrint 
-                        trigger={() => <a href="#"><Icon color='blue' name='print' size='big'></Icon></a>}
-                        content={() => this.componentRef}
-                    />
-                </span> */}
-
-                
             </div>
         );
     }
