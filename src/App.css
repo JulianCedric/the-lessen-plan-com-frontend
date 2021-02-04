@@ -1,5 +1,5 @@
 .App {
-  background-image: url('./blank.png');
+  background-image: url('./Images/blank.png');
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -11,7 +11,7 @@
 }
 
 .homepage {
-  background-image: url('./TLPLogo5.png');
+  background-image: url('./Images/TLPLogo5.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -29,11 +29,11 @@
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-image: url('./blank.png');
+  background-image: url('./Images/blank.png');
 }
 
 .lab {
-  background-image: url('./blank.png');
+  background-image: url('./Images/blank.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -75,7 +75,7 @@
 }
 
 .login-signup {
-  background-image: url('./blank.png');
+  background-image: url('./Images/blank.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
