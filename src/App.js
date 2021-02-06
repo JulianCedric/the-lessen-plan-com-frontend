@@ -5,6 +5,7 @@ import { Sticky } from 'semantic-ui-react';
 import Navbar from './Navbar';
 import Login from './Login';
 import Lab from './Lab';
+import Lab2 from './Lab2';
 import Home from './Home';
 import Footer from './Footer';
 import SignUp from './SignUp';
