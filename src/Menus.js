@@ -1,8 +1,8 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
 
-class MainMenu extends React.Component {
+class Menus extends React.Component {
     state = {  }
     render() { 
         return (  
@@ -23,4 +23,4 @@ class MainMenu extends React.Component {
     }
 }
  
-export default MainMenu;
+export default Menus;
