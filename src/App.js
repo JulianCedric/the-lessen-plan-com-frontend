@@ -37,6 +37,7 @@ class App extends React.Component {
               </Sticky>
               <Route exact path='/' render={(props) => (<Home {...props} />)}></Route>
               <Route exact path='/lab' render={(props) => (<Lab {...props} />)}></Route>
+              <Route exact path='/lab2' render={(props) => (<Lab2 {...props} />)}></Route>
               <Route exact path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
                 {this.state.loggedIn 
                   ? <Redirect to="/lab" component={ Lab } /> 

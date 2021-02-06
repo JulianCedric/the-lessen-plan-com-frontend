@@ -6,7 +6,7 @@ class Create extends React.Component {
         id: 1,
         user_id: 1,
         type: "",
-        goal: "",
+        habit: "",
         dueDate: "",
         habitDesc: "",
         habitBad: false,
@@ -17,12 +17,12 @@ class Create extends React.Component {
         habitTracker: ""
     }
 
-    handleChangeCreate = e => {
+    handleChangeHabit = e => {
         console.log(e.target.name, e.target.value)
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    handleSubmitCreate = e => {
+    handleSubmitHabit = e => {
         e.preventDefault()
         let obj = this.state
         this.props.create(obj)
@@ -38,9 +38,11 @@ class Create extends React.Component {
                         <Form inverted onSubmit={this.handleSubmitHabit}>       
                             <Segment inverted>
                                     <h2 style={{ color: 'white' }}>What habit would you like to 'LESSEN'?</h2>
-                                    <Form.Field>
-                                        <input placeholder='Example: Eating potato chips for breakfast' />
-                                    </Form.Field>
+                                    <Form.Input
+                                        placeholder='Example: Eating potato chips for breakfast'
+                                        name='habit'
+                                        value={this.state.habit}
+                                    />
                                     <Button color='violet' style={{ width: '350px' }} type='submit'>Submit</Button>
                                 <br/>
                             </Segment>

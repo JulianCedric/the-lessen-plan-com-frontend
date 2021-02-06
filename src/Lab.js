@@ -29,7 +29,6 @@ const USERS = [
 const LESSENPLANS = [
     {
       id: 0,
-      user_id: 0,
       type: 'morning',
       goal: "",
       dueDate: "",
