@@ -1,23 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Menu } from 'semantic-ui-react';
 
 class Navbar extends React.Component {
     render() { 
         return (  
             <div className="Navbar">
-                <div className="ui inverted borderless large menu">
-                    <a className="item">
+                <Menu borderless inverted size="large">
+                    <Menu.Item>
                         <Link to="/" className="link"><Icon name='home' size='big'></Icon></Link>
-                    </a>
+                    </Menu.Item>
                     
-                    <a class='item'>
+                    <Menu.Item>
                         <Link to='/lab' className='lab'><Icon name='lab' size='big'></Icon></Link>
-                    </a>
+                    </Menu.Item>
 
-                    <a class='item'>
+                    <Menu.Item>
                         <Link to='/lab2' className='lab'><Icon name='lab' size='big'></Icon></Link>
-                    </a>
+                    </Menu.Item>
 
                     <div className="right menu">
                         <a className="item">
@@ -28,7 +28,7 @@ class Navbar extends React.Component {
                             }
                         </a>
                     </div>
-                </div>
+                </Menu>
             </div>
         );
     };

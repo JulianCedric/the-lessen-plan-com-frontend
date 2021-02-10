@@ -5,8 +5,8 @@ import { Form, Grid, Segment } from 'semantic-ui-react';
   
 class Login extends React.Component {
     state = {  
-        emailLogin: '',
-        passwordLogin: ''
+        email: '',
+        password: ''
     }
 
     handleChangeLogin = e => {
@@ -16,31 +16,26 @@ class Login extends React.Component {
 
     handleSubmitLogin = e => {
         console.log('handleSubmitLogin')
-        // this.props.setLogin()
-    }
+        e.preventDefault()
 
-//   handleSubmitSignUp = e => {
-//       e.preventDefault()
-//       fetch('http://localhost:3001/api/v1/users', {
-//           method: 'POST',
-//           headers: {
-//               "Content-Type": "application/json",
-//               Accept: "application/json"
-//           },
-//           body: JSON.stringify({
-//               firstName: this.state.firstName,
-//               lastName: this.state.lastName,
-//               email: this.state.email,
-//               password: this.state.password
-//           })
-//       })
-//       .then(r => r.json())
-//       .then(data => {
-//           if (!data.error) {
-//               this.props.setLogin(data)
-//           }
-//       })
-//   }
+        fetch('http://localhost:3001/api/v1/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json' 
+            },
+            body: JSON.stringify({
+                email: this.state.email,
+                password: this.state.password
+            })
+        })
+        .then(r => r.json())
+        .then(data => {
+            if (!data.error) {
+                this.props.setLogin(data)
+            }
+        }) 
+    }
   
     render() { 
         return (  

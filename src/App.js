@@ -13,7 +13,12 @@ import SignUp from './SignUp';
 class App extends React.Component {
   state = {  
     loggedIn: false,
+    redirect: false,
     users: []
+  }
+
+  handleClick = e => {
+    this.setState({ redirect: !this.state.redirect })
   }
 
   setLogin = e => {
@@ -32,7 +37,7 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
           <Switch>
-            <div className="App" style={{ color: 'white' }}>
+            <div className="App" style={{ color: 'white' }} onClick={this.handleClick}>
               <Sticky context={this.contextRef}>
                 <Navbar loggedIn={this.state.loggedIn} setLogin={this.setLogin}/>
               </Sticky>

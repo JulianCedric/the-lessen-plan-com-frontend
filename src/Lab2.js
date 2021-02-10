@@ -7,7 +7,11 @@ const LESSENPLANS = [
 // sample data for testing purposes
     {
         id: 0,
-        habit: 'Eating potato chips for breakfast'
+        goal: 'create a web app',
+        identity: 'programmer',
+        kpiHabit: 'make five GitHub commits per week',
+        badHabits: [],
+        new: ''
     }
 ]
 
