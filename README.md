@@ -2,6 +2,31 @@ The Lessen Plan
 
 App Overview:
 
+WHAT IS TheLessenPlan?
+TheLessenPlan is an app that helps users build the habits they need to get the results they want. 
+
+PREMISE:
+Everybody wants a transformation, right? 
+
+Everybody wants a radical improvement, rapid success.
+
+But we fail to realize that small habits and little choices are transforming us everyday already. 
+
+That these times when you make a choice that is slightly better or slightly worse, 1% better or 1% worse, that these things compound over time.   
+
+Habits are the compound interest of self-improvement.
+
+And so, if you can learn to master those, then you can make time work for you rather than against you, right?
+
+Good habits make time your ally.
+
+Bad habits make time your enemy. 
+ 
+TheLessenPlan is an app that helps you build the habits you need to get the results you want. 
+
+--
+DRAFTS: 
+
 TheLessenPlan introduces users to a system for continuous self-improvement that focuses on helping them do less of what isn't working so that they can do more of what is. 
 
 How It Works: 
