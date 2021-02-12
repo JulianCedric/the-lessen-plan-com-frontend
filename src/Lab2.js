@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Button } from 'semantic-ui-react';
+import { Breadcrumb, BreadcrumbDivider, Button } from 'semantic-ui-react';
 import CreatePage01 from './CreatePage01';
 
 const LESSENPLANS = [
@@ -28,7 +28,22 @@ class Lab2 extends React.Component {
     render() { 
         return (  
             <div className="lab" style={{ color: 'white' }}>
+
+                <Breadcrumb size='huge'>
+                    <Breadcrumb.Section active>Step 1</Breadcrumb.Section>
+                    <Breadcrumb.Divider />
+                    <Breadcrumb.Section link>Step 2</Breadcrumb.Section>
+                    <Breadcrumb.Divider />
+                    <Breadcrumb.Section link>Step 3</Breadcrumb.Section>
+                </Breadcrumb>
+
+                <br/>
+                <br/>
+                <br/>
+
                 { this.state.renderCreatePage01 ? <CreatePage01 /> : <Button onClick={this.handleClick} color='violet' size='massive'>Create New Lessen Plan</Button> }
+
+
             </div>
         );
     }
