@@ -33,6 +33,12 @@ How It Works:
 
 Step 1. 
 
+--
+Addt'l / Misc: 
+
+HOW DOES TheLessenPlan WORK?
+By helping you do less of what isn't working ( 'bad habits' - those habits that make time your enemy ) so that you can do more of what is ( 'good habits' - those habits that make time your ally ).
+
 <!-- 
 
 User Journey:
