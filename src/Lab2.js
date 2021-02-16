@@ -30,11 +30,13 @@ class Lab2 extends React.Component {
             <div className="lab" style={{ color: 'white' }}>
 
                 <Breadcrumb size='huge'>
-                    <Breadcrumb.Section active>Step 1</Breadcrumb.Section>
+                    <Breadcrumb.Section active>Step 1. Noticing</Breadcrumb.Section>
                     <Breadcrumb.Divider />
-                    <Breadcrumb.Section link>Step 2</Breadcrumb.Section>
+                    <Breadcrumb.Section link>Step 2. Wanting</Breadcrumb.Section>
                     <Breadcrumb.Divider />
-                    <Breadcrumb.Section link>Step 3</Breadcrumb.Section>
+                    <Breadcrumb.Section link>Step 3. Doing</Breadcrumb.Section>
+                    <Breadcrumb.Divider />
+                    <Breadcrumb.Section link>Step 4. Liking</Breadcrumb.Section>
                 </Breadcrumb>
 
                 <br/>
