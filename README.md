@@ -1,10 +1,35 @@
 The Lessen Plan
 
-App Overview:
+    App Overview:
 
-WHAT IS TheLessenPlan?
-TheLessenPlan is an app that helps users build the habits they need to get the results they want. 
+        What is TheLessenPlan?
+        TheLessenPlan is an app that helps users build the habits they need to get the results they want. 
 
+        How does it work? 
+            1. User is shown a list of *25 good habits.
+
+
+
+
+
+
+
+
+
+
+
+
+--
+Footnote: 
+
+*This list of 25 good habits comes from books on this top, such as 7 Habits of Highly Effective People /Stephen R. Covey/, 6 High Performance Habits /Brendon Burchard/, etc.
+
+
+
+
+
+
+--
 PREMISE:
 Everybody wants a transformation, right? 
 
