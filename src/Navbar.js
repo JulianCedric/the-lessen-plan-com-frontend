@@ -11,9 +11,9 @@ class Navbar extends React.Component {
                         <Link to="/" className="link"><Icon name='home' size='big'></Icon></Link>
                     </Menu.Item>
                     
-                    <Menu.Item>
+                    {/* <Menu.Item>
                         <Link to='/lab' className='lab'><Icon name='lab' size='big'></Icon></Link>
-                    </Menu.Item>
+                    </Menu.Item> */}
 
                     <Menu.Item>
                         <Link to='/lab2' className='lab'><Icon name='lab' size='big'></Icon></Link>
