@@ -41,6 +41,10 @@ class Lab2 extends React.Component {
 
                 <br/>
                 <br/>
+                <p>*Draft* TheLessenPlan is an app that helps us do less of what isn't working so that we can do more of what is. How? By providing us with a systematic approach to identifying those things that aren’t working, and then coupling that with a systematic plan for eliminating those inefficiencies.</p>
+
+                <br/>
+                <br/>
                 <br/>
 
                 { this.state.renderCreatePage01 ? <CreatePage01 /> : <Button onClick={this.handleClick} color='violet' size='massive'>Create New Lessen Plan</Button> }
