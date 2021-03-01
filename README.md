@@ -27,6 +27,8 @@ Footnote:
 
 
 
+Single-Page Application (SPA) 
+Built with JavaScript/React/client-side routing, Rails/Active Record/Postgres backend (RESTful API), and Semantic UI for design
 
 
 --
