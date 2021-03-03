@@ -58,7 +58,14 @@ TheLessenPlan introduces users to a system for continuous self-improvement that 
 
 How It Works: 
 
-Step 1. 
+Step 1. ..
+
+
+--
+Notes: 
+
+Each Lessen Plan is tailored specifically to the user, based on input they 
+provide the app about their current main goal and/or situation. 
 
 --
 Addt'l / Misc: 

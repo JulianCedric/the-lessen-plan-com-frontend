@@ -11,7 +11,8 @@ const LESSENPLANS = [
         identity: 'programmer',
         kpiHabit: 'make five GitHub commits per week',
         badHabits: [],
-        new: ''
+        new: '',
+        changes: ''
     }
 ]
 
