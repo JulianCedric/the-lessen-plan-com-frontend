@@ -12,7 +12,8 @@ const LESSENPLANS = [
         kpiHabit: 'make five GitHub commits per week',
         badHabits: [],
         new: '',
-        changes: ''
+        changes: '',
+        tracker: true
     }
 ]
 
