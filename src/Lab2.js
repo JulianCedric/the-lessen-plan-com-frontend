@@ -17,6 +17,8 @@ const LESSENPLANS = [
     }
 ]
 
+// Updates - 2021.03.12 - FRI:
+
 class Lab2 extends React.Component {
     state = {  
         lessenPlans: LESSENPLANS,
