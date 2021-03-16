@@ -9,16 +9,6 @@ The Lessen Plan
             1. User is shown a list of *25 good habits.
 
 
-
-
-
-
-
-
-
-
-
-
 --
 Footnote: 
 
@@ -72,6 +62,11 @@ Addt'l / Misc:
 
 HOW DOES TheLessenPlan WORK?
 By helping you do less of what isn't working ( 'bad habits' - those habits that make time your enemy ) so that you can do more of what is ( 'good habits' - those habits that make time your ally ).
+
+--
+2021.03.15 - MON: 
+
+*MVP: An app that allows users to easily track anything they want to start tracking and for how long - consider adding React Calendar.
 
 <!-- 
 
