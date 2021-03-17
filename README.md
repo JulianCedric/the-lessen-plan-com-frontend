@@ -68,6 +68,8 @@ By helping you do less of what isn't working ( 'bad habits' - those habits that 
 
 *MVP: An app that allows users to easily track anything they want to start tracking and for how long - consider adding React Calendar.
 
+*User should be able to create categories as well - consider adding drag & drop. 
+
 <!-- 
 
 User Journey:
