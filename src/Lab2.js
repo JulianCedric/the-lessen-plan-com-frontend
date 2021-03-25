@@ -55,6 +55,11 @@ class Lab2 extends React.Component {
 
                 { this.state.renderCreatePage01 ? <CreatePage01 /> : <Button onClick={this.handleClick} color='violet' size='massive'>Create New Lessen Plan</Button> }
 
+                <br/>
+                <br/> 
+
+                <Button secondary>Concept</Button>
+
 
             </div>
         );
