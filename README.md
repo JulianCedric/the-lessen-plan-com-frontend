@@ -70,6 +70,12 @@ By helping you do less of what isn't working ( 'bad habits' - those habits that 
 
 *User should be able to create categories as well - consider adding drag & drop. 
 
+--
+2021.03.25 - THU:
+
+*Consider making this app a combination of the concepts in 'Atomic Habits' and 'What to Say..'
+
+
 <!-- 
 
 User Journey:
