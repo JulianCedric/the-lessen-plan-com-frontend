@@ -75,6 +75,14 @@ By helping you do less of what isn't working ( 'bad habits' - those habits that 
 
 *Consider making this app a combination of the concepts in 'Atomic Habits' and 'What to Say..'
 
+--
+2021.03.26 - FRI:
+
+*Habit-Changing
+*Attitude-Building
+*Motivational
+*Situational
+
 
 <!-- 
 
