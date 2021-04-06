@@ -144,3 +144,9 @@ handleDelete = id => {
             }
         })
     }
+
+//
+
+// 1. Two Sum
+
+nums = [2, 7, 11, 15]
