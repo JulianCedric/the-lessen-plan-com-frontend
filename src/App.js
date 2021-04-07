@@ -9,6 +9,7 @@ import Lab2 from './Lab2';
 import Home from './Home';
 import Footer from './Footer';
 import SignUp from './SignUp';
+import About from './About';
 
 // let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
 
@@ -55,6 +56,7 @@ class App extends React.Component {
               <Route exact path='/' render={(props) => (<Home {...props} />)}></Route>
               <Route exact path='/lab' render={(props) => (<Lab {...props} />)}></Route>
               <Route exact path='/lab2' render={(props) => (<Lab2 {...props} />)}></Route>
+              <Route exact path='/about' render={(props) => (<About {...props} />)}></Route>
               <Route exact path='/login' render={(props) => (<Login {...props} setLogin={this.setLogin}/>)}></Route>
                 {this.state.loggedIn 
                   ? <Redirect to="/lab" component={ Lab } /> 
