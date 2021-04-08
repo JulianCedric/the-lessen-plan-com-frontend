@@ -1,11 +1,14 @@
 import React from 'react';
+import { Container, Divider } from 'semantic-ui-react';
 
 class About extends React.Component {
     state = {  }
     render() { 
         return (  
             <div className='about'>
-                <p>About</p>
+                <Container textAlign='center'>About</Container>
+                <br></br>
+                <Container textAlign='left'>*See notes below: 'Process'</Container>
             </div>
         );
     }
