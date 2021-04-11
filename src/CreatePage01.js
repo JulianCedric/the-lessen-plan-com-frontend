@@ -8,26 +8,46 @@ import GoodHabit from './GoodHabit';
 
 class CreatePage01 extends React.Component {
     state = {  
-        renderCreatePage02: false
+        // renderCreatePage02: false
+        goal: ""
     }
 
-    handleClickBad = e => {
-        this.setState({ renderCreatePage02: !this.state.renderCreatePage02 })
+    handleChangeGoal = e => {
+        
     }
 
-    handleClickOr = e => {
-        console.log('Easter Egg 1..')
-    }
+    // handleClickBad = e => {
+    //     this.setState({ renderCreatePage02: !this.state.renderCreatePage02 })
+    // }
+
+    // handleClickOr = e => {
+    //     console.log('Easter Egg 1..')
+    // }
 
     render() { 
         return ( 
             <div className="create-page-01">
                 <div className="twelve wide column">
                     <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
-                        <Grid.Column style={{ maxWidth: 450 }}>                     
+                        <Grid.Column style={{ maxWidth: 450 }}>
+                            <Form inverted onSubmit={this.handleSubmitSignUp}>
+                                <Segment inverted>
+                                    <form action="#">
+                                        <h2 style={{ color: 'white' }}>What is your goal?</h2>
+                                        <hr style={{ width: '250px' }}/>
+                                        <br/>
+                                        <div class="text-input">
+                                            <Form.Input type='text' name='goal' value={this.state.goal} onChange={this.handleChangeGoal} placeholder='Your Goal.. ' style={{ width: '250px' }} />
+                                            <span class="separator"></span>                                     
+                                        </div>
+                                        <div class="form-bottom">
+                                            <input type="submit" id="submit" value="Submit" class="ui violet button" style={{width: "250px"}}/><p></p>
+                                        </div>
+                                    </form>
+                                </Segment>
+                            </Form>
                         </Grid.Column>
-                    </Grid>    
-                    <h1>What is your goal?</h1>
+                    </Grid>
                 </div>
             </div>
         );
