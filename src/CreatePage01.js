@@ -13,7 +13,12 @@ class CreatePage01 extends React.Component {
     }
 
     handleChangeGoal = e => {
-        
+        console.log(e.target.goal, e.target.value)
+        this.setState({[e.target.goal]: e.target.value})
+    }
+
+    handleSubmitGoal = e => {
+
     }
 
     // handleClickBad = e => {
@@ -30,13 +35,13 @@ class CreatePage01 extends React.Component {
                 <div className="twelve wide column">
                     <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
                         <Grid.Column style={{ maxWidth: 450 }}>
-                            <Form inverted onSubmit={this.handleSubmitSignUp}>
+                            <Form inverted onSubmit={this.handleSubmitGoal}>
                                 <Segment inverted>
                                     <form action="#">
                                         <h2 style={{ color: 'white' }}>What is your goal?</h2>
                                         <hr style={{ width: '250px' }}/>
                                         <br/>
-                                        <div class="text-input">
+                                        <div>
                                             <Form.Input type='text' name='goal' value={this.state.goal} onChange={this.handleChangeGoal} placeholder='Your Goal.. ' style={{ width: '250px' }} />
                                             <span class="separator"></span>                                     
                                         </div>
