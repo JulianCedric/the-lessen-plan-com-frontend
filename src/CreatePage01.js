@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Menu } from 'semantic-ui-react';
+// import { Button, Menu } from 'semantic-ui-react';
+import { Form, Grid, Segment } from 'semantic-ui-react';
 import { BrowserRouter as Router, Link, Route, Switch, Redirect } from 'react-router-dom';
 import Menus from './Menus';
 import BadHabit from './BadHabit';
@@ -20,25 +21,36 @@ class CreatePage01 extends React.Component {
 
     render() { 
         return ( 
-            <Router>
-                <React.Fragment>
-                    <Switch>
-                        <div>
-                            <h1>What are we creating a Lessen Plan for today?</h1>
-                            <br/>
-                            <Menus />
-                            <span><Button onClick={this.handleClickBad} color='red' size='huge'>Break a Bad Habit</Button><Button color='black' size='huge' onClick={this.handleClickOr}>or</Button><Button color='green' size='huge'>Make a Good Habit</Button></span>
-                            <Route exact path='/badhabit' render={(props) => (<BadHabit {...props} />)}></Route>
-                            <Route exact path='/goodhabit' render={(props) => (<GoodHabit {...props} />)}></Route>
-                        
-                        
-                        
-                        </div>
-                    </Switch>
-                </React.Fragment>
-            </Router>
+            <div className="create-page-01">
+                <div className="twelve wide column">
+                    <Grid columns={1} relaxed='very' stackable textAlign='center' style={{ height: '0vh' }} verticalAlign='middle'>
+                        <Grid.Column style={{ maxWidth: 450 }}>                     
+                        </Grid.Column>
+                    </Grid>    
+                    <h1>What is your goal?</h1>
+                </div>
+            </div>
         );
     }
 }
  
 export default CreatePage01;
+
+{/* <Router>
+<React.Fragment>
+    <Switch>
+        <div>
+            <h1>What is your goal?</h1>
+            <br/>
+            
+            <Menus />
+            <span><Button onClick={this.handleClickBad} color='red' size='huge'>Break a Bad Habit</Button><Button color='black' size='huge' onClick={this.handleClickOr}>or</Button><Button color='green' size='huge'>Make a Good Habit</Button></span>
+            <Route exact path='/badhabit' render={(props) => (<BadHabit {...props} />)}></Route>
+            <Route exact path='/goodhabit' render={(props) => (<GoodHabit {...props} />)}></Route>
+        
+        
+        
+        </div>
+    </Switch>
+</React.Fragment>
+</Router> */}

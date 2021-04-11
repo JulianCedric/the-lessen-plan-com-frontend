@@ -6,8 +6,8 @@ class Home extends React.Component {
     render() { 
         return (  
             <div className='homepage'>
-                <p>+</p>
-                <p>-</p>
+                {/* <p>+</p> */}
+                {/* <p>-</p> */}
             </div>
         );
     }
