@@ -97,3 +97,23 @@
   display: grid;
   place-items: center; 
 }
+
+.about {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.grid-container {
+  display: grid;
+  grid-template-columns: auto 250px auto;
+  grid-template-rows: auto 100px;
+  border: 2x dashed red;
+}
+
+div.grid-container > div {
+  background: lightblue;
+  border: 2x solid red;
+  padding: 10px 40px;
+  font: 1.25em sans-serif;
+}

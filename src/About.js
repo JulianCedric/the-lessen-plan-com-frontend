@@ -1,3 +1,4 @@
+import './App.css';
 import React from 'react';
 import { Container, Divider } from 'semantic-ui-react';
 
@@ -8,7 +9,15 @@ class About extends React.Component {
             <div className='about'>
                 <Container textAlign='center'>About</Container>
                 <br></br>
-                <Container textAlign='left'>*See notes below: 'Process'</Container>
+                <div class="grid-container">
+                    <div>One</div>
+                    <div>Two</div>
+                    <div>Three</div>
+                    <div>Four</div>
+                    <div>Five</div>
+                    <div>Six</div>
+                    <div>Seven</div>
+                </div>
             </div>
         );
     }
