@@ -3,7 +3,10 @@ import React from 'react';
 import { Container, Divider } from 'semantic-ui-react';
 
 class About extends React.Component {
-    state = {  }
+    state = {  
+        sections = ['1', '2', '3']
+    }
+
     render() { 
         return (  
             <div className='about'>
