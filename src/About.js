@@ -4,7 +4,7 @@ import { Container, Divider } from 'semantic-ui-react';
 
 class About extends React.Component {
     state = {  
-        sections = ['1', '2', '3']
+        sections: ['1', '2', '3']
     }
 
     render() { 
