@@ -19,29 +19,8 @@ class About extends React.Component {
         return (  
             <div className='about'>
                 <Container textAlign='center'>About</Container>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-
-                    <h1>{this.state.initial}</h1>
-
-                    <Button primary onClick={this.handleClick}>Increase Number</Button>
-
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                <div class="grid-container">
-                    <div>One</div>
-                    <div>Two</div>
-                    <div>Three</div>
-                    <div>Four</div>
-                    <div>Five</div>
-                    <div>Six</div>
-                    <div>Seven</div>
+                <div>
+                    <p>The Process</p>
                 </div>
             </div>
         );
