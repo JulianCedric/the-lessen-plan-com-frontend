@@ -1,7 +1,7 @@
 import React from 'react';  
 import './App.css';
 import { Link } from 'react-router-dom';
-import { Form, Grid, Segment } from 'semantic-ui-react';
+import { Button, Form, Grid, Segment } from 'semantic-ui-react';
   
 class Login extends React.Component {
     state = {  
@@ -10,32 +10,41 @@ class Login extends React.Component {
     }
 
     handleChangeLogin = e => {
-        console.log(e.target.name, e.target.value)       
-        this.setState({[e.target.name]: e.target.value})
-    }
-
-    handleSubmitLogin = e => {
-        console.log('handleSubmitLogin')
         e.preventDefault()
 
-        fetch('http://localhost:3001/api/v1/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json' 
-            },
-            body: JSON.stringify({
-                email: this.state.email,
-                password: this.state.password
-            })
-        })
-        .then(r => r.json())
-        .then(data => {
-            if (!data.error) {
-                this.props.setLogin(data)
-            }
-        }) 
+        // console.log(e.target.name, e.target.value)       
+        this.setState({[e.target.name]: e.target.value})
+        console.log("email: ", this.state.email)
+        this.setState({[e.target.name]: e.target.value})
+        console.log("password: ", this.state.password)
     }
+
+    validator = e => {
+        console.log(this.state.email)
+    }
+
+    // handleSubmitLogin = e => {
+    //     console.log('handleSubmitLogin')
+    //     e.preventDefault()
+
+    //     fetch('http://localhost:3001/api/v1/users', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             Accept: 'application/json' 
+    //         },
+    //         body: JSON.stringify({
+    //             email: this.state.email,
+    //             password: this.state.password
+    //         })
+    //     })
+    //     .then(r => r.json())
+    //     .then(data => {
+    //         if (!data.error) {
+    //             this.props.setLogin(data)
+    //         }
+    //     }) 
+    // }
   
     render() { 
         return (  
@@ -55,12 +64,14 @@ class Login extends React.Component {
                                             <h2 style={{ color: 'white' }}>Login</h2>
                                             <hr style={{ width: '250px' }}/>
                                             <br/>
+                                            <br/>
+                                            <br/>
                                             <div icon='user' iconPosition='left' class="text-input">
-                                                <Form.Input icon='user' iconPosition='left' type="text" name="emailLogin" value={this.state.emailLogin} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
+                                                <Form.Input icon='user' iconPosition='left' type="text" name="email" value={this.state.email} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
                                             </div>
                                             <br/>   
                                             <div class="text-input">
-                                                <Form.Input icon='lock' iconPosition='left' type="password" name="passwordLogin" value={this.state.passwordLogin} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
+                                                <Form.Input icon='lock' iconPosition='left' type="password" name="password" value={this.state.password} onChange={this.handleChangeLogin} id="password" placeholder="Password" style={{width: "250px"}}/>
                                                 <span class="separator"></span>
                                                 <br/>
                                             </div>  
