@@ -98,12 +98,6 @@
   place-items: center; 
 }
 
-.about {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 div.grid-container {
   display: grid;
   grid-template-columns: auto 250px auto;
@@ -116,4 +110,16 @@ div.grid-container > div {
   border: 2x solid red;
   padding: 10px 40px;
   font: 1.25em sans-serif;
+}
+
+.about {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.email {
+  display: grid;
+  margin: auto;
+  place-items: center; 
 }
