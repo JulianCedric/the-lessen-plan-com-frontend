@@ -30,7 +30,10 @@ class About extends React.Component {
 
         if (email.includes("@") && email.includes(".com")) {
             this.setState({renderPass: !this.state.renderPass})
+        } else {
+            alert("Please enter a valid email address.")
         }
+        
 
         //     for (let i=0; i<email.length; i++) {
         //         if ("@" == email[i]) {
