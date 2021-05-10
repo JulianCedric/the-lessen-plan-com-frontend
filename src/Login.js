@@ -6,7 +6,9 @@ import { Button, Form, Grid, Segment } from 'semantic-ui-react';
 class Login extends React.Component {
     state = {  
         email: '',
-        password: ''
+        password: '',
+        renderPass: false
+
     }
 
     handleChangeLogin = e => {
@@ -19,9 +21,24 @@ class Login extends React.Component {
         console.log("password: ", this.state.password)
     }
 
-    validator = e => {
-        console.log(this.state.email)
+    handleSubmitLogin = e => {
+        let email = this.state.email
+
+        console.log("this.state.email: ", email)
+        let arr = []
+
+        console.log(email.includes("@"))
+
+        if (email.includes("@") && email.includes(".com")) {
+            this.setState({renderPass: !this.state.renderPass})
+        } else {
+            alert("Please enter a valid email address.")
+        }
     }
+
+    // validator = e => {
+    //     console.log(this.state.email)
+    // }
 
     // handleSubmitLogin = e => {
     //     console.log('handleSubmitLogin')

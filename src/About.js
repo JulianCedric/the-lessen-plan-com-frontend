@@ -8,7 +8,7 @@ class About extends React.Component {
         initial: 0,
         pass: false,
         email: '',
-        renderPass: false,
+        renderPass: false
     }
 
     handleClick = e => {
@@ -16,6 +16,7 @@ class About extends React.Component {
     }
 
     handleChange = e => {
+        // e.preventDefault()
         this.setState({[e.target.name]: e.target.value})
         console.log(this.state.email)
     }
