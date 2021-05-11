@@ -81,8 +81,6 @@ class Login extends React.Component {
                                             <h2 style={{ color: 'white' }}>Login</h2>
                                             <hr style={{ width: '250px' }}/>
                                             <br/>
-                                            <br/>
-                                            <br/>
                                             <div icon='user' iconPosition='left' class="text-input">
                                                 <Form.Input icon='user' iconPosition='left' type="text" name="email" value={this.state.email} onChange={this.handleChangeLogin} id="username" placeholder="Email" style={{width: "250px"}}/>
                                             </div>
