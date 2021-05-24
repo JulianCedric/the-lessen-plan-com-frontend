@@ -81,3 +81,8 @@ export default About;
 // 3) Do more of what works. Do less of what doesn’t.
 // 4) Don’t stop doing it until it stops working.
 // 5) Repeat." 
+
+// 2021.04.24 - MON: 
+
+// email js 
+// SMS messages

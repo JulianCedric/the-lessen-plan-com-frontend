@@ -40,6 +40,10 @@ class Login extends React.Component {
     //     console.log(this.state.email)
     // }
 
+    handleSubmitLogin = e => {
+        //
+    }
+
     // handleSubmitLogin = e => {
     //     console.log('handleSubmitLogin')
     //     e.preventDefault()
