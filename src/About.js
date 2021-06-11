@@ -86,3 +86,7 @@ export default About;
 
 // email js 
 // SMS messages
+
+//2021.06.10 - THU:
+
+// Add flashcards 
