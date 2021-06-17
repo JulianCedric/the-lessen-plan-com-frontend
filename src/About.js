@@ -90,3 +90,45 @@ export default About;
 //2021.06.10 - THU:
 
 // Add flashcards 
+
+// 2021.06.16 - WED: 
+
+function translatePigLatin(str) {
+
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    let alphabetArr = alphabet.split('');
+    let consonants = alphabetArr.filter(letter => letter !== "a" && letter !== "e" && letter !== "i" && letter !== "o" && letter !== "u") 
+    let vowels = ["a","e","i","o","u"];
+  
+    for (let i=0;i<alphabetArr.length; i++) {
+      if (consonants.indexOf(str.charAt(0))) {
+  
+        let firstCharOfStr = str.charAt(0);
+        console.log("firstCharOfStr:", firstCharOfStr);
+  
+        let slicedStr = str.slice(1);
+        console.log("slicedStr:", slicedStr);
+        
+        var slicedArr = slicedStr.split('');
+        console.log("slicedArr:", slicedArr);
+        console.log("——————————")
+        slicedArr[slicedArr.length] = firstCharOfStr;
+        console.log("slicedArr:", slicedArr);
+        slicedArr[slicedArr.length] = "ay";
+        console.log("slicedArr:", slicedArr);
+        return slicedArr.join('');
+      }
+  
+        // console.log("str:", str);
+        // console.log("str.charAt(0):", str.charAt(0)); 
+        // console.log("vowels:", vowels.indexOf(str.charAt(0)))
+  
+      if (vowels.indexOf(str.charAt(0)) === 0) {
+        return ("str + 'way':", str + 'way');
+      } else {
+        return ("str + 'way':", str + 'way');
+      }
+    }
+  }
+  
+  console.log("Result:", translatePigLatin("california"));
