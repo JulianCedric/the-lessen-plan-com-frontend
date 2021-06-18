@@ -132,3 +132,44 @@ function translatePigLatin(str) {
   }
   
   console.log("Result:", translatePigLatin("california"));
+
+  // 2021.06.18 - FRI: 
+
+  function sumPrimes(num) {
+    console.log("num:", num);
+  
+    // find all prime numbers less than or equal to num
+    // these prime numbers will be greater than or equal to 1
+    // the range of numbers to find are between 1 and num
+    // create an array of consecutive integers within this range
+    // add these prime numbers together
+    // return this num as sum
+  
+    var primeNums = 1;
+    var arr = [];
+    var newArr = [2, 3];
+    var sum = 0;
+  
+    for (let i=1; i<=num; i++) {
+      arr.push(i);
+    }
+    // console.log("arr:", arr); 
+  
+    for (let i=2; i<arr.length; i++) {
+      if ((arr[i] % 2 !== 0) && (arr[i] % 3 !== 0)) {
+        newArr.push(arr[i]); 
+      }
+    }
+    // console.log("newArr:", newArr);
+  
+    for (let i=0; i<newArr.length; i++) {
+      sum += newArr[i];
+      // console.log("sum:", sum)
+    }
+  
+    console.log("sum:", sum);
+    return sum;
+  
+  }
+  
+  console.log("Result:", sumPrimes(977)); 
