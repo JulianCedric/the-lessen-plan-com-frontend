@@ -212,3 +212,45 @@ function mutation(arr) {
   // console.log("Result:", mutation(["hello", "hey"]));
   // console.log("Result:", mutation(["ate", "date"]));
   console.log("Result:", mutation(["Tiger", "Zebra"]));
+
+// 2021.06.19 - SAT: 
+
+function mutation(arr) {
+
+    // console.log("arr[0].charAt(0):", arr[0].charAt(0));
+    // console.log("arr[1].charAt(0):", arr[1].charAt(0));
+    
+    var newArr1 = arr[0].charAt(0).toLowerCase() + arr[0].slice(1);
+    var newArr2 = arr[1].charAt(0).toLowerCase() + arr[1].slice(1);
+    
+    // console.log("newArr1:", newArr1);
+    // console.log("newArr2:", newArr2);
+  
+    var arr1 = newArr1.split('');
+    var arr2 = newArr2.split('');
+  
+    console.log("arr1:", arr1);
+    console.log("arr2:", arr2);
+  
+    var falseArr = [];
+  
+    for (let i=0; i<arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) === -1) {
+        console.log("The letter", arr2[i], "was not found in arr1.")
+        falseArr.push(arr2[i]);
+      }
+    }
+  
+    console.log("falseArr:", falseArr);
+    if (falseArr.length > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  
+  }
+  
+  console.log("Result:", mutation(["hello", "hey"]));
+  
+  // Return true if arr1 contains all the elements in arr2. 
+  // Return false if arr1 does NOT contain all the elements in arr2.
