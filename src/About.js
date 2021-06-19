@@ -173,3 +173,42 @@ function translatePigLatin(str) {
   }
   
   console.log("Result:", sumPrimes(977)); 
+
+// 2021.06.19 - SAT: 
+
+function mutation(arr) {
+    console.log("arr:", arr);
+  
+    var arr1 = arr[0].split('');
+    var arr2 = arr[1].split('');
+  
+    console.log("arr1:", arr1);
+    console.log("arr2:", arr2);
+  
+    var falseCounter = 0;
+    var trueCounter = 0;
+    var falseArr = [];
+    var trueArr = [];
+  
+    for (let i=0; i<arr1.length; i++) {
+      if (arr1.indexOf(arr2[i]) === -1) {
+        // console.log("arr1[i]:", arr2[i]);
+        trueArr.push(arr2[i]);
+        trueCounter += 1;
+      } else {
+        // console.log("arr1[i]:", arr2[i]);
+        falseArr.push(arr2[i]);
+        falseCounter += 1;
+      }
+    }
+  
+    console.log("falseCounter:", falseCounter);
+    console.log("falseArr:", falseArr);
+    console.log("trueCounter:", trueCounter);
+    console.log("trueArr:", trueArr);
+  
+  }
+  
+  // console.log("Result:", mutation(["hello", "hey"]));
+  // console.log("Result:", mutation(["ate", "date"]));
+  console.log("Result:", mutation(["Tiger", "Zebra"]));
