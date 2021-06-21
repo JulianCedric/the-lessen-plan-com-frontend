@@ -254,3 +254,29 @@ function mutation(arr) {
   
   // Return true if arr1 contains all the elements in arr2. 
   // Return false if arr1 does NOT contain all the elements in arr2.
+
+  // 2021.06.21 - MON:
+
+  function smallestCommons(arr) {
+    arr = arr.sort((a,b) => (a-b));
+    console.log("arr:", arr);
+  
+    var low = Math.min(...arr);
+    console.log("low:", low);
+    var high = Math.max(...arr);
+    console.log("high:", high);
+  
+    var newArr = [];
+    var counter = 1;
+  
+    for (let i=0; i<5; i++) {
+      newArr[i] = counter;
+      counter += 1;
+    }
+    console.log("newArr:", newArr);
+  
+     
+  
+  }
+  
+  console.log("Result:", smallestCommons([5,1]));
