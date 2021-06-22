@@ -308,3 +308,57 @@ function palindrome(str) {
 
 
 console.log("Result:", palindrome("eye"));
+
+// 8 of 13 tests passing with the following code:
+
+function palindrome(str) {
+  console.log("str:", str);
+  console.log("typeof str:", typeof str);
+
+  let strArr = str.split('');
+  console.log("strArr:", strArr);
+  console.log("strArr.reverse():", strArr.reverse());
+
+  if (strArr == strArr.reverse()) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+console.log("Result:", palindrome("eye"));
+
+// palindrome("eye") should return a boolean.
+
+// Passed
+// palindrome("eye") should return true.
+
+// Passed
+// palindrome("_eye") should return true.
+
+// Passed
+// palindrome("race car") should return true.
+
+// palindrome("not a palindrome") should return false.
+
+// Passed
+// palindrome("A man, a plan, a canal. Panama") should return true.
+
+// Passed
+// palindrome("never odd or even") should return true.
+
+// palindrome("nope") should return false.
+
+// palindrome("almostomla") should return false.
+
+// Passed
+// palindrome("My age is 0, 0 si ega ym.") should return true.
+
+// palindrome("1 eye for of 1 eye.") should return false.
+
+// Passed
+// palindrome("0_0 (: /-\ :) 0-0") should return true.
+
+// palindrome("five|\_/|four") should return false.
+
