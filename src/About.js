@@ -362,3 +362,29 @@ console.log("Result:", palindrome("eye"));
 
 // palindrome("five|\_/|four") should return false.
 
+// 
+
+function palindrome(str) {
+  console.log("str:", str);
+  // console.log("typeof str:", typeof str);
+
+  let strArr = str.split('');
+  console.log("strArr:", strArr);
+  // console.log("strArr.reverse():", strArr.reverse());
+
+  let reversedStrArr = strArr.reverse();
+  console.log("reversedStrArr:", reversedStrArr);
+  let reversedStr = reversedStrArr.join('');
+  console.log("reversedStr:", reversedStr);
+
+  if (str == reversedStr) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+console.log("Result:", palindrome("nope")); 
+
+//
