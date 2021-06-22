@@ -34,7 +34,7 @@ function convertToRoman(num) {
 
   // passing 2/26 tests:
 
-  // I  1
+// I  1
 // V  5
 // X  10
 // L  50
@@ -59,3 +59,37 @@ function convertToRoman(num) {
   }
   
   console.log("Result:", convertToRoman(3));
+
+  // 3 of 26:
+
+  // I  1
+// V  5
+// X  10
+// L  50
+// C  100
+// D  500
+// M  1000 
+
+function convertToRoman(num) {
+  
+    let romanNumeral = "";
+  
+    while (num > 0) {
+      if (num < 4) {
+        // console.log("num:", num);
+        romanNumeral += "I";
+        num--;
+      } else if (num == 4) {
+          console.log("num:", num);
+          romanNumeral += "IV";
+          num -= 4;
+      } 
+      console.log(num)
+    }
+  
+    console.log("romanNumeral:", romanNumeral);
+    return romanNumeral;
+  
+  }
+  
+  console.log("Result:", convertToRoman(4)); 
