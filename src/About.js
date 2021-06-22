@@ -294,3 +294,17 @@ function palindrome(str) {
 
 
 palindrome("eye");
+
+//
+
+function palindrome(str) {
+  console.log("str:", str);
+
+
+
+
+}
+
+
+
+console.log("Result:", palindrome("eye"));
