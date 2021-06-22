@@ -279,4 +279,18 @@ function mutation(arr) {
   
   }
   
-  console.log("Result:", smallestCommons([5,1]));
+  console.log("Result:", smallestCommons([5,1])); 
+
+// 2021.06.22 - TUE:
+
+// Palindrome Checker - FCC JS Algorithms & Data Structures Project
+
+// Starting Code:
+
+function palindrome(str) {
+  return true;
+}
+
+
+
+palindrome("eye");
