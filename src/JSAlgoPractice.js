@@ -92,4 +92,40 @@ function convertToRoman(num) {
   
   }
   
-  console.log("Result:", convertToRoman(4)); 
+  console.log("Result:", convertToRoman(4));
+
+// *new approach* 
+
+// 2/26
+
+// I  1
+// V  5
+// X  10
+// L  50
+// C  100
+// D  500
+// M  1000 
+
+function convertToRoman(num) {
+    let arr = [];
+    let hash = {};
+  
+    hash[1] = "I";
+    hash[5] = "V";
+  
+    while (num > 0) {
+      if (num <= 3) {
+        arr.push(hash[1]);
+        num--;
+      } else {
+        num--;
+      }
+    }
+  
+    console.log("hash:", hash);
+    console.log("arr:", arr);
+    return arr.join('');
+  
+  }
+    
+  console.log("Result:", convertToRoman(3)); 
