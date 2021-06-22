@@ -167,3 +167,65 @@ function convertToRoman(num) {
   }
     
   console.log("Result:", convertToRoman(4)); 
+
+  // 5/26:
+
+  // I  1
+// V  5
+// X  10
+// L  50
+// C  100
+// D  500
+// M  1000 
+
+function convertToRoman(num) {
+    let arr = [];
+    let hash = {};
+  
+    hash[1] = "I";
+    hash[5] = "V";
+    hash[10] = "X";
+  
+    while (num > 0) {
+      if (num <= 3) {
+        arr.push(hash[1]);
+        num--;
+      } else if (num == 4) {
+        arr.push(hash[1]);
+        arr.push(hash[5]);
+        num -= 4;
+      } else if (num == 5) {
+        arr.push(hash[5]);
+        num -= 5;
+      } else if (num > 5 && num < 9) {
+        // 6,7,8
+        arr.push(hash[5]);
+        if (num - 5 == 1) {
+          arr.push(hash[1]);
+        } else if (num - 5 == 2) {
+          arr.push(hash[1]);
+          arr.push(hash[1]);
+        } else if (num - 5 == 3) {
+          arr.push(hash[1]);
+          arr.push(hash[1]);
+          arr.push(hash[1]);
+        }
+        num -= num;
+      } else if (num == 9) {
+        arr.push(hash[1]);
+        arr.push(hash[10]);
+        num -= num;
+      }
+      
+      else {
+        num--;
+      }
+    }
+  
+    console.log("hash:", hash);
+    console.log("arr:", arr);
+    return arr.join('');
+  
+  }
+    
+  console.log("Result:", convertToRoman(9)); 
