@@ -387,4 +387,39 @@ function palindrome(str) {
 
 console.log("Result:", palindrome("nope")); 
 
-//
+// 9 of 13 passing:
+
+// Loop through strArr
+// if an element is NOT a string, then we need to remove it
+
+function palindrome(str) {
+  console.log("str:", str);
+
+  let strArr = str.split('');
+  console.log("strArr:", strArr);
+
+  for (let i=0; i<strArr.length; i++) {
+    if (strArr[i] === " ") {
+      strArr.splice(i, 1);
+      console.log(strArr);
+      strArr.length - 1;
+    }
+  }
+  let newStr = strArr.join('');
+  console.log("newStr:", newStr);
+
+  let reversedStrArr = strArr.reverse();
+  console.log("reversedStrArr:", reversedStrArr);
+  let reversedStr = reversedStrArr.join('');
+  console.log("reversedStr:", reversedStr);
+
+  if (newStr == reversedStr) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+console.log("Result:", palindrome("race car"));
+// console.log("Result:", palindrome("never odd or even"));
