@@ -232,3 +232,46 @@ function convertToRoman(num) {
 
 // 2021.06.23 - WED:
 
+function rot13(str) {
+  let strArr = str.split('');
+  let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let alphabet = letters.split('');
+
+  let arr = [];
+  let newArr = [];
+  let newerArr = [];
+
+  for (let i=0; i<strArr.length; i++) {
+    if (alphabet.indexOf(strArr[i]) !== -1) {
+      arr.push(alphabet.indexOf(strArr[i]) + 13);
+    } else {
+      arr.push(" ")
+    }
+  }
+  console.log("arr:", arr);
+
+  for (let i=0; i<arr.length; i++) {
+    if (arr[i] >= 26) {
+      newArr.push(arr[i] - 26);
+    } else {
+      newArr.push(arr[i]);
+    }
+  }
+  console.log("newArr:", newArr);
+
+  for (let i=0; i<newArr.length; i++) {
+    newerArr.push(alphabet[newArr[i]]);
+  }
+  console.log("newerArr:", newerArr);
+
+  
+
+}
+
+// function converter(letter) {
+
+// }
+
+console.log("Result:", rot13("SERR PBQR PNZC"));
+
+// 
