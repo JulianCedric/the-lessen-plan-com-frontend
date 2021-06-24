@@ -386,3 +386,28 @@ function telephoneCheck(str) {
 
 telephoneCheck("555-555-5555");
 
+// 28 tests in total
+
+function telephoneCheck(str) {
+
+
+
+
+
+}
+
+console.log("Result:", telephoneCheck("555-555-5555"));
+
+//
+
+// check if the str contains only numbers (and dashes, parentheses)
+
+function telephoneCheck(str) {
+  console.log("str:", str);
+
+  
+
+
+}
+
+console.log("Result:", telephoneCheck("555-555-5555"));
