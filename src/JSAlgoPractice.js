@@ -411,3 +411,22 @@ function telephoneCheck(str) {
 }
 
 console.log("Result:", telephoneCheck("555-555-5555"));
+
+//
+
+// check if the str contains only numbers (and dashes, parentheses)
+
+function telephoneCheck(str) {
+  console.log("str:", str);
+
+  let arr = str.split('');
+  console.log("arr:", arr);
+
+}
+
+console.log("Result:", telephoneCheck("555-555-5555"));
+// console.log("Result:", telephoneCheck("(555)555-5555"));
+// console.log("Result:", telephoneCheck("(555) 555-5555"));
+// console.log("Result:", telephoneCheck("555 555 5555"));
+// console.log("Result:", telephoneCheck("5555555555"));
+// console.log("Result:", telephoneCheck("1 555 555 5555"));
