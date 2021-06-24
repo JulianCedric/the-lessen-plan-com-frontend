@@ -600,3 +600,68 @@ console.log("Result:", telephoneCheck("555-555-555"));
 // console.log("Result:", telephoneCheck("555 555 5555"));
 // console.log("Result:", telephoneCheck("5555555555"));
 // console.log("Result:", telephoneCheck("1 555 555 5555"));
+
+// 14/14:
+
+function telephoneCheck(str) {
+  console.log("str:", str);
+
+  let arr = str.split('');
+
+  let acceptableChars = "0123456789-() ";
+
+  let acceptableCharsArr = acceptableChars.split('');
+  console.log("acceptableCharsArr:", acceptableCharsArr);
+
+  let acceptArr = [];
+
+// check acceptable str characters: 0-10 as string characters, "-", "(", ")", and " ";
+  for (let i=0; i<arr.length; i++) {
+    if (acceptableCharsArr.indexOf(arr[i]) === -1) {
+      return false;
+    } else {
+      acceptArr.push(arr[i]);
+    }
+  }
+  console.log("acceptArr:", acceptArr);
+
+/* 
+telephoneCheck("555-5555") should return false: BECAUSE THERE SHOULD BE AT LEAST 10 NUMBERS.
+
+To check for this, we'll create arr2 to contain only numbers, and then check that arr2.length >= 10;
+*/
+
+  let arr2 = [];
+
+  for (let i=0; i<arr.length; i++) {
+    if (
+      arr[i] === "0" ||
+      arr[i] === "1" ||
+      arr[i] === "2" ||
+      arr[i] === "3" ||
+      arr[i] === "4" ||
+      arr[i] === "5" ||
+      arr[i] === "6" ||
+      arr[i] === "7" ||
+      arr[i] === "8" ||
+      arr[i] === "9"     
+    ) {
+      arr2.push(arr[i]);
+    }
+  }
+  console.log("arr2:", arr2);
+
+  if (arr2.length < 10) {
+    return false;
+  }
+
+  return true;
+ 
+}
+
+console.log("Result:", telephoneCheck("555-555"));
+// console.log("Result:", telephoneCheck("(555)555-5555"));
+// console.log("Result:", telephoneCheck("(555) 555-5555"));
+// console.log("Result:", telephoneCheck("555 555 5555"));
+// console.log("Result:", telephoneCheck("5555555555"));
+// console.log("Result:", telephoneCheck("1 555 555 5555"));
