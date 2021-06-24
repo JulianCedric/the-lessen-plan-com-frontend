@@ -732,3 +732,75 @@ To check for this, we can
 
 console.log("Result:", telephoneCheck("10 (757) 622-7382"));
 
+// 22/28 passing:
+
+function telephoneCheck(str) {
+  console.log("str:", str);
+
+  let arr = str.split('');
+
+  let acceptableChars = "0123456789-() ";
+
+  let acceptableCharsArr = acceptableChars.split('');
+  console.log("acceptableCharsArr:", acceptableCharsArr);
+
+  let acceptArr = [];
+
+// check acceptable str characters: 0-10 as string characters, "-", "(", ")", and " ";
+  for (let i=0; i<arr.length; i++) {
+    if (acceptableCharsArr.indexOf(arr[i]) === -1) {
+      return false;
+    } else {
+      acceptArr.push(arr[i]);
+    }
+  }
+  // console.log("acceptArr:", acceptArr);
+
+/* 
+telephoneCheck("555-5555") should return false: BECAUSE THERE SHOULD BE AT LEAST 10 NUMBERS.
+
+To check for this, we'll create arr2 to contain only numbers, and then check that arr2.length >= 10;
+*/
+
+  let arr2 = [];
+
+  for (let i=0; i<arr.length; i++) {
+    if (
+      arr[i] === "0" ||
+      arr[i] === "1" ||
+      arr[i] === "2" ||
+      arr[i] === "3" ||
+      arr[i] === "4" ||
+      arr[i] === "5" ||
+      arr[i] === "6" ||
+      arr[i] === "7" ||
+      arr[i] === "8" ||
+      arr[i] === "9"     
+    ) {
+      arr2.push(arr[i]);
+    }
+  }
+  console.log("arr2:", arr2);
+  console.log("arr2.length:", arr2.length);
+
+  if (arr2.length < 10 || arr2.length > 11) {
+    return false;
+  } else if (arr2.length === 11 && arr2[0] !== "1") {
+    return false;
+  }
+
+
+// If a phone number has 11 numbers, then the first number must be 1
+
+
+/* telephoneCheck("1 555)555-5555") should return false BECAUSE ")" IS IN THE WRONG PLACE
+
+To check for this, we can 
+
+*/ 
+
+  return true;
+ 
+}
+
+console.log("Result:", telephoneCheck("2 757 622-7382"));
