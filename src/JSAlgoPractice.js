@@ -373,3 +373,16 @@ function rot13(str) {
 
 // console.log("Result:", rot13("SERR PBQR PNZC")); 
 console.log("Result:", rot13("SERR CVMMN!"));
+
+// 2021.06.24 - THU:
+
+// Telephone Number Validator
+
+// Starting Code: 
+
+function telephoneCheck(str) {
+  return true;
+}
+
+telephoneCheck("555-555-5555");
+
