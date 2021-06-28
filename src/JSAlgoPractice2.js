@@ -7,3 +7,19 @@ let userCheck = /^[a-z]/; // Change this line
 let result = userCheck.test(username);
 
 console.log("result:", result);
+
+// 6/13 passing:
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]/; // Change this line
+let result = userCheck.test(username);
+
+console.log("result:", result);
+
+// 8/13:
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]/i; // Change this line
+let result = userCheck.test(username);
+
+console.log("result:", result);
