@@ -38,6 +38,44 @@ function maxProfit(arr) {
 
 console.log("Result:", maxProfit(prices));
 
+//
+
+var prices = [7,1,5,3,6,4];
+
+function maxProfit(arr) {
+
+  let arr1 = arr.slice();
+  console.log("arr1:", arr1);
+
+  let sortedArr = arr1.sort();
+  console.log("sortedArr:", sortedArr);
+
+  let maxPrice = sortedArr[sortedArr.length-1];
+  console.log("maxPrice:", maxPrice);
+
+  let minPrice = sortedArr[0];
+  console.log("minPrice:", minPrice);
+
+  let maxDay = arr.indexOf(maxPrice);
+  console.log("maxDay:", maxDay);
+
+  let minDay = arr.indexOf(minPrice);
+  console.log("minDay:", minDay);
+
+  if (minDay > maxDay) {
+    maxPrice = sortedArr[sortedArr.length-2];
+  }
+  console.log("maxPrice:", maxPrice);
+
+  let maxProfit = maxPrice-minPrice;
+  console.log("maxProfit:", maxProfit);
+
+  return maxProfit;
+
+};
+
+console.log("Result:", maxProfit(prices));
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
