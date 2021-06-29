@@ -36,3 +36,57 @@ function steamrollArray(arr) {
   }
   
   console.log("Result:", binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"));
+
+// From LeetCode, past progress: 
+
+// Best time to buy and sell stock:
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+ var maxProfit = function(prices) {
+    let buyAtThisPrice = 0;
+    let sellAtThisPrice = 0;
+    let buyAtThisIndex = 0;
+    let sellAtThisIndex = 0;
+    
+    let pricesClone = prices.slice();
+    
+    pricesClone.sort((a,b) => a-b);
+    console.log(pricesClone.sort((a,b) => a-b));
+    
+    let maxPrice = Math.max(...prices);
+    let minPrice = Math.min(...prices);
+    console.log(maxPrice, minPrice);
+
+    console.log("prices:", prices)
+    
+    for (let i=0; i<prices.length; i++) {
+
+        if (prices[i] === minPrice) {
+            buyAtThisPrice += prices[i];
+            buyAtThisIndex += i;
+        } else if (prices[i] === maxPrice) {
+            sellAtThisPrice += prices[i];
+            sellAtThisIndex += i;
+        }
+    }
+
+console.log(buyAtThisPrice);
+console.log(sellAtThisPrice);
+console.log(buyAtThisIndex);
+console.log(sellAtThisIndex);
+    
+    if (sellAtThisIndex < buyAtThisIndex) {
+        prices.splice(sellAtThisIndex, 1);
+        var newMax = Math.max(...prices.sort((a,b) => a-b));
+        console.log("newMax:", newMax);
+    for (let i=0; i<prices.length; i++) {
+        if (prices[i])
+    }
+    } 
+ 
+    return 0;
+};
+
