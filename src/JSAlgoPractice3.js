@@ -2,6 +2,14 @@
 
 // From LeetCode: Best Time to Buy and Sell Stock:
 
+// Take 2:
+
+
+
+
+
+//
+
 var prices = [7,1,5,3,6,4];
 
 function maxProfit(arr) {
@@ -75,6 +83,10 @@ function maxProfit(arr) {
 };
 
 console.log("Result:", maxProfit(prices));
+
+//
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
