@@ -17,6 +17,27 @@ console.log("sortedArr:", sortedArr);
 
 console.log("Result:", maxProfit(prices));
 
+//
+
+var prices = [7,1,5,3,6,4];
+
+function maxProfit(arr) {
+
+  let sortedArr = arr.sort();
+  console.log("sortedArr:", sortedArr);
+
+  let maxPrice = sortedArr[sortedArr.length-1];
+  console.log("maxPrice:", maxPrice);
+
+  let minPrice = sortedArr[0];
+  console.log("minPrice:", minPrice);
+
+
+
+};
+
+console.log("Result:", maxProfit(prices));
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
