@@ -1,5 +1,25 @@
 // 2021.06.29 - TUE:
 
+// From LeetCode: Best Time to Buy and Sell Stock:
+
+var prices = [7,1,5,3,6,4];
+
+function maxProfit(arr) {
+
+console.log(arr.sort());
+
+let sortedArr = arr.sort();
+console.log("sortedArr:", sortedArr);
+
+
+
+};
+
+console.log("Result:", maxProfit(prices));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 // drafts for Steamroller algo problem:
 
 function steamrollArray(arr) {
@@ -99,4 +119,4 @@ function orbitalPeriod(arr) {
     return arr;
   }
   
-  console.log("Result:", orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+  console.log("Result:", orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}])); 
