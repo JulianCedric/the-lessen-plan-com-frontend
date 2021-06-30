@@ -132,6 +132,53 @@ function smallestCommons(arr) {
   
   console.log("Result:", smallestCommons([2,10])); 
 
+// Solved!
+
+function smallestCommons(arr) {
+  
+    console.log("arr:", arr);
+  
+    let lowerNum, higherNum;
+    if (arr[0] > arr[1]) {
+      lowerNum = arr[1];
+      higherNum = arr[0];
+    } else {
+      lowerNum = arr[0];
+      higherNum = arr[1];
+    }
+  
+    console.log("arr.sort():", arr.sort((a,b) => (a-b)));
+  
+    let range = [];
+    let counter = arr[0]
+  
+    while (counter <= arr[arr.length-1]) {
+      range.push(counter);
+      counter++;
+    }
+    console.log("range:", range);
+  
+    let multiple = 1;
+    while (multiple < 1000000) {
+      let higherCommonMultiple = (lowerNum * multiple) * higherNum;
+  
+      let trueCount = 0;
+      for (let i=0; i<range.length; i++) {
+        if (higherCommonMultiple % range[i] === 0) {
+          trueCount += 1;
+          if (trueCount === range.length) {
+            return higherCommonMultiple;
+          }
+        }
+      }
+      multiple += 1;
+    }
+  
+  
+  }
+  
+  console.log("Result:", smallestCommons([23,18]));   
+
 // 2021.06.29 - TUE:
 
 // From LeetCode: Best Time to Buy and Sell Stock:
