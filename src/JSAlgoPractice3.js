@@ -78,6 +78,60 @@ function smallestCommons(arr) {
   
   console.log("Result:", smallestCommons([1,5])); 
 
+// 
+
+function smallestCommons(arr) {
+  
+    console.log("arr:", arr);
+  
+    let lowerNum, higherNum;
+    if (arr[0] > arr[1]) {
+      lowerNum = arr[1];
+      higherNum = arr[0];
+    } else {
+      lowerNum = arr[0];
+      higherNum = arr[1];
+    }
+  
+    console.log("arr.sort():", arr.sort((a,b) => (a-b)));
+  
+    let newArr = [];
+    let counter = arr[0]
+  
+    while (counter <= arr[arr.length-1]) {
+      newArr.push(counter);
+      counter++;
+    }
+    console.log("newArr:", newArr);
+  
+    let newArr2 = [];
+    let counter2 = 1;
+  
+    while (counter2 < 1000) {
+      newArr2.push(newArr[newArr.length-1] * counter2);
+      counter2++;
+    }
+    // console.log("newArr2:", newArr2);
+   
+    let newArr3 = [];
+  
+    for (let i=0; i<newArr2.length; i++) {
+      for (let j=0; j<=newArr.length; j++) {
+        // console.log("newArr2[i]:", newArr2[i]);
+        // console.log("newArr[j]:", newArr[j]);
+        if (newArr2[i] % newArr[j] === 0 && 
+            newArr2[i] % higherNum === 0) {
+          newArr3.push(newArr2[i]);
+        }
+      }
+    }
+    // console.log("newArr3:", newArr3);
+  
+    return newArr3[0];
+  }
+  
+  console.log("Result:", smallestCommons([2,10])); 
+
 // 2021.06.29 - TUE:
 
 // From LeetCode: Best Time to Buy and Sell Stock:
