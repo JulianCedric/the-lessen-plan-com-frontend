@@ -1,10 +1,54 @@
+// 2021.06.30 - WED: 
+
+// Smallest Common Multiple: 
+
+function smallestCommons(arr) {
+  
+    arr.sort();
+    console.log(arr);
+  
+    let newArr = [];
+    let counter = arr[0]
+  
+    while (counter <= arr[arr.length-1]) {
+      newArr.push(counter);
+      counter++;
+    }
+    console.log("newArr:", newArr);
+  
+    let newArr2 = [];
+    let counter2 = 1;
+  
+    while (counter2 < 20) {
+      newArr2.push(newArr[newArr.length-1] * counter2);
+      counter2++;
+    }
+    console.log("newArr2:", newArr2);
+  
+    let newArr3
+  
+  }
+  
+  console.log("Result:", smallestCommons([1,5])); 
+
+
 // 2021.06.29 - TUE:
 
 // From LeetCode: Best Time to Buy and Sell Stock:
 
 // Take 2:
 
+var prices = [7,1,5,3,6,4];
 
+function maxProfit(arr) {
+  console.log("arr:", arr);
+
+
+
+
+};
+
+console.log("Result:", maxProfit(prices));
 
 
 
