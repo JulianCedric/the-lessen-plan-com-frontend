@@ -1,6 +1,41 @@
 // 2021.07.01 - THU:
 
+// 
 
+function steamrollArray(arr) {
+    console.log("arr:", arr);
+  
+    console.log("arr[0]:", arr[0]);
+    console.log("arr[1]:", arr[1]);
+    console.log("arr[2]:", arr[2]);  
+  
+  
+  
+  
+  }
+  
+  console.log("Result:", steamrollArray([1, [2], [3, [[4]]]]));
+
+// Steamroller - Flatten a Nested Array algo problem:
+
+function steamrollArray(arr) {
+
+    while (arrInDS(arr)) {
+      arr = arr.flat();
+    }
+  
+    return arr;
+  
+  
+  }
+  
+  function arrInDS(ds) {
+    return ds.some(dPoint => {
+      return Array.isArray(dPoint);  
+    })
+  }
+  
+  steamrollArray([1, [2], [3, [[4]]]]);
 
 
 
