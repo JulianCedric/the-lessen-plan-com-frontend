@@ -9,6 +9,51 @@
     // .. comes first in the array
 // If such a difference is not found, the function must return 0. 
 
+var prices = [2,4,1];
+
+function maxProfit(arr) {
+  console.log("arr:", arr);
+
+  let x = arr[0];
+  console.log("x:", x);
+
+  let y = 0;
+
+  for (let i=1; i<arr.length; i++) {
+    if (x > arr[i]) {
+      x = arr[i]
+    } else {
+      y = arr[i];
+      i++;
+    }
+  }
+  console.log("x:", x);
+
+  console.log("y:", y);
+  console.log("y - x = ", y - x);
+
+  if ((y - x) < 0) {
+    return 0;
+  } else {
+    return (y - x);
+  }
+
+};
+
+console.log("Result:", maxProfit(prices)); 
+
+// 
+
+// We are given an array of integers
+// Write a function that returns the biggest difference of two integers in which.. 
+// .. the number being subtracted from the other is:
+    // .. smaller and 
+    // .. comes first in the array
+// If such a difference is not found, the function must return 0. 
+
+// var prices = [7,1,5,3,6,4];
+// var prices = [7,6,4,3,1];
+
 function maxProfit(prices) {
     console.log("prices:", prices);
   
@@ -28,7 +73,20 @@ function maxProfit(prices) {
     return profit;
   };
 
-// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
