@@ -74,7 +74,43 @@ function maxProfit(prices) {
   };
 
 
+// 
 
+var mat1 = 
+[[1,1,0,0,0],
+ [1,1,1,1,0],
+ [1,0,0,0,0],
+ [1,1,0,0,0],
+ [1,1,1,1,1]]; 
+var k1 = 3;
+
+function kWeakestRows(mat, k) {
+
+  let hash = {};
+
+  for (let i=0; i<mat.length; i++) {
+    var numSoldiers = 0;
+
+    for (let j=0; j<mat[i].length; j++) {
+
+      if (mat[i][j] === 1) {
+        numSoldiers = numSoldiers + 1;
+      }
+    }
+    hash[i] = numSoldiers;
+  }
+  console.log(hash);
+
+  let keys = Object.keys(hash);
+
+  keys.sort((a,b) => hash[a] - hash[b]);
+
+  return keys.slice(0, k)
+
+
+}
+
+console.log(kWeakestRows(mat1, k1));
 
 
 
