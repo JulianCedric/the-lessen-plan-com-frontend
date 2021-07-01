@@ -1,5 +1,27 @@
 // 2021.07.01 - THU:
 
+// (moved global variable inside the function)
+
+var flattenedArr = [];
+
+function steamrollArray(arr, flattenedArr = []) {
+  console.log("arr:", arr);
+
+  for (let i=0; i<arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      flattenedArr = steamrollArray(arr[i], flattenedArr);
+    } else {
+      flattenedArr.push(arr[i])
+    }
+  }
+
+  // console.log("flattenedArr:", flattenedArr);
+  return flattenedArr;
+
+}
+
+console.log("Result:", steamrollArray([1, [2], [3, [[4]]]]));
+
 //
 
 var flattenedArr = [];
