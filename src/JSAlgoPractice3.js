@@ -179,6 +179,36 @@ function smallestCommons(arr) {
   
   console.log("Result:", smallestCommons([23,18]));   
 
+// 2021.07.01 - THU:
+
+var prices = [7,1,5,3,6,4]; 
+// var prices = [7,6,4,3,1];
+// var prices = [2,4,1]; 
+
+function maxProfit(arr) {
+
+  let buy = arr[0];
+  console.log("buy:", buy);
+
+  let profit = 0;
+
+  for (let i=1; i<arr.length; i++) {
+    if (buy > arr[i]) {
+      buy = arr[i];
+      arr[i] = 0;
+    } else {
+      profit = Math.max(arr[i] - buy, profit)
+    }
+  }
+  console.log("buy:", buy); 
+
+  console.log("profit:", profit);
+  return profit;
+
+}
+
+console.log("Result:", maxProfit(prices));
+
 // 2021.06.29 - TUE:
 
 // From LeetCode: Best Time to Buy and Sell Stock:
