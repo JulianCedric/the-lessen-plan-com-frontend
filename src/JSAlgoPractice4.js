@@ -1,5 +1,20 @@
 // 2021.07.01 - THU:
 
+// Make a Person - algo problem:
+
+var Person = function(firstAndLast) {
+    // Only change code below this line
+    // Complete the method below and implement the others similarly
+    this.getFullName = function() {
+      return "";
+    };
+    return firstAndLast;
+  };
+  
+  var bob = new Person('Bob Ross');
+  bob.getFullName();
+
+
 // (moved global variable inside the function)
 
 var flattenedArr = [];
