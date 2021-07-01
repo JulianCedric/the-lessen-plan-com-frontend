@@ -1,5 +1,41 @@
 // 2021.07.01 - THU:
 
+// (LeetCode - revisited problem:) Best Time to Buy and Sell Stock:
+
+// We are given an array of integers
+// Write a function that returns the biggest difference of two integers in which.. 
+// .. the number being subtracted from the other is:
+    // .. smaller and 
+    // .. comes first in the array
+// If such a difference is not found, the function must return 0. 
+
+function maxProfit(prices) {
+    console.log("prices:", prices);
+  
+    let buyPrice = prices[0];
+    let profit = 0;
+  
+    for (let i=1; i<prices.length; i++) {
+      if (buyPrice > prices[i]) {
+        buyPrice = prices[i];
+      } else {
+        profit = Math.max(prices[i] - buyPrice, profit);
+        console.log("profit:", profit);
+      }
+    }
+    console.log("buyPrice:", buyPrice);
+  
+    return profit;
+  };
+
+// 
+
+
+
+
+
+
+
 // Make a Person - algo problem:
 
 var Person = function(firstAndLast) {
