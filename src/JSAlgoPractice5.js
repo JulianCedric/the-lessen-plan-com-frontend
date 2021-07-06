@@ -1,5 +1,22 @@
 // 2021.07.06 - TUE:
 
+//
+
+// add up total in cash register before transaction is made
+
+function checkCashRegister(price, cash, cid) {
+
+    console.log("price:", price);
+    console.log("cash:", cash);
+    console.log("cid:\n ", cid);
+    
+  
+  
+  
+  }
+  
+  console.log("Result:", checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])); 
+
 // Roman Numeral Converter
 
 // I  1
