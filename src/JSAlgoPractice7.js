@@ -26,3 +26,45 @@ function shortestToChar(s,c) {
 };
 
 console.log("Result:", shortestToChar(str, char));
+
+// 2021.07.08 - THU:
+
+// Strings
+// … 
+// Arrays
+// For Loop
+// Recursion
+// Map
+// Set
+// Sorting
+// Sliding Window
+// Binary Search
+// Dynamic Programming
+// Objects
+// … 
+
+// —
+
+// String Reversal
+// Palindrome
+// Integer Reversal
+// Fizz Buzz
+// Max Character
+// Anagrams
+// Vowels
+// Array Chunking
+// Reverse Array
+// Reverse Words
+// Capitalization
+// Caesar Cipher
+// Ransom Note
+// Mean, Median, Mode
+// Two Sum
+// Max Profit
+// Sieve of Eratosthenes
+// Fibonacci
+// Memoized Fibonacci
+// Staircase
+// Pyramid
+// Matrix Spiral 
+
