@@ -140,3 +140,10 @@ console.log("Result:", maximumWealth(accts));
     // Create hash whose keys represent the ith customer/s, and values are totals of each account
     // Determine highest sum, assigned to maxVal
     // Return maxVal
+
+// 2021.07.14 - WED: Sliding Window
+
+var array = [100,200,300,400,500];
+
+var num = 3;
+
