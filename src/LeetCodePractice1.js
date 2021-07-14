@@ -152,7 +152,10 @@ function slidingWindow(arr, k) {
   let sum = 0;
   let max = 0;
 
-  
+  for (let i=0; i<k; i++) {
+    sum += arr[i];
+  }
+  console.log("sum:", sum);
 
 
 }
