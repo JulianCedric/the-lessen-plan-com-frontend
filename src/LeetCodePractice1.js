@@ -144,6 +144,17 @@ console.log("Result:", maximumWealth(accts));
 // 2021.07.14 - WED: Sliding Window
 
 var array = [100,200,300,400,500];
-
 var num = 3;
 
+// The Sliding Window technique helps us find the max/min by first creating a variable to store some value, which we then compare to another value. 
+function slidingWindow(arr, k) {
+  
+  let sum = 0;
+  let max = 0;
+
+  
+
+
+}
+
+console.log("Result:", slidingWindow(array, num));
