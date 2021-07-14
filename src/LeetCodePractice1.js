@@ -160,8 +160,14 @@ function slidingWindow(arr, k) {
   for (let i=k; i<arr.length; i++) {
     sum += arr[i] - arr[i-k];
     console.log("sum2=" + sum, "i=" + i, "i-k=" + (i-k));
+
+    if (sum > max) {
+      max = sum;
+      console.log("max=" + max);
+    }
   }
 
+  return max;
 
 }
 
