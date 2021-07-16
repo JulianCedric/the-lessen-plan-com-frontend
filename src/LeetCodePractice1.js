@@ -204,3 +204,42 @@ function slidingWindow(arr, k) {
 }
 
 console.log("Result:", slidingWindow(array, num));
+
+// 2021.07.16 - FRI:
+
+// Updated Sliding Window practice problem:
+
+// var array = [100,200,300,400,500];
+var array = [1, 4, 2, 10, 2, 3, 1, 0, 20];
+// var num = 3;
+var num = 4;
+
+// The Sliding Window technique helps us find the max/min by first creating a variable to store some value, which we then compare to another value. 
+function slidingWindow(arr, k) {
+  
+  let sum = 0;
+  let max = 0;
+
+  for (let i=0; i<k; i++) {
+    sum += arr[i];
+  }
+  console.log("sum=" + sum);
+  console.log("");
+
+  for (let i=k; i<arr.length; i++) {
+    console.log("sum=" + sum);
+    sum += arr[i] - arr[i-k];
+    // console.log("sum2=" + sum, "i=" + i, "i-k=" + (i-k));
+
+    if (sum > max) {
+      max = sum;
+    }
+  }
+
+  console.log("");
+
+  return max;
+
+}
+
+console.log("Result:", slidingWindow(array, num));
