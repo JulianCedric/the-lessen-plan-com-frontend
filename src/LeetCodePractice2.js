@@ -13,6 +13,8 @@ function runningSum(nums) {
   }
   console.log(arr);
 
+  return arr;
+
 }
 
 console.log("\n Result:", runningSum(array));
