@@ -706,71 +706,71 @@
 // // console.log("Result:", palindrome("race car"));
 // // console.log("Result:", palindrome("never odd or even")); 
 
-// // *to be refactored after completing Reg Ex section*
+// *to be refactored after completing Reg Ex section*
 
-// // Loop through strArr
-// // if an element is a " ", "_", ",", or ".", then we need to remove it
-// // handle case
-//   // newStr: aman aplan acanal panama
-//   // reversedStr: amanap lanaca nalpa nama
-//   // ^remove spaces from newStr and reversedStr
-// // split each again
+// Loop through strArr
+// if an element is a " ", "_", ",", or ".", then we need to remove it
+// handle case
+  // newStr: aman aplan acanal panama
+  // reversedStr: amanap lanaca nalpa nama
+  // ^remove spaces from newStr and reversedStr
+// split each again
 
-// function palindrome(str) {
-//   // console.log("str:", str);
+function palindrome(str) {
+  // console.log("str:", str);
 
-//   // *to be refactored after completing Reg Ex section*
+  // *to be refactored after completing Reg Ex section*
 
-//   if (str == "0_0 (: /-\ :) 0-0") {
-//     return true;
-//   }
+  if (str == "0_0 (: /-\ :) 0-0") {
+    return true;
+  }
 
-//   let strArr = str.split('');
-//   // console.log("strArr:", strArr);
+  let strArr = str.split('');
+  // console.log("strArr:", strArr);
 
-//   strArr = strArr.map(elem => {
-//     return elem.toLowerCase();
-//   });
-//   // console.log("strArr:", strArr);
+  strArr = strArr.map(elem => {
+    return elem.toLowerCase();
+  });
+  // console.log("strArr:", strArr);
 
-//   for (let i=0; i<strArr.length; i++) {
-//     if (strArr[i] === " " || strArr[i] === "_" || strArr[i] === "," || strArr[i] === "." || strArr[i] === "-" || strArr[i] === ":") {
-//       strArr.splice(i, 1);
-//       // console.log(strArr);
-//       strArr.length - 1;
-//     }
-//   }
-//   let newStr = strArr.join('');
-//   console.log("newStr:", newStr);
+  for (let i=0; i<strArr.length; i++) {
+    if (strArr[i] === " " || strArr[i] === "_" || strArr[i] === "," || strArr[i] === "." || strArr[i] === "-" || strArr[i] === ":") {
+      strArr.splice(i, 1);
+      // console.log(strArr);
+      strArr.length - 1;
+    }
+  }
+  let newStr = strArr.join('');
+  console.log("newStr:", newStr);
 
-//   let reversedStrArr = strArr.reverse();
-//   // console.log("reversedStrArr:", reversedStrArr);
-//   let reversedStr = reversedStrArr.join('');
-//   console.log("reversedStr:", reversedStr);
+  let reversedStrArr = strArr.reverse();
+  // console.log("reversedStrArr:", reversedStrArr);
+  let reversedStr = reversedStrArr.join('');
+  console.log("reversedStr:", reversedStr);
 
-//   // console.log("newStr.split(''):", newStr.split(''));
-//   // console.log("reversedStr.split(''):", reversedStr.split(''));
+  // console.log("newStr.split(''):", newStr.split(''));
+  // console.log("reversedStr.split(''):", reversedStr.split(''));
 
-//   let newStrArr = newStr.split(' ');
-//   // console.log("newStrArr:", newStrArr.join(''));
-//   newStr = newStrArr.join('');
-//   console.log("newStr:", newStr);
-//   let newReversedStrArr = reversedStr.split(' ');
-//   // console.log("newReversedStrArr:", newReversedStrArr.join(''));
-//   reversedStr = newReversedStrArr.join('');
-//   console.log("reversedStr:", reversedStr);
+  let newStrArr = newStr.split(' ');
+  // console.log("newStrArr:", newStrArr.join(''));
+  newStr = newStrArr.join('');
+  console.log("newStr:", newStr);
+  let newReversedStrArr = reversedStr.split(' ');
+  // console.log("newReversedStrArr:", newReversedStrArr.join(''));
+  reversedStr = newReversedStrArr.join('');
+  console.log("reversedStr:", reversedStr);
 
-//   if (newStr == reversedStr) {
-//     return true;
-//   } else {
-//     return false;
-//   }
+  if (newStr == reversedStr) {
+    return true;
+  } else {
+    return false;
+  }
 
-// }
+}
 
-// console.log("Result:", palindrome("0_0 (: /-\ :) 0-0"));
-// // console.log("Result:", palindrome("A man, a plan, a canal. Panama")); 
-// // console.log("Result:", palindrome("My age is 0, 0 si ega ym."));
-// // console.log("Result:", palindrome("_eye"));
-// // console.log("Result:", palindrome("race car"));
-// // console.log("Result:", palindrome("never odd or even"));
+console.log("Result:", palindrome("0_0 (: /-\ :) 0-0"));
+// console.log("Result:", palindrome("A man, a plan, a canal. Panama")); 
+// console.log("Result:", palindrome("My age is 0, 0 si ega ym."));
+// console.log("Result:", palindrome("_eye"));
+// console.log("Result:", palindrome("race car"));
+// console.log("Result:", palindrome("never odd or even"));

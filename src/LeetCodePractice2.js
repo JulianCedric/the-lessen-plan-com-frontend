@@ -17,4 +17,4 @@ function runningSum(nums) {
 
 }
 
-console.log("\n Result:", runningSum(array));
+console.log("\n Result:", runningSum(array)); 
