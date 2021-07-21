@@ -26,4 +26,25 @@ function defangIPaddr(address) {
 
 };
 
-console.log("Result:", defangIPaddr(addr));
+console.log("Result:", defangIPaddr(addr)); 
+
+// Longest Common Prefix:
+
+var strings = ["flower","flow","flight"];
+// var strings = ["dog","racecar","car"];
+
+function longestCommonPrefix(strs) {
+
+  let comparisonWord = strs[0];
+
+  for (let comparisonLetter of comparisonWord) {
+    console.log("comparisonLetter:", comparisonLetter);
+  
+    
+  
+  }
+
+
+};
+
+console.log("Result:", longestCommonPrefix(strings)); 
