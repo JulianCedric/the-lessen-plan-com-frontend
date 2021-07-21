@@ -48,3 +48,37 @@ function longestCommonPrefix(strs) {
 };
 
 console.log("Result:", longestCommonPrefix(strings)); 
+
+//
+
+var strings = ["flower","flow","flight"];
+// var strings = ["dog","racecar","car"];
+
+function longestCommonPrefix(strs) {
+
+  let comparisonWord = strs[0];
+
+  let hash = {};
+
+  let arr = [];
+
+  for (let comparisonLetter of comparisonWord) {
+    console.log("ITERATION:", "comparisonLetter:", comparisonLetter);
+    hash[comparisonLetter] = 1;
+  
+    for (let i=1; i<strs.length; i++) {
+      if (strs[i].indexOf(comparisonLetter) !== -1) {
+        hash[comparisonLetter] += 1;
+      }
+    }
+
+    if (hash[comparisonLetter] === strs.length) {
+      arr.push(comparisonLetter);      
+    }
+
+  }
+  console.log("arr:", arr);
+
+};
+
+console.log("Result:", longestCommonPrefix(strings)); 
