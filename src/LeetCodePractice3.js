@@ -1,3 +1,7 @@
+// 2021.07.21 - WED: 
+
+// Defanged IP Address:
+
 var addr = "1.1.1.1";
 
 function defangIPaddr(address) {
