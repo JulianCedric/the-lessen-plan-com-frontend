@@ -177,3 +177,66 @@ function longestCommonPrefix(strs) {
 };
 
 console.log("Result:", longestCommonPrefix(strings)); 
+
+// 
+
+var strings = ["flower","flow","flight"];
+// var strings = ["cir","car"];
+// var strings = ["flower", "fkow"];
+
+function longestCommonPrefix(strs) {
+
+  let longest = "";
+
+  let comparisonWord = strs[0];
+
+  let firstLetterOfFirstWord = strs[0].charAt(0);
+  if (strs[1]) {
+    let secondWord = strs[1];
+    let firstLetterOfSecondWord = secondWord.charAt(0);
+
+    if (firstLetterOfFirstWord !== firstLetterOfSecondWord) {
+      return longest;
+    }
+
+  }
+
+  let hash = {};
+
+  let arr = [];
+
+  for (let comparisonLetter of comparisonWord) {
+    console.log("ITERATION:", "comparisonLetter:", comparisonLetter);
+
+    hash[comparisonLetter] = 1;
+  
+    for (let i=1; i<strs.length; i++) {
+      if (strs[i].indexOf(comparisonLetter) !== -1) {
+        hash[comparisonLetter] += 1;
+      }
+    }
+
+    if (hash[comparisonLetter] === strs.length) {
+      arr.push(comparisonLetter);      
+    }
+
+  }
+
+  if (arr.length > 1) {
+    for (let j=0; j<arr.length-1; j++) {
+      if (Math.abs(strs[0].indexOf(arr[j]) - strs[0].indexOf(arr[j+1])) > 1) {
+        arr.pop();
+        console.log("arr.pop():", arr.splice(j+1, 1));
+      }
+    }
+  }
+  console.log("arr:", arr);
+
+  longest = arr.join("");
+  console.log("longest:", longest);
+
+  return longest;
+
+};
+
+console.log("Result:", longestCommonPrefix(strings)); 
