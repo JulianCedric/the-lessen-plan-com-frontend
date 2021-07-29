@@ -240,3 +240,5 @@ function longestCommonPrefix(strs) {
 };
 
 console.log("Result:", longestCommonPrefix(strings)); 
+
+// 2021.07.29 - React Practice - new app 
