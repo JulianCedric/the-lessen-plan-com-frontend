@@ -18,6 +18,22 @@ class MyComponent extends React.Component {
 
 //
 
+class MyComponent extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    componentWillMount() {
+      // Change code below this line
+      console.log("Hello there!")
+      // Change code above this line
+    }
+    render() {
+      return <div />
+    }
+  };
+
+//
+
 class MyApp extends React.Component {
     constructor(props) {
       super(props);
