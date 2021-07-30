@@ -1,5 +1,20 @@
 // 2021.07.30 - FRI:
 
+// Render React on the Server with RenderToString:
+
+class App extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+      return <div/>
+    }
+  };
+  
+  // Change code below this line
+  
+  ReactDOMServer.renderToString(<App />);
+
 // Use Array.filter() to Dynamically Filter an Array:
 
 class MyComponent extends React.Component {
