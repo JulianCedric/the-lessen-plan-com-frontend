@@ -1,5 +1,23 @@
 // 2021.07.30 - FRI:
 
+// Use the LifeCycle Method componentWillMount
+
+class MyComponent extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    componentWillMount() {
+      // Change code below this line
+  
+      // Change code above this line
+    }
+    render() {
+      return <div />
+    }
+  };
+
+//
+
 class MyApp extends React.Component {
     constructor(props) {
       super(props);
