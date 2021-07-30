@@ -1,6 +1,58 @@
 // 2021.07.30 - FRI:
 
-//
+// Use Array.filter() to Dynamically Filter an Array:
+
+class MyComponent extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        users: [
+          {
+            username: 'Jeff',
+            online: true
+          },
+          {
+            username: 'Alan',
+            online: false
+          },
+          {
+            username: 'Mary',
+            online: true
+          },
+          {
+            username: 'Jim',
+            online: false
+          },
+          {
+            username: 'Sara',
+            online: true
+          },
+          {
+            username: 'Laura',
+            online: true
+          }
+        ]
+      };
+    }
+    render() {
+      const usersOnline = this.state.users.filter(user => user.online); // Change this line
+      const renderOnline = usersOnline.map(user => {
+        return <li key={user.username}>{user.username}</li>
+      }); // Change this line
+  
+      console.log("this.state.users", this.state.users.filter(user => user.online));
+      console.log("usersOnline:", usersOnline); 
+  
+      return (
+        <div>
+          <h1>Current Online Users:</h1>
+          <ul>{renderOnline}</ul>
+        </div>
+      );
+    }
+  }
+
+// Give Sibling Elements a Unique Key Attribute:
 
 const frontEndFrameworks = [
     'React',
