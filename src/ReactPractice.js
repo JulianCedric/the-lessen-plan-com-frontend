@@ -1,5 +1,15 @@
 // 2021.07.30 - FRI:
 
+// Introducing Inline Styles:
+
+class Colorful extends React.Component {
+    render() {
+      return (
+        <div style={{color: "red", fontSize: 72}}>Big Red</div>
+      );
+    }
+  };
+
 // Optimize Re-Renders with shouldComponentUpdate:
 
 class OnlyEvens extends React.Component {
