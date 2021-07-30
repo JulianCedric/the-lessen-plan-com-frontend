@@ -1,5 +1,58 @@
 // 2021.07.30 - FRI:
 
+// Optimize Re-Renders with shouldComponentUpdate:
+
+class OnlyEvens extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+      console.log('Should I update?');
+      // Change code below this line
+  
+      // console.log("nextProps:", nextProps);
+      // console.log("nextState:", nextState);
+      // console.log("this.props.value:", this.props.value);
+  
+      if (nextProps.value % 2 == 0) {
+        return true;
+      } else {
+        return false;
+      }
+  
+      // Change code above this line
+    }
+    componentDidUpdate() {
+      console.log('Component re-rendered.');
+    }
+    render() {
+      return <h1>{this.props.value}</h1>;
+    }
+  }
+  
+  class Controller extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        value: 0
+      };
+      this.addValue = this.addValue.bind(this);
+    }
+    addValue() {
+      this.setState(state => ({
+        value: state.value + 1
+      }));
+    }
+    render() {
+      return (
+        <div>
+          <button onClick={this.addValue}>Add</button>
+          <OnlyEvens value={this.state.value} />
+        </div>
+      );
+    }
+  }
+
 // Add Event Listeners:
 
 class MyComponent extends React.Component {
