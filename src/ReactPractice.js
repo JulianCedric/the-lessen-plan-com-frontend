@@ -1,5 +1,31 @@
 // 2021.07.30 - FRI:
 
+//
+
+const frontEndFrameworks = [
+    'React',
+    'Angular',
+    'Ember',
+    'Knockout',
+    'Backbone',
+    'Vue'
+  ];
+  
+  function Frameworks() {
+    const renderFrameworks = frontEndFrameworks.map(item => {
+      return <li key={item}>{item}</li>
+    }); // Change this line
+    console.log("renderFrameworks:", renderFrameworks);
+    return (
+      <div>
+        <h1>Popular Front End JavaScript Frameworks</h1>
+        <ul>
+          {renderFrameworks}
+        </ul>
+      </div>
+    );
+  };
+
 // Use Array.map() to Dynamically Render Elements:
 
 const textAreaStyles = {
