@@ -1,3 +1,42 @@
+// 2021.07.30 - FRI:
+
+class MyApp extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        name: 'CamperBot'
+      }
+    }
+    render() {
+      return (
+         <div>
+           {/* Change code below this line */}
+           <Navbar />
+           {/* Change code above this line */}
+         </div>
+      );
+    }
+  };
+  
+  class Navbar extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+      return (
+      <div>
+        {/* Change code below this line */}
+        <h1>Hello, my name is: </h1>
+        {/* Change code above this line */}
+      </div>
+      );
+    }
+  };
+
+//
+
+
+
 // 2021.07.29 - THU:
 
 class ControlledInput extends React.Component {
