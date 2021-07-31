@@ -1,3 +1,9 @@
+// 2021.07.31 - SAT: 
+
+// Get State from the Redux Store:
+
+
+
 // 2021.07.30 - FRI: 
 
 // Create a Redux Store:
@@ -10,4 +16,4 @@ const reducer = (state = 5) => {
   // For example: Redux.createStore()
   // Define the store here:
   
-  const store = Redux.createStore(reducer)
+  const store = Redux.createStore(reducer); 
