@@ -1,6 +1,6 @@
 // 2021.07.31 - SAT: 
 
-
+// Use a Switch Statement to Handle Multiple Actions: 
 
 const defaultState = {
     authenticated: false
