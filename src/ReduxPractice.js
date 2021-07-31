@@ -2,7 +2,13 @@
 
 // Get State from the Redux Store:
 
-
+const store = Redux.createStore(
+    (state = 5) => state
+  );
+  
+  // Change code below this line
+  
+  const currentState = store.getState();
 
 // 2021.07.30 - FRI: 
 
