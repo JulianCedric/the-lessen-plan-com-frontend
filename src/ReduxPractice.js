@@ -1,5 +1,13 @@
 // 2021.07.31 - SAT: 
 
+// Define a Redux Action:
+
+// Define an action here:
+
+const action = {
+    type: 'LOGIN'
+  }
+
 // Get State from the Redux Store:
 
 const store = Redux.createStore(
