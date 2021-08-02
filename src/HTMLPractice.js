@@ -30,3 +30,18 @@
 
 <footer id="footer"></footer> 
 
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+<h2>Cats love.. </h2>
+
+<ul>
+  <li>Cat food</li>
+  <li>Toys</li>
+  <li>Sitting next to windows</li>
+</ul> 
+</main>
+
