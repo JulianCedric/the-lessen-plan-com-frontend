@@ -68,3 +68,7 @@
 
 </main>
 
+<form action="http://www.google.com/">
+    <input type="text" placeholder="What's your name?"/>
+    <button type="submit">Submit</button>
+</form>
