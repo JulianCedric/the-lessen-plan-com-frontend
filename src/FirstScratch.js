@@ -1,5 +1,51 @@
 // 2021.08.04 - WED:
 
+var array = ["First Task", "Second Task", "Third Task"];
+
+function renderData(arr) {
+	let tasksContainer = document.getElementById("tasks-container");
+  
+  for (let i=0; i<arr.length; i++) {
+    let tasksUl = document.createElement("ul");
+    tasksUl.innerHTML = `<li>${arr[i]}</li>`;
+    tasksContainer.appendChild(tasksUl);
+  };
+
+};
+
+renderData(array);
+
+let formVisible = false;
+
+let addBtn = document.getElementById("add-btn");
+
+addBtn.addEventListener("click", () => {
+	if (formVisible == false) {
+  	formVisible = true;
+    console.log("formVisible-within-function:", formVisible);
+    renderForm(formVisible);
+  };
+})
+
+function renderForm(visibility) {
+	if (visibility) {
+  	let mainDiv = document.getElementById("main-div");
+    let createNewTaskDiv = document.createElement("div");
+    createNewTaskDiv.innerHTML = `
+    	<form id="create-form" action=null>
+        <input id="new-task" type="text" placeholder="Enter new task">
+        <button id="btn" type="submit">
+          Submit
+        </button>
+      </form>
+    `;
+    mainDiv.appendChild(createNewTaskDiv);
+  }
+  addBtn.remove();
+};
+
+console.log("formVisible:", formVisible);
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -59,4 +105,3 @@ function renderData(arr) {
 };
 
 renderData(array);
-
