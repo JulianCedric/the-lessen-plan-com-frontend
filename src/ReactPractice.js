@@ -427,6 +427,8 @@ const inputStyle = {
     }
   }
 
+// const, functional stateless component, JavaScript style class components
+
 // Add Inline Styles in React:
 
 const styles = {
