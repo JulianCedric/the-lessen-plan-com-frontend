@@ -27,19 +27,36 @@
 
   //
 
-  var array = ["First Task", "Second", "Third"];
+//   var array = ["First Task", "Second", "Third"];
 
-function renderStuff(arr) {
+// function renderStuff(arr) {
 
-  let tasksDiv = document.getElementById("tasks-div");
-  let task = document.createElement("li");
-  let text = document.createTextNode(arr[0]);
+//   let tasksDiv = document.getElementById("tasks-div");
+//   let task = document.createElement("li");
+//   let text = document.createTextNode(arr[0]);
 
-	task.appendChild(text);
+// 	task.appendChild(text);
 	
-  return tasksDiv.appendChild(task);
+//   return tasksDiv.appendChild(task);
   
+// };
+
+// renderStuff(array);
+
+//
+
+var array = ["First Task", "Second Task", "Third Task"];
+
+function renderData(arr) {
+	let tasksContainer = document.getElementById("tasks-container");
+  
+  for (let i=0; i<arr.length; i++) {
+    let tasksUl = document.createElement("ul");
+    tasksUl.innerHTML = `<li>${arr[i]}</li>`;
+    tasksContainer.appendChild(tasksUl);
+  };
+
 };
 
-renderStuff(array);
+renderData(array);
 
