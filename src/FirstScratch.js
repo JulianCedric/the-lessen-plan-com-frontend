@@ -1,3 +1,23 @@
+// 2021.08.05 - THU:
+
+#tasks-container {
+  background-color: silver;
+}
+
+#my-tasks-header {
+  font-family: monospace;
+}
+
+#add-btn {
+  background-color: black;
+  color: white;
+}
+
+#add-task-btn {
+  background-color: blue;
+  color: white;
+}
+
 // 2021.08.04 - WED:
 
 var array = ["First Task", "Second Task", "Third Task"];
