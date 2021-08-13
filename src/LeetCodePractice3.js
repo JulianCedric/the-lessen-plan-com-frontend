@@ -1,4 +1,32 @@
-// 2021.08.12 - FRI:
+// 2021.08.13 - FRI:
+
+var jwls = "aA";
+var stns = "aAAbbbb";
+var jwls2 = "z";
+var stns2 = "ZZ";
+
+function numJewelsInStones(jewels, stones) {
+  var output = 0;
+
+  var jewelsArr = jewels.split("");
+  console.log("jewelsArr:", jewelsArr);
+
+  var stonesArr = stones.split("");
+  console.log("stonesArr:", stonesArr);
+
+  for (let i=0; i<stonesArr.length; i++) {
+    if (jewelsArr.indexOf(stonesArr[i]) !== -1) {
+      output += 1;
+    }
+  }
+
+  return output;
+}
+
+// console.log("numJewelsInStones(jwls, stns):", numJewelsInStones(jwls, stns));
+console.log("numJewelsInStones(jwls, stns):", numJewelsInStones(jwls2, stns2));
+
+//
 
 var arr = [2,3,5,1,3]; 
 var extraArr = 3;
