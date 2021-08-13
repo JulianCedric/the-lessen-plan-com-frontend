@@ -1,3 +1,61 @@
+// 2021.08.12 - FRI:
+
+var arr = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]];
+var rK = "color";
+var rV = "silver";
+var arr2 = [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]];
+var rK2 = "type"; 
+var rV2 = "phone";
+
+function countMatches(items, ruleKey, ruleValue) {
+  var numItems = 0;
+
+  for (let i=0; i<items.length; i++) {
+    console.log("Iteration #:", i+1, items[i]);
+    
+    if (ruleKey == "type") {
+      for (let j=0; j<1 ; j++) {
+        if (items[i][j] == ruleValue) {
+          numItems += 1;
+        }
+      }
+    }
+    
+    if (ruleKey == "color") {
+      for (let j=1; j<2; j++) {
+        console.log("j=", items[i][j])
+        if (items[i][j] == ruleValue) {
+          numItems += 1; 
+        }
+      }
+    }
+
+    if (ruleKey == "name") {
+      for (j=2; j<3; j++) {
+        if (items[i][j] == ruleValue) {
+          numItems += 1;
+        }
+      }
+    }
+
+  }
+
+  return numItems;
+};
+
+// console.log("countMatches(arr, rK, rV):", countMatches(arr, rK, rV));
+console.log("countMatches(arr2, rK2, rV2):", countMatches(arr2, rK2, rV2));
+
+
+
+
+
+
+
+
+
+
+
 // 2021.07.21 - WED: 
 
 // Defanged IP Address:
