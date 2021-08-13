@@ -1,5 +1,41 @@
 // 2021.08.12 - FRI:
 
+var img = [[1,1,0],[1,0,1],[0,0,0]];
+var img2 = [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]];
+
+function flipAndInvertImage(image) {
+  var newImage = [];
+
+  var outerArr = [];
+  var innerArr = [];
+
+  for (let i=0; i<image.length; i++) {
+      innerArr = image[i].reverse();
+      outerArr.push(innerArr);
+  }
+  console.log("outerArr:", outerArr);
+
+  for (let i=0; i<outerArr.length; i++) {
+    for (let j=0; j<outerArr[i].length; j++) {
+      if (outerArr[i][j] == 0) {
+        outerArr[i][j] = 1;
+      } else if (outerArr[i][j] == 1) {
+        outerArr[i][j] = 0;
+      }
+    }
+  }
+  console.log('outerArr:', outerArr);
+
+  newImage = outerArr;
+
+  return newImage;
+}
+
+// console.log("flipAndInvertImage(img):", flipAndInvertImage(img));
+console.log("flipAndInvertImage(img):", flipAndInvertImage(img2));
+
+//
+
 var arr = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]];
 var rK = "color";
 var rV = "silver";
