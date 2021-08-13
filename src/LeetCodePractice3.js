@@ -1,5 +1,38 @@
 // 2021.08.12 - FRI:
 
+var arr = [2,3,5,1,3]; 
+var extraArr = 3;
+var arr2 = [4,2,1,1,2];
+var extraArr2 = 1;
+
+function kidsWithCandies(candies, extraCandies) {
+  var output = [];
+
+  var candiesCopy = candies.slice();
+  var sortedArr = candiesCopy.sort((a,b) => (b-a));
+  var highestNum = sortedArr[0];
+  var currentBoolVal = false;
+
+  for (let i=0; i<candies.length; i++) {
+    if (candies[i] + extraCandies >= highestNum) {
+      currentBoolVal = true;
+      output.push(currentBoolVal);
+    } else if (candies[i] + extraCandies < highestNum) {
+      console.log("candies[3]:", candies[3]);
+      currentBoolVal = false;
+      output.push(currentBoolVal);
+    }
+  }
+  console.log("output:", output);
+
+  return output;
+}
+
+// console.log("kidsWithCandies(arr, extraArr):", kidsWithCandies(arr, extraArr));
+console.log("kidsWithCandies(arr, extraArr):", kidsWithCandies(arr2, extraArr2));
+
+//
+
 var img = [[1,1,0],[1,0,1],[0,0,0]];
 var img2 = [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]];
 
