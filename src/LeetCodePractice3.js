@@ -1,3 +1,31 @@
+// 2021.08.15 - SUN:
+
+var numbers = [1,1,2];
+var numbers2 = [0,0,1,1,1,2,2,3,3,4];
+
+function removeDuplicates(nums) {
+  var arr = [nums[0]];
+
+  var currNum = nums[0];
+
+  for (let i=1; i<nums.length; i++) {
+    if (nums[i] == currNum + 1) {
+      currNum = nums[i];
+      arr.push(currNum);
+    }
+  }
+  console.log("arr:", arr);
+  nums = arr;
+  console.log("nums:", nums);
+
+  var k = nums.length;
+
+  return k;
+
+}
+
+console.log("removeDuplicates(numbers):", removeDuplicates(numbers));
+
 // 2021.08.13 - FRI:
 
 var jwls = "aA";
