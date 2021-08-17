@@ -1,3 +1,7 @@
+// 2021.08.17 - TUE:
+
+const JSX = <h1>Hello JSX!</h1>;
+
 // 2021.07.30 - FRI:
 
 // Render React on the Server with RenderToString:
