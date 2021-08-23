@@ -1,19 +1,22 @@
-// 2021.07.09 - FRI: 
+// 2021.08.23 - MON: 
 
-// Refactoring the following 5 JS Algo & DS projects:
+// Revisited algo problem:
 
-    // 1. Palindrome Checker
-    // 2. Roman Numeral Converter
-    // 3. Caesar's Cipher
-    // 4. Telephone Number Validar
-    // 5. Cash Register
-
-// 
-
-function palindrome(str) {
-    return true;
-  }
+function maxProfit(prices) {
+    console.log("prices:", prices);
   
+    let buyPrice = prices[0];
+    let profit = 0;
   
+    for (let i=1; i<prices.length; i++) {
+      if (buyPrice > prices[i]) {
+        buyPrice = prices[i];
+      } else {
+        profit = Math.max(prices[i] - buyPrice, profit);
+        console.log("profit:", profit);
+      }
+    }
+    console.log("buyPrice:", buyPrice);
   
-  palindrome("eye");
+    return profit;
+  };
