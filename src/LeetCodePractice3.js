@@ -1,3 +1,25 @@
+// 2021.08.24 - TUE:
+
+// Revisited
+
+function numJewelsInStones(jewels, stones) {
+  var output = 0;
+
+  var jewelsArr = jewels.split("");
+  console.log("jewelsArr:", jewelsArr);
+
+  var stonesArr = stones.split("");
+  console.log("stonesArr:", stonesArr);
+
+  for (let i=0; i<stonesArr.length; i++) {
+    if (jewelsArr.indexOf(stonesArr[i]) !== -1) {
+      output += 1;
+    }
+  }
+
+  return output;
+}
+
 // 2021.08.15 - SUN:
 
 var numbers = [1,1,2];
