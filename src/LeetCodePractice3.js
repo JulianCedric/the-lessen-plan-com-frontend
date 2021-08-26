@@ -1,3 +1,32 @@
+// 2021.08.26 - THU:
+
+var numbers1 = [8,1,2,2,3];
+var numbers2 = [6,5,4,8];
+var numbers3 = [7,7,7,7];
+
+function smallerNumbersThanCurrent(nums) {
+
+  var arr = [];
+
+  for (let i=0;i<nums.length; i++) {
+    var counter = 0;
+
+    for (let j=0; j<nums.length; j++) {
+      if ((j != i) && (nums[j] < nums[i])) {
+        counter += 1;
+      }
+    }
+    console.log("i:", i, "          counter:", counter);
+    arr[i] = counter;
+  }
+
+  return arr;
+}
+
+console.log(smallerNumbersThanCurrent(numbers1));
+// console.log(smallerNumbersThanCurrent(numbers2));
+// console.log(smallerNumbersThanCurrent(numbers3));
+
 // 2021.08.25 - WED:
 
 var numbers1 = [8,1,2,2,3];
