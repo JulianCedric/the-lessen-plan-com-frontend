@@ -1,3 +1,34 @@
+// 2021.08.27 - FRI: 
+
+var sentence1 = "is2 sentence4 This1 a3";
+var sentence2 = "Myself2 Me1 I4 and3";
+
+function sortSentence(s) {
+  var string;
+
+  var arr = [];
+
+  s = s.split(" ");
+
+  for (let i=0; i<s.length; i++) {
+    var stringifiedNumber = (i + 1).toString();
+    console.log(stringifiedNumber); // i = 0;
+
+    for (let j=0; j<s.length; j++) {
+      if (s[j].includes(stringifiedNumber)) {
+        arr[i] = s[j]
+      }
+    }
+  }
+
+  string = arr.join(" ");
+
+  return string;
+}
+
+console.log("sortSentence(sentence1):", sortSentence(sentence1));
+// console.log("sortSentence(sentence1):", sortSentence(sentence2));
+
 // 2021.08.26 - THU:
 
 var numbers1 = [8,1,2,2,3];
