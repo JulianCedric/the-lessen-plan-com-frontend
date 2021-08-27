@@ -12,6 +12,43 @@ function sortSentence(s) {
 
   for (let i=0; i<s.length; i++) {
     var stringifiedNumber = (i + 1).toString();
+
+    for (let j=0; j<s.length; j++) {
+      if (s[j].includes(stringifiedNumber)) {
+        arr[i] = s[j]
+      }
+    }
+  }
+  console.log("arr:", arr);
+
+  for (let i=0;i<arr.length; i++) {
+    var word = arr[i].slice(0, -1);
+    arr[i] = word;
+  }
+  console.log("arr2:", arr);
+
+  string = arr.join(" ");
+
+  return string;
+}
+
+console.log("sortSentence(sentence1):", sortSentence(sentence1));
+// console.log("sortSentence(sentence1):", sortSentence(sentence2));
+
+//
+
+var sentence1 = "is2 sentence4 This1 a3";
+var sentence2 = "Myself2 Me1 I4 and3";
+
+function sortSentence(s) {
+  var string;
+
+  var arr = [];
+
+  s = s.split(" ");
+
+  for (let i=0; i<s.length; i++) {
+    var stringifiedNumber = (i + 1).toString();
     console.log(stringifiedNumber); // i = 0;
 
     for (let j=0; j<s.length; j++) {
