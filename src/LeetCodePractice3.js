@@ -1,3 +1,39 @@
+// 2021.08.28 - SAT: 
+
+var c1 = "G()(al)";
+var c2 = "G()()()()(al)";
+var c3 = "(al)G(al)()()G";
+
+function interpret(command) {
+
+  var arr = command.split("");
+  var newArr = [];
+
+  for (let i=0;i<arr.length;i++) {
+    var currentValue;
+
+    if (arr[i] === "G") {
+      currentValue = "G";
+      newArr.push(currentValue);
+    } else if ((arr[i] === "(") && (arr[i+1]) === ")") {
+      currentValue = "o";
+      newArr.push(currentValue);
+    } else if ((arr[i] === "(") && (arr[i+1] === "a") && (arr[i+2] === "l") && (arr[i+3] === ")")) {
+      currentValue = "al";
+      newArr.push(currentValue)
+    } else {
+      // console.log("error");
+    }
+  }
+
+  var newString = newArr.join("");
+  return newString;
+}
+
+console.log(interpret(c1));
+// console.log(interpret(c2));
+// console.log(interpret(c3));
+
 // 2021.08.27 - FRI: 
 
 var sentence1 = "is2 sentence4 This1 a3";
