@@ -1,139 +1,28 @@
 import React from 'react';
 import './App.css';
-import { Button, Form, Grid, Icon, Image, Reveal } from 'semantic-ui-react';
-import HabitLoop from './HabitLoop';
-import LessenPlan from './LessenPlan';
-import ReactToPrint from "react-to-print";
-import Create from './Create';
-import LessenPlans from './LessenPlans';
-import Update from './Update';
-import LabIcon from './LabIcon';
-
-const USERS = [
-    {
-        id: 0,
-        firstName: 'Adam',
-        lastName: 'Benton',
-        email: 'adam.boyd@email.com',
-        password: 'ab123'
-    },
-    {
-        id: 1,
-        firstName: 'Clara',
-        lastName: 'Davidson',
-        email: 'clara.davidson@email.com',
-        password: 'cd123'
-    }
-]
-
-const LESSENPLANS = [
-    {
-      id: 0,
-      type: 'morning',
-      goal: "",
-      dueDate: "",
-      habitDesc: '',
-      habitBad: false,
-      habitLoopItemA: 'Cue',
-      habitLoopItemB: 'Craving',
-      habitLoopItemC: 'Response',
-      habitLoopItemD: 'Reward',
-      habitTracker: 'Under Construction'
-    }
-  ]
+import QuestionForm from './QuestionForm';
 
 class Lab extends React.Component {
     state = {  
-        users: USERS,
-        lessenPlans: LESSENPLANS,
-        renderLabIcon: false,
-        renderCreateIcon: true,
-        renderCreate: false,
-        renderUpdate: true
+        questions: []
     }
 
-    handleClickCreate = e => {
-        this.setState({ renderLabIcon: !this.state.renderLabIcon })
-        this.setState({ renderCreateIcon: !this.state.renderCreateIcon })
-        this.setState({ renderCreate: !this.state.renderCreate })
-    }
+    handleUserSubmit = newQuestion => {
+        console.log("newQuestion2:", newQuestion);
+        console.log("questions BEFORE", this.state.questions);
 
-    // badHabit = e => {
-    //     console.log('Confirmation: badHabit()')
-    //     this.setState({ habitBad: true })
-    // }
+        let questionsArr = this.state.questions;
 
-    create = obj => {
-        let arr = [...this.state.lessenPlans, obj]
-        this.setState({ lessenPlans: arr })
-    }
+        const arr = questionsArr.push(newQuestion);
 
-    signup = (e, obj) => {
-        console.log('signup')
-    }
-
-    delete = id => {
-        console.log('delete', id)
-        let arr = [...this.state.lessenPlans]
-        let obj = arr.filter(elem => elem.id !== id)
-        this.setState({ lessenPlans: arr })
-    }
-
-    renderCreate = e => {
-        console.log('renderCreate')
-        // this.setState({ renderCreate: !this.state.renderCreate })
-        // this.setState({ renderUpdate: !this.state.renderUpdate })
-    }
-
-    updateHabitDesc = (id, desc, bad) => {
-        let arr = [...this.state.lessenPlans]
-        let obj = arr.find(elem => elem.id === id)
-
-        console.log('id: ', id)
-        console.log('desc: ', desc)
-
-        obj.habitDesc = desc
-        obj.habitBad = bad
-
-        this.setState({ lessenPlans: arr })
-    }
-
-    updateHabitLoopItemA = (id, cue) => {
-        let arr = [...this.state.lessenPlans]
-        let obj = arr.find(elem => elem.id === id)
-        obj.habitLoopItemA = cue
-        this.setState({ lessenPlans: arr })
-    }
-
-    handleClickLoadUsers = e => {
-        console.log('[ Load Users ]')
-        this.setState({ users: USERS })
-    }
-
-    handleClickLoadLessenPlans = e => {
-        console.log('[ Load Lessen Plans ]')
-        this.setState({ lessenPlans: LESSENPLANS })
+        this.setState({ questions: arr })
+        console.log("questions AFTER", this.state.questions);
     }
 
     render() { 
-        console.log("Current state of 'lessenPlans': ", this.state.lessenPlans)
         return (  
             <div className="lab" style={{ color: 'white' }}>
-
-                {this.state.renderLabIcon ? <LabIcon /> : null }
-
-                {this.state.renderCreateIcon ? <Icon onClick={this.handleClickCreate} inverted color='violet' name='add circle' size='huge'/> : null }
-                
-                {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} signup={this.signup} /> : null }
-
-                {/* {this.state.renderUpdate ? <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} /> : null } */}
-
-                <br/>
-                <br/>
-                <br/>
-
-                {/* <LessenPlans lessenPlans={this.state.lessenPlans} delete={this.delete} /> */}
-
+                <QuestionForm questions={this.state.questions} handleUserSubmit={this.handleUserSubmit}/>
             </div>
         );
     }
