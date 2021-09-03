@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { Form } from 'semantic-ui-react';
 
 class QuestionForm extends React.Component {
@@ -23,7 +24,7 @@ class QuestionForm extends React.Component {
 
     render() { 
         return (  
-            <div className="form">
+            <div className="question-form">
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>
                         <Form.Input 

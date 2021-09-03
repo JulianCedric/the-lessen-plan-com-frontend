@@ -123,3 +123,8 @@ div.grid-container > div {
   margin: auto;
   place-items: center; 
 }
+
+.question-form {
+  display: grid;
+  place-items: center;
+}

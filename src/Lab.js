@@ -8,9 +8,13 @@ var bTimeActivities = ["b1", "b2", "b3"];
 class Lab extends React.Component {
     state = {  
         aTime: [],
+        aTimeStatus: false,
         bTime: [],
+        bTimeComplete: [],
         questions: []
     }
+
+
 
 
 
