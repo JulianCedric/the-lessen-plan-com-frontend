@@ -62,3 +62,7 @@ class App extends React.Component {
 }
  
 export default App;
+
+// 2021.09.23 - THU:
+
+// Test (AWS)

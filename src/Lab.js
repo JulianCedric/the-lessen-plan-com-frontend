@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import QuestionForm from './QuestionForm';
 
+
 var aTimeActivities = ["a1", "a2", "a3"];
 var bTimeActivities = ["b1", "b2", "b3"];
 
@@ -13,10 +14,6 @@ class Lab extends React.Component {
         bTimeComplete: [],
         questions: []
     }
-
-
-
-
 
     handleUserSubmit = newQuestion => {
         console.log("newQuestion2:", newQuestion);
@@ -37,6 +34,7 @@ class Lab extends React.Component {
         return (  
             <div className="lab" style={{ color: 'white' }}>
                 <QuestionForm questions={this.state.questions} handleUserSubmit={this.handleUserSubmit}/>
+                
             </div>
         );
     }
