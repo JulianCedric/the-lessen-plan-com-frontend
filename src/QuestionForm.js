@@ -28,7 +28,7 @@ class QuestionForm extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>
                         <Form.Input 
-                            placeholder='Your Question'
+                            placeholder='Your Question.. '
                             name='question'
                             value={this.state.question}
                             onChange={this.handleChange}
@@ -42,3 +42,5 @@ class QuestionForm extends React.Component {
 }
  
 export default QuestionForm;
+
+// test

@@ -26,7 +26,7 @@ class LessenPlan extends React.Component {
 
                                 <hr/>
 
-                                <p>Step 1. Make a list of your daily morning habits:</p>
+                                <p>Step abc. Make a list of your daily morning habits:</p>
                                 <p>{this.props.lessenPlan.habitDesc}</p>
                                 <br/>
                                 <p>Step 2. For each behavior, select "-" if it's bad, or "+" if it's good:</p>

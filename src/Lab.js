@@ -2,10 +2,6 @@ import React from 'react';
 import './App.css';
 import QuestionForm from './QuestionForm';
 
-
-var aTimeActivities = ["a1", "a2", "a3"];
-var bTimeActivities = ["b1", "b2", "b3"];
-
 class Lab extends React.Component {
     state = {  
         aTime: [],
