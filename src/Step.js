@@ -6,10 +6,9 @@ class Step extends React.Component {
         console.log("this.props:", this.props.id)
         return (
             <div className="step">
-                <li>
-                    {this.props.desc}
-                </li>
-                {/* <Radio label={this.props.s}/> */}
+                <Radio label={this.props.desc} />
+                <br/>
+
             </div>
         )
     }

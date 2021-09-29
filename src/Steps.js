@@ -7,9 +7,9 @@ class Steps extends React.Component {
         console.log("this.props:", this.props);
         return (
             <div className="steps">
-                <ol>
+                
                 {this.props.steps.map(step => <Step key={step.id} {...step} />)}
-                </ol>
+
             </div>
         )
     }

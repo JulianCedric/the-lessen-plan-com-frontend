@@ -39,6 +39,7 @@ class MyLessenPlan extends React.Component {
                                             <div className="steps">
                                                 <h4>Steps</h4>
                                                 <Steps steps={this.state.steps} />
+                                                <br/>
                                                 <Button basic color="cornflower blue">Add Step</Button>
                                             </div>
                                         </Card.Description>
