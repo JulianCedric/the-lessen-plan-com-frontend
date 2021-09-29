@@ -2,22 +2,29 @@ import React from 'react';
 import './App.css';
 import MyLessenPlans from './MyLessenPlans';
 
+const LESSENPLANS = [
+    {
+        id: 1,
+        title: "Deep Work Session",
+        duration: 90
+    },
+    {
+        id: 2,
+        title: "Coding Practice",
+        duration: 30
+    }
+];
+
 class Lab extends React.Component {
     state = {  
-        aTime: [],
-        aTimeStatus: false,
-        bTime: [],
-        bTimeComplete: [],
-        questions: []
+        myLessenPlans: LESSENPLANS
     }
 
     render() { 
-        console.log("Current state of 'aTime':", this.state.aTime);
-        console.log("Current state of 'aTime':", this.state.BTime);
-
+        console.log("this.state.myLessenPlans:", this.state.myLessenPlans)
         return (  
             <div className="lab" style={{ color: 'white' }}>
-                <MyLessenPlans questions={this.state.questions} handleUserSubmit={this.handleUserSubmit}/>
+                <MyLessenPlans myLessenPlans={this.state.myLessenPlans} />
             </div>
         );
     }
