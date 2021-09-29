@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grid, Header, Segment } from 'semantic-ui-react';
+import { Card, Grid, Header, Segment } from 'semantic-ui-react';
 
-class QuestionForm extends React.Component {
+class MyLessenPlans extends React.Component {
     render() { 
         return (
         
@@ -10,11 +10,11 @@ class QuestionForm extends React.Component {
 
                 <Header
                 as='h3'
-                content='Routines'
-                // style={style.h3}
+                content='My Lessen Plans'
+                // style={{ color: 'black' }}
                 textAlign='center'
                 />
-                <Grid container columns={3} doubling stackable>
+                <Grid container columns={3} doubling stackable style={{ color: 'black' }}>
                 <Grid.Column>
                     <Segment>Time-Blocked DWS</Segment>
                 </Grid.Column>
@@ -36,7 +36,7 @@ class QuestionForm extends React.Component {
     }
 }
  
-export default QuestionForm;
+export default MyLessenPlans;
 
 //
 

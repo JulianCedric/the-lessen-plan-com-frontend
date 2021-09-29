@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import QuestionForm from './QuestionForm';
+import MyLessenPlans from './MyLessenPlans';
 
 class Lab extends React.Component {
     state = {  
@@ -11,26 +11,13 @@ class Lab extends React.Component {
         questions: []
     }
 
-    handleUserSubmit = newQuestion => {
-        console.log("newQuestion2:", newQuestion);
-        console.log("questions BEFORE", this.state.questions);
-
-        let questionsArr = this.state.questions;
-
-        const arr = questionsArr.push(newQuestion);
-
-        this.setState({ questions: arr })
-        console.log("questions AFTER", this.state.questions);
-    }
-
     render() { 
         console.log("Current state of 'aTime':", this.state.aTime);
         console.log("Current state of 'aTime':", this.state.BTime);
 
         return (  
             <div className="lab" style={{ color: 'white' }}>
-                <QuestionForm questions={this.state.questions} handleUserSubmit={this.handleUserSubmit}/>
-                
+                <MyLessenPlans questions={this.state.questions} handleUserSubmit={this.handleUserSubmit}/>
             </div>
         );
     }
