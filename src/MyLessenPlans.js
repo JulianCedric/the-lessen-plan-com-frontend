@@ -1,36 +1,25 @@
 import React from 'react';
-import { Card, Grid, Header, Segment } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
+import MyLessenPlan from './MyLessenPlan';
 
 class MyLessenPlans extends React.Component {
     render() { 
+        console.log("this.props.myLessenPlans:", this.props.myLessenPlans);
+        // console.log("this.props:", this.props);
+
         return (
         
-            <div>
-                {/* <Header as='h3' content='Doubling Grid Container' style={style.h3} textAlign='center' /> */}
+            <div className="myLessenPlans">
 
                 <Header
                 as='h3'
                 content='My Lessen Plans'
-                // style={{ color: 'black' }}
                 textAlign='center'
                 />
-                <Grid container columns={3} doubling stackable style={{ color: 'black' }}>
-                <Grid.Column>
-                    <Segment>Time-Blocked DWS</Segment>
-                </Grid.Column>
-                <Grid.Column>
-                    <Segment>Routine 2</Segment>
-                </Grid.Column>
-                <Grid.Column>
-                    <Segment>Routine 3</Segment>
-                </Grid.Column>
-                <Grid.Column>
-                    <Segment>Routine 4</Segment>
-                </Grid.Column>
-                <Grid.Column>
-                    <Segment>Routine 5</Segment>
-                </Grid.Column>
-                </Grid>
+
+                {this.props.myLessenPlans.map(plan => <MyLessenPlan key={plan.id} {...plan} />)}
+
+                
             </div>
         );
     }

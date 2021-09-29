@@ -6,12 +6,14 @@ const LESSENPLANS = [
     {
         id: 1,
         title: "Deep Work Session",
-        duration: 90
+        duration: 90,
+        steps: "tbd"
     },
     {
         id: 2,
         title: "Coding Practice",
-        duration: 30
+        duration: 30,
+        steps: "tbd"
     }
 ];
 
