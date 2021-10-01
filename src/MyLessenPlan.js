@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Grid, Segment } from 'semantic-ui-react';
+import { Button, Card, Grid, Icon, Segment } from 'semantic-ui-react';
 import Steps from './Steps';
 
 const STEPS = [
@@ -40,7 +40,7 @@ class MyLessenPlan extends React.Component {
                                                 <h4>Steps</h4>
                                                 <Steps steps={this.state.steps} />
                                                 <br/>
-                                                <Button basic color="cornflower blue">Add Step</Button>
+                                                <Button basic color="cornflower blue"><Icon name='add'/>Add Step</Button>
                                             </div>
                                         </Card.Description>
                                     </Card.Content>
