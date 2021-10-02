@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import MyLessenPlans from './MyLessenPlans';
+import Pomodoro from './Pomodoro';
 
 const LESSENPLANS = [
     {
@@ -27,6 +28,7 @@ class Lab extends React.Component {
         return (  
             <div className="lab" style={{ color: 'white' }}>
                 <MyLessenPlans myLessenPlans={this.state.myLessenPlans} />
+                <Pomodoro />
             </div>
         );
     }
