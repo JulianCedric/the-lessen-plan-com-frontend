@@ -4,3 +4,11 @@ import React from 'react';
 // import SettingsContext from "./SettingsContext";
 // import {useContext} from "react";
 // import BackButton from "./BackButton"; 
+
+function Settings() {
+    return (
+        <div>Settings</div>
+    )
+}
+
+export default Settings;

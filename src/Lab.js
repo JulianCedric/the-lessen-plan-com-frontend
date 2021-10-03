@@ -3,6 +3,7 @@ import './App.css';
 import MyLessenPlans from './MyLessenPlans';
 import Pomodoro from './Pomodoro';
 import Timer from './Timer';
+import Settings from './Settings';
 
 const LESSENPLANS = [
     {
@@ -30,6 +31,7 @@ class Lab extends React.Component {
             <div className="lab" style={{ color: 'white' }}>
                 {/* <MyLessenPlans myLessenPlans={this.state.myLessenPlans} />
                 <Pomodoro /> */}
+                <Settings />
                 <Timer />
             </div>
         );
