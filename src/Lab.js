@@ -4,6 +4,8 @@ import MyLessenPlans from './MyLessenPlans';
 import Pomodoro from './Pomodoro';
 import Timer from './Timer';
 import Settings from './Settings';
+import {useState} from 'react';
+import SettingsContext from "./SettingsContext";
 
 const LESSENPLANS = [
     {
@@ -24,6 +26,8 @@ class Lab extends React.Component {
     state = {  
         myLessenPlans: LESSENPLANS
     }
+
+    // const [showSettings, setShowSettings] = useState(false);
 
     render() { 
         console.log("this.state.myLessenPlans:", this.state.myLessenPlans)
