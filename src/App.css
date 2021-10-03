@@ -33,7 +33,7 @@
 }
 
 .lab {
-  /* background-image: url('./Images/blank.png'); */
+  background-image: url('./Images/blank.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

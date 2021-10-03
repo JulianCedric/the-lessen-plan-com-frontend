@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import MyLessenPlans from './MyLessenPlans';
 import Pomodoro from './Pomodoro';
+import Timer from './Timer';
 
 const LESSENPLANS = [
     {
@@ -27,8 +28,9 @@ class Lab extends React.Component {
         console.log("this.state.myLessenPlans:", this.state.myLessenPlans)
         return (  
             <div className="lab" style={{ color: 'white' }}>
-                <MyLessenPlans myLessenPlans={this.state.myLessenPlans} />
-                <Pomodoro />
+                {/* <MyLessenPlans myLessenPlans={this.state.myLessenPlans} />
+                <Pomodoro /> */}
+                <Timer />
             </div>
         );
     }

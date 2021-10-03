@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { Breadcrumb, BreadcrumbDivider, Button } from 'semantic-ui-react';
-import CreatePage01 from './CreatePage01';
 
 const LESSENPLANS = [
 // sample data for testing purposes
@@ -53,7 +52,7 @@ class Lab2 extends React.Component {
                 <br/>
                 <br/>
 
-                { this.state.renderCreatePage01 ? <CreatePage01 /> : <Button onClick={this.handleClick} color='violet' size='massive'>Create New Lessen Plan</Button> }
+                {/* { this.state.renderCreatePage01 ? <CreatePage01 /> : <Button onClick={this.handleClick} color='violet' size='massive'>Create New Lessen Plan</Button> } */}
 
                 <br/>
                 <br/> 

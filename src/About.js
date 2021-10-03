@@ -4,7 +4,7 @@ import { Button, Form, Grid, Icon, Image, Reveal } from 'semantic-ui-react';
 import HabitLoop from './HabitLoop';
 import LessenPlan from './LessenPlan';
 import ReactToPrint from "react-to-print";
-import Create from './Create';
+
 import LessenPlans from './LessenPlans';
 import Update from './Update';
 import LabIcon from './LabIcon';
@@ -124,7 +124,7 @@ class Lab extends React.Component {
 
                 {this.state.renderCreateIcon ? <Icon onClick={this.handleClickCreate} inverted color='violet' name='add circle' size='huge'/> : null }
                 
-                {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} signup={this.signup} /> : null }
+                {/* {this.state.renderCreate ? <Create create={this.create} renderCreate={this.renderCreate} signup={this.signup} /> : null } */}
 
                 {/* {this.state.renderUpdate ? <Update updateHabitDesc={this.updateHabitDesc} updateHabitLoopItemA={this.updateHabitLoopItemA} badHabit={this.badHabit} /> : null } */}
 
