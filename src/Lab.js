@@ -1,10 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import MyLessenPlans from './MyLessenPlans';
 import Pomodoro from './Pomodoro';
-import Timer from './Timer';
-import Settings from './Settings';
-import SettingsContext from "./SettingsContext";
+import Lab2 from './Lab2';
 
 const LESSENPLANS = [
     {
@@ -26,26 +24,12 @@ class Lab extends React.Component {
         myLessenPlans: LESSENPLANS
     }
 
-    // const [showSettings, setShowSettings] = useState(initialState: false);
-
     render() { 
-        console.log("this.state.myLessenPlans:", this.state.myLessenPlans)
         return (  
             <div className="lab" style={{ color: 'white' }}>
-                {/* <MyLessenPlans myLessenPlans={this.state.myLessenPlans} />
-                <Pomodoro /> */}
-                {/* <SettingsContext.Provider value={{
-                    // showSettings,
-                    // setShowSettings,
-                    // workMinutes,
-                    // breakMinutes,
-                    // setWorkMinutes,
-                    // setBreakMinutes,
-                }}> */}
-                    {/* {showSettings ? <Settings /> : <Timer />} */}
-                {/* <SettingsContext.Provider /> */}
-                <Settings />
-                <Timer />
+                {/* <MyLessenPlans myLessenPlans={this.state.myLessenPlans} /> */}
+                {/* <Pomodoro /> */}
+                <Lab2 />
             </div>
         );
     }

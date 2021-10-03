@@ -1,5 +1,5 @@
-import react from 'react';
+// import react from 'react';
 
-const SettingsContext = react.createContext({});
+// const SettingsContext = React.createContext({});
 
-export default SettingsContext;
+// export default SettingsContext;
