@@ -5,7 +5,7 @@ import PlayButton from './PlayButton';
 import PauseButton from './PauseButton';
 import SettingsButton from './SettingsButton';
 import {useContext, useState, useEffect, useRef} from "react";
-
+import SettingsContext from "./SettingsContext";
 
 const red = '#FF4500';
 const blue = '#6495ED';
@@ -14,7 +14,7 @@ function Timer() {
     const settingsInfo = useContext(SettingsContext);
 
     return (
-        <div>
+        <div className='timer'>
             <h1>Timer</h1>
 
             <CircularProgressbar
