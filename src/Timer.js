@@ -23,6 +23,7 @@ function Timer() {
                 text={'77%'}
                 styles={buildStyles({
                 textColor:'#fff',
+                pathColor: 'cornflowerblue',
                 // pathColor:mode === 'work' ? red : green,
                 tailColor:'rgba(255,255,255,.2)',
                 })} 

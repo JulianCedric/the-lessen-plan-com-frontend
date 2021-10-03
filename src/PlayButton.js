@@ -11,4 +11,3 @@ function PlayButton(props) {
   }
   
   export default PlayButton;
-
