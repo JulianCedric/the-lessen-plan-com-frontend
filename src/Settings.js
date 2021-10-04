@@ -1,5 +1,5 @@
 import React from 'react';
-// import ReactSlider from 'react-slider';
+import ReactSlider from 'react-slider';
 // import './slider.css'
 // import SettingsContext from "./SettingsContext";
 // import {useContext} from "react";
@@ -7,7 +7,10 @@ import React from 'react';
 
 function Settings() {
     return (
-        <div>Settings</div>
+        <div>
+            <p>Settings</p>
+            <React ReactSlider />
+        </div>
     )
 }
 

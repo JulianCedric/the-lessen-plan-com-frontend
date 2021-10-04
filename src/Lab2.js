@@ -1,31 +1,50 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Timer from "./Timer";
-import Settings from "./Settings";
+import ReactSlider from 'react-slider';
 import SettingsContext from "./SettingsContext";
+import {useContext} from "react";
+// import BackButton from "./BackButton";
+import Timer from './Timer';
 
-function Lab2() {
-
-  const [showSettings, setShowSettings] = useState(false);
-  const [workMinutes, setWorkMinutes] = useState(45);
-  const [breakMinutes, setBreakMinutes] = useState(15);
-
-  return (
-      <div>
-        <Settings />
+function Settings() {
+  const settingsInfo = useContext(SettingsContext);
+  return(
+    <div>
         <Timer />
-        {/* <SettingsContext.Provider value={{
-            showSettings,
-            setShowSettings,
-            workMinutes,
-            breakMinutes,
-            setWorkMinutes,
-            setBreakMinutes
-        }}> */}
-        {/* {showSettings ? <Settings /> : <Timer />} */}
-        {/* </SettingsContext.Provider> */}
-      </div>
+        <br/>
+        <br/>
+      {/* <label>work: {settingsInfo.workMinutes}:00</label> */}
+      <label>work minutes: :00</label>
+
+      <ReactSlider
+        className={'slider'}
+        thumbClassName={'thumb'}
+        trackClassName={'track'}
+        // value={settingsInfo.workMinutes}
+        value={45}
+        // onChange={newValue => settingsInfo.setWorkMinutes(newValue)}
+        min={1}
+        max={120}
+      />
+      {/* <label>break: {settingsInfo.breakMinutes}:00</label> */}
+      <label>break minutes: :00</label>
+
+      {/* <ReactSlider
+        className={'slider-green'}
+        thumbClassName={'thumb'}
+        trackClassName={'track'}
+        // value={settingsInfo.breakMinutes}
+        value={77}
+        // onChange={newValue => settingsInfo.setBreakMinutes(newValue)}
+        min={1}
+        max={120}
+      /> */}
+      {/* <div style={{textAlign:'center', marginTop:'20px'}}>
+        <BackButton onClick={() => settingsInfo.setShowSettings(false)} />
+      </div> */}
+
+    </div>
   );
 }
 
-export default Lab2;
+export default Settings;
