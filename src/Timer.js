@@ -13,12 +13,14 @@ const blue = '#6495ED';
 function Timer() {
     const settingsInfo = useContext(SettingsContext);
 
+    const value = 30;
+
     return (
         <div className='timer'>
             <h1>Timer</h1>
 
             <CircularProgressbar
-                value={77}
+                value={value}
                 // text={minutes + ':' + seconds}
                 text={'77%'}
                 styles={buildStyles({
