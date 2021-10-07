@@ -6,6 +6,7 @@ class Lab2 extends React.Component {
   render() { 
     return (
       <div>
+        <p>Test</p>
         <Timer />
         <br/>
         <br/>
@@ -16,4 +17,4 @@ class Lab2 extends React.Component {
   }
 }
  
-export default Lab2;
+export default Lab2; 
