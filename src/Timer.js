@@ -9,6 +9,7 @@ import SettingsContext from "./SettingsContext";
 
 const red = '#FF4500';
 const blue = '#6495ED';
+const percentage = 7;
 
 function Timer() {
     const settingsInfo = useContext(SettingsContext);
@@ -20,16 +21,30 @@ function Timer() {
             <h1>Timer</h1>
 
             <CircularProgressbar
+                value={percentage}
+                text={`${percentage}%`}
+                background
+                backgroundPadding={6}
+                styles={buildStyles({
+                backgroundColor: "cornflowerblue",
+                textColor: "#fff",
+                pathColor: "#fff",
+                trailColor: "transparent"
+                })}
+            />
+
+            {/* <CircularProgressbar
                 value={value}
                 // text={minutes + ':' + seconds}
-                text={'77%'}
+                text={'777%'}
                 styles={buildStyles({
                 textColor:'#fff',
                 pathColor: 'cornflowerblue',
                 // pathColor:mode === 'work' ? red : green,
                 tailColor:'rgba(255,255,255,.2)',
                 })} 
-            />
+            /> */}
+
             <div style={{marginTop:'20px'}}>
                 <PlayButton />
                 <PauseButton />
