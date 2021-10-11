@@ -9,7 +9,7 @@ import SettingsContext from "./SettingsContext";
 
 const red = '#FF4500';
 const blue = '#6495ED';
-const percentage = 7;
+const percentage = 70;
 
 function Timer() {
     const settingsInfo = useContext(SettingsContext);
@@ -48,6 +48,7 @@ function Timer() {
             <div style={{marginTop:'20px'}}>
                 <PlayButton />
                 <PauseButton />
+                <ResetButton />
             </div>
             <div style={{marginTop:'20px'}}>
                 <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />    
