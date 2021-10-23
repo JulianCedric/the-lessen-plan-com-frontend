@@ -48,7 +48,7 @@ function Timer() {
             <div style={{marginTop:'20px'}}>
                 <PlayButton />
                 <PauseButton />
-                <ResetButton />
+                {/* <ResetButton /> */}
             </div>
             <div style={{marginTop:'20px'}}>
                 <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />    
